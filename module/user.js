@@ -1,4 +1,4 @@
-const UserMuseumKNMII = require('../models/userMuseumKNMII');
+const UserMuseumKNMII = require('../models/userMissPolin');
 let adminId = '';
 const adminLogin = require('./const').adminLogin,
     adminPass = require('./const').adminPass;

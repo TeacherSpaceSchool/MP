@@ -2,13 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/precache-manifest.966272771944171e325fecc4d4928d67.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.bb14694d.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.bb14694d.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/asset-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/precache-manifest.ceb1b33f21dc36d7743b4f7c5d859926.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/robots.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/service-worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/1.22958c10.chunk.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/1.22958c10.chunk.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/main.61e5dadc.chunk.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/main.61e5dadc.chunk.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.eb64a796.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.eb64a796.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.a4509113.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.a4509113.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.229c360f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.229c360f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/banya.868ff1d8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/comp.cc6a13f4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/kyrgyzstan.fb2ea834.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/mobile.51373b03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/music.c8529e82.mp3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/openfullimage.2c739a70.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/russia.965262d5.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/unitedstates.07ba3996.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/vverhstrelka.75a849b8.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/asset-manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/precache-manifest.cb37c2bc822d7e813089b45f64abd0e9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/service-worker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/css/9.702ac6fb.chunk.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/css/9.702ac6fb.chunk.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/css/main.ef6619c2.chunk.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/css/main.ef6619c2.chunk.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/0.18a2fbf8.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/0.18a2fbf8.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/1.8c7ed431.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/1.8c7ed431.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/10.ea969a5d.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/10.ea969a5d.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/11.a34a5787.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/11.a34a5787.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/2.32e8ee5d.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/2.32e8ee5d.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/4.96db708f.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/4.96db708f.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/5.826cc2c9.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/5.826cc2c9.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/6.720e5280.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/6.720e5280.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/7.02372e75.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/7.02372e75.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/8.316d96fb.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/8.316d96fb.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/9.4234475d.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/9.4234475d.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/main.b78feaef.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/main.b78feaef.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/runtime~main.e1e9f17e.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/js/runtime~main.e1e9f17e.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/admin/static/media/logo.fdc48fe4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/aboutMuseum/aboutMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/artwork/artworkMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/artwork/authorArtworkMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/artwork/genreArtworkMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/eventMuseum/eventMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/excursion/excursionMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/nameMuseum/nameMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/ticket/ticketMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/models/virtualMuseum/virtualMuseumKNMII.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/aboutMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/artworkMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/authorArtworkMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/eventMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/excursionMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/genreArtworkMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/itemMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/nameMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/ticketMuseum.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/module/virtualMuseum.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/itemMuseumKNMII.js" afterPath="$PROJECT_DIR$/models/contactsMissPolin.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/models/userMuseumKNMII.js" afterPath="$PROJECT_DIR$/models/userMissPolin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/asset-manifest.json" afterPath="$PROJECT_DIR$/aclient/asset-manifest.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/index.html" afterPath="$PROJECT_DIR$/aclient/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/service-worker.js" afterPath="$PROJECT_DIR$/aclient/service-worker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/www" afterPath="$PROJECT_DIR$/bin/www" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/passport.js" afterPath="$PROJECT_DIR$/module/passport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/user.js" afterPath="$PROJECT_DIR$/module/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/data.js" afterPath="$PROJECT_DIR$/routes/data.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,101 +109,122 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="artworkMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/artworkMuseum.js">
+      <file leaf-file-name="itemMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authorArtworkMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/authorArtworkMuseum.js">
+      <file leaf-file-name="mailchimp.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/mailchimp.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mailingMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/mailingMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="39" />
+              <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eventMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/eventMuseum.js">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state relative-caret-position="72">
+              <caret line="54" column="162" lean-forward="false" selection-start-line="54" selection-start-column="162" selection-end-line="54" selection-end-column="162" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="excursionMuseum.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/module/excursionMuseum.js">
+      <file leaf-file-name="www" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bin/www">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-200">
+              <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/data.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
+              <folding>
+                <element signature="e#5380#9084#0" expanded="false" />
+                <element signature="e#9238#9464#0" expanded="false" />
+                <element signature="e#11353#12131#0" expanded="false" />
+                <element signature="e#12198#13230#0" expanded="false" />
+                <element signature="e#13310#13840#0" expanded="false" />
+                <element signature="e#13901#14637#0" expanded="false" />
+                <element signature="e#14701#15160#0" expanded="false" />
+                <element signature="e#15225#15862#0" expanded="false" />
+                <element signature="e#16854#17728#0" expanded="false" />
+                <element signature="e#17791#18297#0" expanded="false" />
+                <element signature="e#18366#18922#0" expanded="false" />
+                <element signature="e#19069#19719#0" expanded="false" />
+                <element signature="e#19774#20602#0" expanded="false" />
+                <element signature="e#20670#21104#0" expanded="false" />
+                <element signature="e#21153#21744#0" expanded="false" />
+                <element signature="e#21796#22171#0" expanded="false" />
+                <element signature="e#22224#22741#0" expanded="false" />
+                <element signature="e#23541#24259#0" expanded="false" />
+                <element signature="e#24310#24720#0" expanded="false" />
+                <element signature="e#24777#25189#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blogMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/blogMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contactsMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/contactsMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favoriteMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="genreArtworkMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/genreArtworkMuseum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itemMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/itemMuseum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="nameMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/nameMuseum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ticketMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/ticketMuseum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="virtualMuseum.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/virtualMuseum.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="const.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/const.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,54 +241,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;</find>
-      <find>new Date</find>
-      <find>format</find>
-      <find>Произ</find>
-      <find>СтилиИлиМатериал</find>
-      <find>Произведение</find>
-      <find>.populate({path: 'author',</find>
-      <find>dele</find>
-      <find>.select(</find>
-      <find>.limit(4)</find>
-      <find>Экскурсии</find>
-      <find>unique: true</find>
-      <find>_ru</find>
-      <find>String</find>
-      <find>Artwork</find>
-      <find>ur</find>
-      <find>'/'</find>
-      <find>Автор произведения</find>
-      <find>author</find>
-      <find>development</find>
-      <find>log</find>
-      <find>console.log</find>
-      <find>try</find>
-      <find>catch</find>
-      <find>Авторы</find>
-      <find>Жанр произведения</find>
-      <find>Автор</find>
       <find>Галлерея</find>
       <find>жанр</find>
       <find>.asString('yyyy.dd.MM hh:mm',</find>
+      <find>Contact</find>
+      <find>Billboard</find>
+      <find>user</find>
+      <find>Blog</find>
+      <find>AboutMuseum</find>
+      <find>yyyy.dd.MM</find>
+      <find>Catalog</find>
+      <find>Client</find>
+      <find>Biletiki</find>
+      <find>Ads</find>
+      <find>Jimp</find>
+      <find>getBlogMissPolin</find>
+      <find>Реклама</find>
+      <find>findResult[i].</find>
+      <find>true</find>
+      <find>count</find>
+      <find>name</find>
+      <find>MuseumKNMII</find>
+      <find>Preitem</find>
+      <find>verifydeuser</find>
+      <find>Item</find>
+      <find>Favorite</find>
+      <find>populate</find>
+      <find>Предзаказы</find>
+      <find>Контакты</find>
+      <find>Товары</find>
+      <find>format</find>
     </findStrings>
     <replaceStrings>
-      <replace>TicketMuseumKNMII</replace>
-      <replace>String</replace>
-      <replace>styleOrMaterial</replace>
-      <replace>row</replace>
-      <replace>myNew</replace>
-      <replace>findResult[i]</replace>
-      <replace>updatedAt</replace>
-      <replace>VirtualMuseumKNMII</replace>
-      <replace>type</replace>
-      <replace>name</replace>
-      <replace>ExcursionMuseumKNMII</replace>
-      <replace>EventMuseumKNMII</replace>
-      <replace>AuthorArtworkMuseumKNMII</replace>
-      <replace>search</replace>
-      <replace>,</replace>
-      <replace>description</replace>
       <replace>dd.MM.yyyy hh:mm</replace>
       <replace>yyyy.dd.MM hh:mm</replace>
       <replace>GenreArtworkMuseumKNMII</replace>
@@ -194,10 +283,26 @@
       <replace>'</replace>
       <replace>.limit(30)</replace>
       <replace>unique: false</replace>
-      <replace>Item</replace>
       <replace>Тип произведения</replace>
       <replace>тип</replace>
       <replace>(</replace>
+      <replace>Contact</replace>
+      <replace>Billboard</replace>
+      <replace>favorite</replace>
+      <replace>User</replace>
+      <replace>Catalog</replace>
+      <replace>Favorite</replace>
+      <replace>Ads</replace>
+      <replace>Client</replace>
+      <replace>Contacts</replace>
+      <replace>Item</replace>
+      <replace>Order</replace>
+      <replace>Blog</replace>
+      <replace>false</replace>
+      <replace>MissPolin</replace>
+      <replace>verifydadmin</replace>
+      <replace>Preitem</replace>
+      <replace>PreitemUser</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -206,41 +311,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/models/index.js" />
-        <option value="$PROJECT_DIR$/.eslintrc" />
-        <option value="$PROJECT_DIR$/models/userMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/artwork/authorArtwork.js" />
-        <option value="$PROJECT_DIR$/models/excursion/excursionTypeMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/excursion/excursionItemMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/artwork/MaterialStyleOfWorkMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/routes/aboutMuseum.js" />
-        <option value="$PROJECT_DIR$/models/nameMuseum/virtualMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/routes/client.js" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/routes/users.js" />
-        <option value="$PROJECT_DIR$/client/service-worker-knmi-client.js" />
-        <option value="$PROJECT_DIR$/admin/service-worker-knmi-admin.js" />
-        <option value="$PROJECT_DIR$/admin/service-worker.js" />
-        <option value="$PROJECT_DIR$/admin/precache-manifest.161576c6727d4ccd0dc9bc760a197789.js" />
-        <option value="$PROJECT_DIR$/../../data.js" />
-        <option value="$PROJECT_DIR$/routes/admin.js" />
-        <option value="$PROJECT_DIR$/views/error.jade" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/models/aboutMuseum/aboutMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/artwork/genreArtworkMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/eventMuseum/eventMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/excursion/excursionMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/models/nameMuseum/nameMuseumKNMII.js" />
         <option value="$PROJECT_DIR$/models/ticket/ticketMuseumKNMII.js" />
         <option value="$PROJECT_DIR$/models/virtualMuseum/virtualMuseumKNMII.js" />
         <option value="$PROJECT_DIR$/models/itemMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/module/passport.js" />
         <option value="$PROJECT_DIR$/module/user.js" />
         <option value="$PROJECT_DIR$/models/artwork/authorArtworkMuseumKNMII.js" />
         <option value="$PROJECT_DIR$/models/artwork/artworkMuseumKNMII.js" />
-        <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/module/eventMuseum.js" />
         <option value="$PROJECT_DIR$/module/aboutMuseum.js" />
@@ -253,6 +329,39 @@
         <option value="$PROJECT_DIR$/module/ticketMuseum.js" />
         <option value="$PROJECT_DIR$/module/virtualMuseum.js" />
         <option value="$PROJECT_DIR$/module/const.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/models/userMuseumKNMII.js" />
+        <option value="$PROJECT_DIR$/models/billboardMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/contactsMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/clientMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/catalogMuseum.js" />
+        <option value="$PROJECT_DIR$/models/adsMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/adsMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/blogMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/contactsMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/clientMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/mailingBiletiki.js" />
+        <option value="$PROJECT_DIR$/module/mailingBiletiki.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/models/catalogMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/catalogMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/readsql.js" />
+        <option value="$PROJECT_DIR$/models/itemMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/passport.js" />
+        <option value="$PROJECT_DIR$/models/userMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/userMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/preitemMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/preitemMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/favoriteMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/orderMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/favoriteMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/orderMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/preitemUserMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/preitemUserMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/blogMissPolin.js" />
+        <option value="$PROJECT_DIR$/routes/data.js" />
+        <option value="$PROJECT_DIR$/module/itemMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/mailingMissPolin.js" />
       </list>
     </option>
   </component>
@@ -279,7 +388,9 @@
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -295,104 +406,51 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="bin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="aboutMuseum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="artwork" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="eventMuseum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="excursion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="nameMuseum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="ticket" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-              <item name="virtualMuseum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="module" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
+              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
+              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="museum-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="museum-api" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path" value="C:/Nodist/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../agent/agent-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../misspolin-admin" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -407,13 +465,16 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\projects\misspolin\misspolin-api" />
+      <recent name="C:\projects\misspolin\misspolin-api\public" />
       <recent name="C:\projects\museum\museum-api" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\misspolin\misspolin-api\module" />
+      <recent name="C:\projects\misspolin\misspolin-api\models" />
       <recent name="C:\projects\museum\museum-api\routes" />
       <recent name="C:\projects\museum\museum-api\module" />
       <recent name="C:\projects\museum\museum-api\models" />
-      <recent name="C:\projects\museum\museum-api\models\artwork" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -516,12 +577,19 @@
       <workItem from="1550839361086" duration="616000" />
       <workItem from="1550845378621" duration="685000" />
       <workItem from="1551165424352" duration="1881000" />
-      <workItem from="1551186752713" duration="356000" />
+      <workItem from="1551186752713" duration="983000" />
+      <workItem from="1551702653339" duration="2489000" />
+      <workItem from="1551787616183" duration="5405000" />
+      <workItem from="1551846100603" duration="1167000" />
+      <workItem from="1551939362454" duration="611000" />
+      <workItem from="1552745070607" duration="27305000" />
+      <workItem from="1553249826820" duration="10214000" />
+      <workItem from="1553315576865" duration="4592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295462000" />
+    <option name="totallyTimeSpent" value="347872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,14 +604,14 @@
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14068441" sideWeight="0.7589286" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14068441" sideWeight="0.8120438" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14068441" sideWeight="0.24107143" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14068441" sideWeight="0.1879562" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -587,161 +655,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose-random/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/UVdKoUmce3d5361-4272-4f22-a.jpg" />
-    <entry file="file://$PROJECT_DIR$/admin/static/media/logo.6380e3d6.png" />
-    <entry file="file://$PROJECT_DIR$/admin/static/js/5.56378f80.chunk.js" />
-    <entry file="file://$PROJECT_DIR$/admin/static/js/3.a3393e93.chunk.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/favicon.ico" />
-    <entry file="file://$PROJECT_DIR$/client/index.html" />
-    <entry file="file://$PROJECT_DIR$/admin/service-worker-knmi-admin.js" />
-    <entry file="file://$PROJECT_DIR$/admin/precache-manifest.4757e71e78c208962048d67a6a8503ee.js" />
-    <entry file="file://$PROJECT_DIR$/admin/asset-manifest.json" />
-    <entry file="file://$PROJECT_DIR$/admin/manifest.json" />
-    <entry file="file://$PROJECT_DIR$/client/service-worker-knmi-client.js" />
-    <entry file="file://$PROJECT_DIR$/admin/service-worker-knmi-admin.js" />
-    <entry file="file://$PROJECT_DIR$/admin/service-worker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/precache-manifest.161576c6727d4ccd0dc9bc760a197789.js" />
-    <entry file="file://$PROJECT_DIR$/admin/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/service-worker.js" />
-    <entry file="file://$PROJECT_DIR$/../../data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="52" selection-start-column="25" selection-end-line="52" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa10544.29729/data.js" />
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
-          <caret line="77" column="1" lean-forward="false" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/error.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/excursion/excursionMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/nameMuseum/nameMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ticket/ticketMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="6" lean-forward="false" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/virtualMuseum/virtualMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/itemMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="35" selection-end-line="0" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/userMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/eventMuseum/eventMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="24" column="6" lean-forward="true" selection-start-line="24" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/artwork/genreArtworkMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/aboutMuseum/aboutMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64">
-          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/artwork/authorArtworkMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="62" column="48" lean-forward="false" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/artwork/artworkMuseumKNMII.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="64" column="10" lean-forward="false" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/models/artwork/genreArtworkMuseumKNMII.js" />
+    <entry file="file://$PROJECT_DIR$/models/aboutMuseum/aboutMuseumKNMII.js" />
+    <entry file="file://$PROJECT_DIR$/models/artwork/authorArtworkMuseumKNMII.js" />
+    <entry file="file://$PROJECT_DIR$/models/artwork/artworkMuseumKNMII.js" />
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -749,6 +666,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/module/artworkMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/authorArtworkMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/eventMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/genreArtworkMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/itemMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/nameMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/ticketMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/virtualMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/module/excursionMuseum.js" />
+    <entry file="file://$PROJECT_DIR$/models/billboardMissPolin.js" />
+    <entry file="file://$PROJECT_DIR$/module/4646.js" />
+    <entry file="file://$PROJECT_DIR$/models/clientMissPolin.js" />
+    <entry file="file://$PROJECT_DIR$/module/clientMissPolin.js" />
     <entry file="file://$PROJECT_DIR$/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -756,110 +686,266 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="54" column="162" lean-forward="false" selection-start-line="54" selection-start-column="162" selection-end-line="54" selection-end-column="162" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/user.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="17" column="27" lean-forward="true" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/aboutMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="66" column="5" lean-forward="false" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/artworkMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/authorArtworkMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/eventMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/genreArtworkMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/itemMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/nameMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/ticketMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/virtualMuseum.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/const.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/catalogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="6" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/readsql.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="162" column="24" lean-forward="false" selection-start-line="162" selection-start-column="24" selection-end-line="162" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="133" column="0" lean-forward="true" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/userMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1292">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/adsMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/catalogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/favoriteMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/mailingMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/userMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/adsMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/excursionMuseum.js">
+    <entry file="file://$PROJECT_DIR$/module/preitemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/orderMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/preitemUserMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/preitemUserMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" lean-forward="false" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/preitemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="48" lean-forward="true" selection-start-line="2" selection-start-column="48" selection-end-line="30" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/blogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/contactsMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/contactsMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="58" lean-forward="false" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="394" column="0" lean-forward="false" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
+          <folding>
+            <element signature="e#5380#9084#0" expanded="false" />
+            <element signature="e#9238#9464#0" expanded="false" />
+            <element signature="e#11353#12131#0" expanded="false" />
+            <element signature="e#12198#13230#0" expanded="false" />
+            <element signature="e#13310#13840#0" expanded="false" />
+            <element signature="e#13901#14637#0" expanded="false" />
+            <element signature="e#14701#15160#0" expanded="false" />
+            <element signature="e#15225#15862#0" expanded="false" />
+            <element signature="e#16854#17728#0" expanded="false" />
+            <element signature="e#17791#18297#0" expanded="false" />
+            <element signature="e#18366#18922#0" expanded="false" />
+            <element signature="e#19069#19719#0" expanded="false" />
+            <element signature="e#19774#20602#0" expanded="false" />
+            <element signature="e#20670#21104#0" expanded="false" />
+            <element signature="e#21153#21744#0" expanded="false" />
+            <element signature="e#21796#22171#0" expanded="false" />
+            <element signature="e#22224#22741#0" expanded="false" />
+            <element signature="e#23541#24259#0" expanded="false" />
+            <element signature="e#24310#24720#0" expanded="false" />
+            <element signature="e#24777#25189#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/blogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/mailchimp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="35" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/mailingMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-200">
+          <caret line="1" column="20" lean-forward="false" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="54" column="162" lean-forward="false" selection-start-line="54" selection-start-column="162" selection-end-line="54" selection-end-column="162" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
           <folding />
         </state>
       </provider>

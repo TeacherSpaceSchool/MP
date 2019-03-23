@@ -3,7 +3,7 @@ const LocalStrategy = require('passport-local');
 const JwtStrategy = require('passport-jwt').Strategy;
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const jwtsecret = '@615141ViDiK141516@';
-const UserMuseumKNMII = require('../models/userMuseumKNMII');
+const UserMissPolin = require('../models/userMissPolin');
 const jwt = require('jsonwebtoken');
 
 let start = () => {
@@ -15,7 +15,7 @@ let start = () => {
         },
         function (email, password, done) {
 
-            UserMuseumKNMII.findOne({email}, (err, user) => {
+            UserMissPolin.findOne({email}, (err, user) => {
                 if (err) {
                     return done(err);
                 }
@@ -32,7 +32,7 @@ let start = () => {
     jwtOptions.jwtFromRequest= ExtractJwt.fromAuthHeaderAsBearerToken();
     jwtOptions.secretOrKey=jwtsecret;
     passport.use(new JwtStrategy(jwtOptions, function (payload, done) {
-            UserMuseumKNMII.findOne({email:payload.email}, (err, user) => {
+            UserMissPolin.findOne({email:payload.email}, (err, user) => {
                 if (err) {
                     return done(err)
                 }
@@ -88,7 +88,46 @@ const signinuser = (req, res) => {
     })(req, res);
 }
 
+const verifydrole = async (req, res, func) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                await func(user.role)
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const verifydadmin = async (req, res, func) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active'&&(user.role==='admin'||user.role==='manager')) {
+                await func()
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+
 
 module.exports.start = start;
 module.exports.verifydeuser = verifydeuser;
 module.exports.signinuser = signinuser;
+module.exports.verifydrole = verifydrole;
+module.exports.verifydadmin = verifydadmin;
