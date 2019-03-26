@@ -36,10 +36,11 @@ router.get('/', async (req, res, next) => {
 
 router.post('/', async (req, res, next) => {
     let ip = JSON.stringify(req.ip)
-    console.log(req.body.Refer)
     if(req.body.Refer===undefined)
         req.body.Refer='-'
     let geo = geoip.lookup(ip);
+    console.log(JSON.stringify(req.ip))
+    console.log(geo)
     if(geo===null)geo={country: '', city: ''}
     let _object = new CatalogMissPolin({
         email: req.body.Email,
