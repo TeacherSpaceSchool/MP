@@ -20,6 +20,10 @@ const CatalogMissPolinSchema = mongoose.Schema({
     data: {
         type: String,
         required: true
+    },
+    refer: {
+        type: String,
+        required: true
     }
 }, {
     timestamps: true

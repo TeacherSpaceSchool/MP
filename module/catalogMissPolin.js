@@ -2,6 +2,7 @@ const CatalogMissPolin = require('../models/catalogMissPolin');
 const format = require('date-format') ;
 
 const getCatalogMissPolin = async (search, sort, skip) => {
+    //await CatalogMissPolin.deleteMany()
     let findResult = [], data = [], count;
     const row = [
         'email',
@@ -9,6 +10,7 @@ const getCatalogMissPolin = async (search, sort, skip) => {
         'телефон',
         'статус',
         'данные',
+        'рефералка',
         'создан',
         '_id'
     ];
@@ -34,6 +36,10 @@ const getCatalogMissPolin = async (search, sort, skip) => {
         sort = '-data';
     else if(sort[0]=='данные'&&sort[1]=='ascending')
         sort = 'data';
+    else if(sort[0]=='рефералка'&&sort[1]=='descending')
+        sort = '-refer';
+    else if(sort[0]=='рефералка'&&sort[1]=='ascending')
+        sort = 'refer';
     else if(sort[0]=='создан'&&sort[1]=='descending')
         sort = '-updatedAt';
     else if(sort[0]=='создан'&&sort[1]=='ascending')
@@ -44,8 +50,7 @@ const getCatalogMissPolin = async (search, sort, skip) => {
             .find()
             .sort(sort)
             .skip(parseInt(skip))
-            .limit(10)
-            .select('email status data updatedAt _id');
+            .limit(10);
     } else {
         count = await CatalogMissPolin.count({
             $or: [
@@ -54,6 +59,7 @@ const getCatalogMissPolin = async (search, sort, skip) => {
                 {email: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
                 {data: {'$regex': search, '$options': 'i'}},
+                {refer: {'$regex': search, '$options': 'i'}},
             ]
         });
         findResult = await CatalogMissPolin.find({
@@ -63,15 +69,15 @@ const getCatalogMissPolin = async (search, sort, skip) => {
                 {email: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
                 {data: {'$regex': search, '$options': 'i'}},
+                {refer: {'$regex': search, '$options': 'i'}},
             ]
         })
             .sort(sort)
             .skip(parseInt(skip))
-            .limit(10)
-            .select('email status data updatedAt _id');
+            .limit(10);
     }
     for (let i=0; i<findResult.length; i++){
-        data.push([findResult[i].email, findResult[i].name, findResult[i].phone, findResult[i].status, findResult[i].data, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
+        data.push([findResult[i].email, findResult[i].name, findResult[i].phone, findResult[i].status, findResult[i].data, findResult[i].refer, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
 }

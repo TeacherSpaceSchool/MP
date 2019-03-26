@@ -8,6 +8,7 @@ const app = express();
 const indexRouter = require('./routes/index');
 const adminRouter = require('./routes/admin');
 const usersRouter = require('./routes/users');
+const landingRouter = require('./routes/landing');
 const dataRouter = require('./routes/data');
 const passportEngine = require('./module/passport');
 const cors = require('cors');
@@ -38,6 +39,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'aclient')));
+app.use(express.static(path.join(__dirname, 'landing')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'admin')));
 app.use(cors());
@@ -56,6 +58,7 @@ app.use(new RegExp(/^\/(events|genre|author\/[\s\S]+|event\/[\s\S]+|about|artwor
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 app.use('/data', dataRouter);
+app.use('/landing', landingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

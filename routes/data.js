@@ -12,6 +12,7 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
 const OrderMissPolin = require('../module/orderMissPolin');
 const UserMissPolin = require('../module/userMissPolin');
+const ReferMissPolin = require('../module/referMissPolin');
 const PreitemUserMissPolin = require('../module/preitemUserMissPolin');
 const PreitemMissPolin = require('../module/preitemMissPolin');
 const readsql = require('../module/readsql');
@@ -45,6 +46,8 @@ router.post('/get', async (req, res) => {
           await res.send(await PreitemUserMissPolin.getPreitemUserMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Предзаказы'){
           await res.send(await PreitemMissPolin.getPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Рефералка'){
+          await res.send(await ReferMissPolin.getReferMissPolin(req.body.search, req.body.sort, req.body.skip))
       }
   });
 });
