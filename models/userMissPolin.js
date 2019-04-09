@@ -10,14 +10,13 @@ const UserMissPolinSchema = mongoose.Schema({
         unique: true
     },
     phonenumber: String,
-    address: String,
     role: String,
     status: String,
     data: String,
-    activeTime: String,
     passwordHash: String,
     salt: String,
     ref: String,
+    lvl: String,
 }, {
     timestamps: true
 });

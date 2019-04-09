@@ -8,7 +8,6 @@ const getCatalogMissPolin = async (search, sort, skip) => {
         'email',
         'имя',
         'телефон',
-        'статус',
         'данные',
         'рефералка',
         'создан',
@@ -57,7 +56,6 @@ const getCatalogMissPolin = async (search, sort, skip) => {
                 {name: {'$regex': search, '$options': 'i'}},
                 {phone: {'$regex': search, '$options': 'i'}},
                 {email: {'$regex': search, '$options': 'i'}},
-                {status: {'$regex': search, '$options': 'i'}},
                 {data: {'$regex': search, '$options': 'i'}},
                 {refer: {'$regex': search, '$options': 'i'}},
             ]
@@ -67,7 +65,6 @@ const getCatalogMissPolin = async (search, sort, skip) => {
                 {name: {'$regex': search, '$options': 'i'}},
                 {phone: {'$regex': search, '$options': 'i'}},
                 {email: {'$regex': search, '$options': 'i'}},
-                {status: {'$regex': search, '$options': 'i'}},
                 {data: {'$regex': search, '$options': 'i'}},
                 {refer: {'$regex': search, '$options': 'i'}},
             ]
@@ -77,7 +74,7 @@ const getCatalogMissPolin = async (search, sort, skip) => {
             .limit(10);
     }
     for (let i=0; i<findResult.length; i++){
-        data.push([findResult[i].email, findResult[i].name, findResult[i].phone, findResult[i].status, findResult[i].data, findResult[i].refer, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
+        data.push([findResult[i].email, findResult[i].name, findResult[i].phone, findResult[i].data, findResult[i].refer, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
 }

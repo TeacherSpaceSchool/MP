@@ -1,6 +1,15 @@
 const BlogMissPolin = require('../models/blogMissPolin');
 const format = require('date-format') ;
 
+const getClient1 = async(title)=>{
+    console.log(await BlogMissPolin.findOne({title: title}))
+    return await BlogMissPolin.findOne({title: title})
+}
+
+const getClient = async()=>{
+    return await BlogMissPolin.find().sort('-updatedAt')
+}
+
 const getBlogMissPolin = async (search, sort, skip) => {
     //await BlogMissPolin.deleteMany()
     let findResult = [], data = [], count;
@@ -86,3 +95,5 @@ module.exports.deleteBlogMissPolin = deleteBlogMissPolin;
 module.exports.getBlogMissPolin = getBlogMissPolin;
 module.exports.setBlogMissPolin = setBlogMissPolin;
 module.exports.addBlogMissPolin = addBlogMissPolin;
+module.exports.getClient = getClient;
+module.exports.getClient1 = getClient1;

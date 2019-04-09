@@ -9,10 +9,6 @@ const PreitemUserMissPolinSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    status: {
-        type: String,
-        required: true
-    },
     data: {
         type: String,
         required: false

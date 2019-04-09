@@ -9,11 +9,12 @@ const PreitemMissPolinSchema = mongoose.Schema({
         type: String,
         required: false,
     },
-    name: {
+    art: {
         type: String,
-        required: false
+        required: false,
+        unique: true
     },
-    price: {
+    prices: {
         type: String,
         required: false
     },

@@ -1,6 +1,48 @@
 const UserMissPolin = require('../models/userMissPolin');
-const format = require('./const').stringifyDateTime
+const MailingMissPolin = require('../models/mailingMissPolin');
 const mailchimp = require('../module/mailchimp');
+const nodemailer = require('nodemailer');
+const randomstring = require('randomstring');
+const format = require('date-format') ;
+
+let recoveryPass = async (email) => {
+    if(await MailingMissPolin.count({email: email})>0){
+        let newPassword = randomstring.generate(7);
+        let user = await MailingMissPolin.findOne({email: email});
+        user.password = newPassword;
+        await user.save();
+        let mailingBiletiki = await MailingMissPolin.findOne();
+        let mailOptions = {
+            from: mailingBiletiki.mailuser,
+            to: email,
+            subject: 'Восстановление пароля',
+            text: 'Ваш новый пароль: '+newPassword
+        };
+        if(mailingBiletiki!==null){
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: mailingBiletiki.mailuser,
+                    pass: mailingBiletiki.mailpass
+                },
+                tls: {
+                    // do not fail on invalid certs
+                    rejectUnauthorized: false
+                }
+            });
+            transporter.sendMail(mailOptions, function(error, info){
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
+        }
+        return 'ok'
+    } else {
+        return 'lol'
+    }
+}
 
 const getUserMissPolin = async (search, sort, skip) => {
     try{
@@ -9,12 +51,11 @@ const getUserMissPolin = async (search, sort, skip) => {
             'имя',
             'email',
             'телефон',
-            'адрес',
             'роль',
             'статус',
             'дополнительно',
-            'активность',
             'рефер',
+            'уровень',
             'создан',
             '_id'
         ];
@@ -72,11 +113,8 @@ const getUserMissPolin = async (search, sort, skip) => {
                             {name: {'$regex': search, '$options': 'i'}},
                             {email: {'$regex': search, '$options': 'i'}},
                             {phonenumber: {'$regex': search, '$options': 'i'}},
-                            {role: {'$regex': search, '$options': 'i'}},
                             {status: {'$regex': search, '$options': 'i'}},
-                            {address: {'$regex': search, '$options': 'i'}},
                             {data: {'$regex': search, '$options': 'i'}},
-                            {activeTime: {'$regex': search, '$options': 'i'}},
         ]}, {
                         role:
                             {$ne: 'admin'}
@@ -90,11 +128,8 @@ const getUserMissPolin = async (search, sort, skip) => {
                             {name: {'$regex': search, '$options': 'i'}},
                             {email: {'$regex': search, '$options': 'i'}},
                             {phonenumber: {'$regex': search, '$options': 'i'}},
-                            {role: {'$regex': search, '$options': 'i'}},
                             {status: {'$regex': search, '$options': 'i'}},
-                            {address: {'$regex': search, '$options': 'i'}},
                             {data: {'$regex': search, '$options': 'i'}},
-                            {activeTime: {'$regex': search, '$options': 'i'}},
                         ]}, {
                         role:
                             {$ne: 'admin'}
@@ -105,16 +140,42 @@ const getUserMissPolin = async (search, sort, skip) => {
                 .limit(10);
         }
         for (let i=0; i<findResult.length; i++){
+            let name = ''
+            if (findResult[i].name!==undefined)
+                name = findResult[i].name
+            let email = ''
+            if (findResult[i].email!==undefined)
+                email = findResult[i].email
+            let phonenumber = ''
+            if (findResult[i].phonenumber!==undefined)
+                phonenumber = findResult[i].phonenumber
+            let role = ''
+            if (findResult[i].role!==undefined)
+                role = findResult[i].role
+            let status = ''
+            if (findResult[i].status!==undefined)
+                status = findResult[i].status
+            let data1 = ''
+            if (findResult[i].data!==undefined)
+                data1 = findResult[i].data
+            let ref = ''
+            if (findResult[i].ref!==undefined)
+                ref = findResult[i].ref
+            let lvl = '0'
+            if (findResult[i].lvl!==undefined)
+                lvl = findResult[i].lvl
+
             data.push([
-                findResult[i].name,
-                findResult[i].email,
-                findResult[i].phonenumber,
-                findResult[i].address,
-                findResult[i].role,
-                findResult[i].status,
-                findResult[i].data,
-                findResult[i].activeTime,
-                format(findResult[i].updatedAt), findResult[i]._id]);
+                name,
+                email,
+                phonenumber,
+                role,
+                status,
+                data1,
+                ref,
+                lvl,
+                format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
+                findResult[i]._id]);
         }
         return {data: data, count: count, row: row}
     } catch(error) {
@@ -196,7 +257,7 @@ const deleteUserMissPolin = async (id) => {
     }
 }
 
-//module.exports.recoveryPass = recoveryPass;
+module.exports.recoveryPass = recoveryPass;
 module.exports.deleteUserMissPolin = deleteUserMissPolin;
 module.exports.getUserMissPolin = getUserMissPolin;
 module.exports.setUserMissPolin = setUserMissPolin;

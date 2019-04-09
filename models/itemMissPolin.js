@@ -58,7 +58,19 @@ const ItemMissPolinSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    hit: {
+        type: String,
+        required: false
+    },
+    news: {
+        type: String,
+        required: false
+    },
     cod: {
+        type: String,
+        required: false
+    },
+    prices: {
         type: String,
         required: false
     }

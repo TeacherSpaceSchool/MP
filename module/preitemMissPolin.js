@@ -2,6 +2,16 @@ const PreitemMissPolin = require('../models/preitemMissPolin');
 const format = require('date-format') ;
 const mongoose = require('mongoose');
 
+const getClient = async () => {
+    return await PreitemMissPolin.find();
+}
+
+const getItem = async (art) => {
+    return await PreitemMissPolin
+        .findOne({art: art})
+
+}
+
 const getPreitemMissPolin = async (search, sort, skip) => {
     //await PreitemMissPolin.deleteMany()
     let findResult = [], data = [], count;
@@ -52,7 +62,7 @@ const getPreitemMissPolin = async (search, sort, skip) => {
                 {art: {'$regex': search, '$options': 'i'}},
                 {line: {'$regex': search, '$options': 'i'}},
                 {material: {'$regex': search, '$options': 'i'}},
-                {price: {'$regex': search, '$options': 'i'}},
+                {prices: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
             ]
         });
@@ -63,7 +73,7 @@ const getPreitemMissPolin = async (search, sort, skip) => {
                 {art: {'$regex': search, '$options': 'i'}},
                 {line: {'$regex': search, '$options': 'i'}},
                 {material: {'$regex': search, '$options': 'i'}},
-                {price: {'$regex': search, '$options': 'i'}},
+                {prices: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
             ]
         })
@@ -78,7 +88,7 @@ const getPreitemMissPolin = async (search, sort, skip) => {
                 {art: {'$regex': search, '$options': 'i'}},
                 {line: {'$regex': search, '$options': 'i'}},
                 {material: {'$regex': search, '$options': 'i'}},
-                {price: {'$regex': search, '$options': 'i'}},
+                {prices: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
             ]
         });
@@ -88,7 +98,7 @@ const getPreitemMissPolin = async (search, sort, skip) => {
                 {art: {'$regex': search, '$options': 'i'}},
                 {line: {'$regex': search, '$options': 'i'}},
                 {material: {'$regex': search, '$options': 'i'}},
-                {price: {'$regex': search, '$options': 'i'}},
+                {prices: {'$regex': search, '$options': 'i'}},
                 {status: {'$regex': search, '$options': 'i'}},
             ]
         })
@@ -109,12 +119,9 @@ const getPreitemMissPolin = async (search, sort, skip) => {
         let material = ''
         if (findResult[i].material!=undefined)
             material = findResult[i].material
-        let weight = ''
-        if (findResult[i].weight!=undefined)
-            weight = findResult[i].weight
-        let price = ''
-        if (findResult[i].price!=undefined)
-            price = findResult[i].price
+        let prices = ''
+        if (findResult[i].prices!=undefined)
+            prices = findResult[i].prices
         let status = ''
         if (findResult[i].status!=undefined)
             status = findResult[i].status
@@ -123,11 +130,11 @@ const getPreitemMissPolin = async (search, sort, skip) => {
             art,
             line,
             material,
-            weight,
-            price,
+            prices,
             status,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
+    console.log(data)
     return {data: data, count: count, row: row}
 }
 
@@ -160,3 +167,5 @@ module.exports.deletePreitemMissPolin = deletePreitemMissPolin;
 module.exports.getPreitemMissPolin = getPreitemMissPolin;
 module.exports.setPreitemMissPolin = setPreitemMissPolin;
 module.exports.addPreitemMissPolin = addPreitemMissPolin;
+module.exports.getClient = getClient;
+module.exports.getItem = getItem;

@@ -1,6 +1,14 @@
 const AdsMissPolin = require('../models/adsMissPolin');
 const format = require('date-format') ;
 
+const getBillboard = async () => {
+    return await AdsMissPolin.find({type: 'билборд'});
+}
+
+const getBanner = async () => {
+    return await AdsMissPolin.findRandom({type: 'банер'}).limit(1);
+};
+
 const getAdsMissPolin = async (search, sort, skip) => {
     let findResult = [], data = [], count;
     const row = [
@@ -94,3 +102,5 @@ module.exports.deleteAdsMissPolin = deleteAdsMissPolin;
 module.exports.getAdsMissPolin = getAdsMissPolin;
 module.exports.setAdsMissPolin = setAdsMissPolin;
 module.exports.addAdsMissPolin = addAdsMissPolin;
+module.exports.getBillboard = getBillboard;
+module.exports.getBanner = getBanner;

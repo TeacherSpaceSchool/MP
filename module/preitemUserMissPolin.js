@@ -6,7 +6,6 @@ const getPreitemUserMissPolin = async (search, sort, skip) => {
     const row = [
         'товар',
         'клиент',
-        'статус',
         'информация',
         'создан',
         '_id'
@@ -51,13 +50,13 @@ const getPreitemUserMissPolin = async (search, sort, skip) => {
     }
     for (let i=0; i<findResult.length; i++){
         data.push([
-            findResult[i].item,
+            findResult[i].preitem,
             findResult[i].user,
-            findResult[i].status,
             findResult[i].data,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
             findResult[i]._id]);
     }
+    console.log(data)
     return {data: data, count: count, row: row}
 }
 

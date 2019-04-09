@@ -1,7 +1,7 @@
 const request = require('superagent');
 const MailingBiletiki = require('../models/mailingMissPolin');
 
-const send = async (email, name, surname, _id) => {
+const send = async (email) => {
     let mailingBiletiki = await MailingBiletiki.findOne();
     if(mailingBiletiki!==null)
         await request
@@ -13,8 +13,8 @@ const send = async (email, name, surname, _id) => {
                     'email_address': email,
                     'status': 'subscribed',
                     'merge_fields': {
-                        'FNAME': name,
-                        'LNAME': surname
+                        'FNAME': '',
+                        'LNAME': ''
                     }
                 }
                 ], 'update_existing': true})

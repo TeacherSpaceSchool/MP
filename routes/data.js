@@ -9,11 +9,16 @@ const ContactsMissPolin = require('../module/contactsMissPolin');
 const FavoriteMissPolin = require('../module/favoriteMissPolin');
 const ItemMissPolin = require('../module/itemMissPolin');
 const ModelsItemMissPolin = require('../models/itemMissPolin');
+const ColorMissPolin = require('../module/colorMissPolin');
+const CurrencyMissPolin = require('../module/currencyMissPolin');
+const StaticMissPolinModel = require('../models/staticMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
 const OrderMissPolin = require('../module/orderMissPolin');
 const UserMissPolin = require('../module/userMissPolin');
 const ReferMissPolin = require('../module/referMissPolin');
 const PreitemUserMissPolin = require('../module/preitemUserMissPolin');
+const StaticMissPolin = require('../module/staticMissPolin');
+const KategoriaMissPolin = require('../module/kategoriaMissPolin');
 const PreitemMissPolin = require('../module/preitemMissPolin');
 const readsql = require('../module/readsql');
 const myConst = require('../module/const');
@@ -21,6 +26,69 @@ const randomstring = require('randomstring');
 const app = require('../app');
 const fs = require('fs');
 const path = require('path');
+const Mailchimp = require('../module/mailchimp');
+
+router.post('/getclient', async (req, res) => {
+    let data;
+    if(req.body.data!==undefined)
+        data = JSON.parse(req.body.data)
+    if(req.body.name == 'Новинки'){
+        await res.send(await ItemMissPolin.getNew(data.search))
+    } else if(req.body.name == 'Хиты'){
+        await res.send(await ItemMissPolin.getHit(data.search))
+    } else if(req.body.name == 'Категории'){
+        await res.send(await ItemMissPolin.getKategory())
+    } else if(req.body.name == 'Подписка'){
+        Mailchimp.send(data.email)
+        await res.send('ok')
+    } else if(req.body.name == 'Товары'){
+        await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria))
+    } else if(req.body.name == 'Товар'){
+        await res.send(await ItemMissPolin.getItem(data.art))
+    } else if(req.body.name == 'Рекомендуем'){
+        await res.send(await ItemMissPolin.getRecom())
+    } else if(req.body.name == 'Скидки'){
+        await res.send(await ItemMissPolin.getDiscountItems(data.skip))
+    } else if(req.body.name == 'ВосстановлениеПароля'){
+        let data = JSON.parse(req.body.data);
+        await res.send(await UserMissPolin.recoveryPass(data.email))
+    } else if(req.body.name == 'Цвет'){
+        let data = JSON.parse(req.body.data);
+        await res.send(await ColorMissPolin.getClient(data.color))
+    } else if(req.body.name == 'Категория'){
+        await res.send(await KategoriaMissPolin.getClient())
+    } else if(req.body.name == 'Предзаказы'){
+        await res.send(await PreitemMissPolin.getClient())
+    } else if(req.body.name == 'Биллборд'){
+        await res.send(await AdsMissPolin.getBillboard())
+    } else if(req.body.name == 'Баннер'){
+        await res.send(await AdsMissPolin.getBanner())
+    } else if(req.body.name == 'Блог'){
+        await res.send(await BlogMissPolin.getClient())
+    } else if(req.body.name == 'Предзаказ'){
+        await res.send(await PreitemMissPolin.getItem(data.art))
+    } else if(req.body.name == 'Валюта'){
+        await res.send(await CurrencyMissPolin.getClient())
+    } else if(req.body.name == 'БлогПоИмени'){
+        await res.send(await BlogMissPolin.getClient1(data.title))
+    }
+});
+
+router.post('/getclientsecure', async (req, res) => {
+    if(req.body.name === 'Профиль'){
+        await passportEngine.getProfile(req, res)
+    } else if(req.body.name == 'ПроверкаПредзаказ'){
+        await passportEngine.checkPreitemUser(req, res)
+    } else if(req.body.name === 'ИзменитьПрофиль'){
+        await passportEngine.setProfile(req, res)
+    } else if(req.body.name == 'ПредзаказПользователь'){
+        await passportEngine.getPreitemUser(req, res)
+    } else if(req.body.name == 'ДобавитьПредзаказ'){
+        await passportEngine.addPreitemUser(req, res)
+    } else if(req.body.name == 'УдалитьПредзаказ'){
+        await passportEngine.delPreitemUser(req, res)
+    }
+});
 
 router.post('/get', async (req, res) => {
   await passportEngine.verifydadmin(req, res, async ()=>{
@@ -30,6 +98,8 @@ router.post('/get', async (req, res) => {
           await res.send(await BlogMissPolin.getBlogMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Каталог'){
           await res.send(await CatalogMissPolin.getCatalogMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Файлы'){
+          await res.send(await StaticMissPolin.getStaticMissPolin())
       } else if(req.body.name == 'Контакты'){
           await res.send(await ContactsMissPolin.getContactsMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Избранное'){
@@ -48,6 +118,14 @@ router.post('/get', async (req, res) => {
           await res.send(await PreitemMissPolin.getPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Рефералка'){
           await res.send(await ReferMissPolin.getReferMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Цвет'){
+          await res.send(await ColorMissPolin.getColorMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Категория'){
+          await res.send(await KategoriaMissPolin.getKategoriaMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Категории'){
+          await res.send(await ItemMissPolin.getKategoria())
+      } else if(req.body.name == 'Валюта'){
+          await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
       }
   });
 });
@@ -78,16 +156,46 @@ router.post('/delete', async (req, res) => {
         } else if(req.body.name == 'Пользователи'){
             await UserMissPolin.deleteUserMissPolin(JSON.parse(req.body.deleted))
             await res.send(await UserMissPolin.getUserMissPolin(req.body.search, req.body.sort, req.body.skip))
-        } else if(req.body.name == 'Предзаказы'){
+        } else if(req.body.name == 'Предзаказы пользователи'){
             await PreitemUserMissPolin.deletePreitemUserMissPolin(JSON.parse(req.body.deleted))
             await res.send(await PreitemUserMissPolin.getPreitemUserMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Предзаказы'){
+            await PreitemMissPolin.deletePreitemMissPolin(JSON.parse(req.body.deleted))
+            await res.send(await PreitemMissPolin.getPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Цвет'){
+            await ColorMissPolin.deleteColorMissPolin(JSON.parse(req.body.deleted))
+            await res.send(await ColorMissPolin.getColorMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Категория'){
+            await KategoriaMissPolin.deleteKategoriaMissPolin(JSON.parse(req.body.deleted))
+            await res.send(await KategoriaMissPolin.getKategoriaMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Валюта'){
+            await CurrencyMissPolin.deleteCurrencyMissPolin(JSON.parse(req.body.deleted))
+            await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
         }
     });
 });
 
 router.post('/add', async (req, res) => {
-    console.log(req.body.name)
     await passportEngine.verifydadmin(req, res, async ()=>{
+        if(req.body.name == 'Файлы') {
+            let staticMissPolinModel = await StaticMissPolinModel.findOne();
+            fs.unlink(staticMissPolinModel.catalog, ()=>{console.log('successfully deleted');})
+            let filename = randomstring.generate(7) + '.pdf';
+            let filepath = path.join(app.dirname, 'public', 'catalog', filename);
+            let fstream = fs.createWriteStream(filepath);
+            let stream = await req.body['file0'].pipe(fstream);
+            stream.on('finish', async () => {
+                let data = {
+                    catalog: filepath
+                }
+                if(req.body.id==undefined)
+                    await StaticMissPolin.addStaticMissPolin(data)
+                else
+                    await StaticMissPolin.setStaticMissPolin(data, req.body.id)
+                await res.send(await StaticMissPolin.getStaticMissPolin())
+            })
+        }
+        else
         if(req.body.name == 'Интеграция') {
             let filename = randomstring.generate(7) + req.body['fileName' + 0];
             let filepath = path.join(app.dirname, 'integration', filename);
@@ -104,8 +212,14 @@ router.post('/add', async (req, res) => {
                     let Price = readsql.getPrice(queries[11], TypPrice)
                     let Models = readsql.getModels(queries[2], Price, Count, Kategoria, Material)
                     for(let i = 0; i<Models.length; i++) {
-                        if(Models[i].count.length>0){
-                            if(await ModelsItemMissPolin.count({cod: Models[i].cod})===0){
+                        let statusq = ''
+                        if(Models[i].count.length>0||Models[i].price.length>0)
+                            statusq = 'нет в наличие'
+                        else
+                            statusq = 'в наличие'
+                        if(await ModelsItemMissPolin.count({cod: Models[i].cod})===0){
+                            if(Models[i].count.length>0&&Models[i].price.length>0){
+                                console.log(Models[i].price)
                                 let _object = new ModelsItemMissPolin({
                                     art: Models[i].name,
                                     price: JSON.stringify(Models[i].price),
@@ -114,32 +228,27 @@ router.post('/add', async (req, res) => {
                                     kategoria: Models[i].kategoria,
                                     cod: Models[i].cod,
                                     weight: Models[i].weight,
-                                    status: 'в наличие',
-                                    material: Models[i].material
+                                    status: statusq,
+                                    material: Models[i].material,
+                                    hit: 'отключено',
+                                    prices: Models[i].price[0]!==undefined?Models[i].price[0].price:'0',
+                                    news: 'отключено'
                                 });
                                 await ModelsItemMissPolin.create(_object);
-                            } else {
-                                await ModelsItemMissPolin.findOneAndUpdate({cod: Models[i].cod}, {$set: {
-                                    art: Models[i].name,
-                                    price: JSON.stringify(Models[i].price),
-                                    line: Models[i].line,
-                                    count: JSON.stringify(Models[i].count),
-                                    kategoria: Models[i].kategoria,
-                                    cod: Models[i].cod,
-                                    status: 'в наличие',
-                                    weight: Models[i].weight,
-                                    material: Models[i].material
-                                }});
                             }
-                        } else if(await ModelsItemMissPolin.count({cod: Models[i].cod})!==0) {
+                        }
+                        else {
+                            if(await ModelsItemMissPolin.findOne({cod: Models[i].cod}).status=='отключен')
+                                statusq = 'отключен'
                             await ModelsItemMissPolin.findOneAndUpdate({cod: Models[i].cod}, {$set: {
                                 art: Models[i].name,
+                                prices: Models[i].price[0]!==undefined?Models[i].price[0].price:'0',
                                 price: JSON.stringify(Models[i].price),
                                 line: Models[i].line,
                                 count: JSON.stringify(Models[i].count),
                                 kategoria: Models[i].kategoria,
                                 cod: Models[i].cod,
-                                status: 'нет в наличие',
+                                status: statusq,
                                 weight: Models[i].weight,
                                 material: Models[i].material
                             }});
@@ -148,8 +257,9 @@ router.post('/add', async (req, res) => {
                     await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
                 });
             })
-        } else
-            {
+        }
+        else
+        {
             let data, myNew = JSON.parse(req.body.new), photos = [], photosThumbnail = []
             if(req.body.oldFile!=undefined) {
                 photos = req.body.oldFile.split('\n');
@@ -200,21 +310,19 @@ router.post('/add', async (req, res) => {
                             }
                             else if(req.body.name == 'Предзаказы'){
                                 data = {
-                                    price: myNew.price,
+                                    prices: myNew.prices,
                                     line: myNew.line,
                                     material: myNew.material,
                                     status: myNew.status,
                                     image: photos,
                                     imageThumbnail: photosThumbnail,
-                                    name: myNew.name,
-                                    url: myNew.url,
-                                    type: myNew.type
+                                    art: myNew.art
                                 }
                                 if(req.body.id==undefined)
                                     await PreitemMissPolin.addPreitemMissPolin(data)
                                 else
                                     await PreitemMissPolin.setPreitemMissPolin(data, req.body.id)
-                                await res.send(await PreitemMissPolin.setPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
+                                await res.send(await PreitemMissPolin.getPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
                             }
                             else if(req.body.name == 'Предзаказы пользователи'){
                                 data = {
@@ -247,6 +355,29 @@ router.post('/add', async (req, res) => {
                                     await CatalogMissPolin.setCatalogMissPolin(data, req.body.id)
                                 await res.send(await CatalogMissPolin.getCatalogMissPolin(req.body.search, req.body.sort, req.body.skip))
                             }
+                            else if(req.body.name == 'Категория'){
+                                data = {
+                                    image: photos,
+                                    imageThumbnail: photosThumbnail,
+                                    title: myNew.title,
+                                }
+                                if(req.body.id==undefined)
+                                    await KategoriaMissPolin.addKategoriaMissPolin(data)
+                                else
+                                    await KategoriaMissPolin.setKategoriaMissPolin(data, req.body.id)
+                                await res.send(await KategoriaMissPolin.getKategoriaMissPolin(req.body.search, req.body.sort, req.body.skip))
+                            }
+                            else if(req.body.name == 'Цвет'){
+                                data = {
+                                    title: myNew.title,
+                                    RGB: myNew.RGB,
+                                }
+                                if(req.body.id==undefined)
+                                    await ColorMissPolin.addColorMissPolin(data)
+                                else
+                                    await ColorMissPolin.setColorMissPolin(data, req.body.id)
+                                await res.send(await ColorMissPolin.getColorMissPolin(req.body.search, req.body.sort, req.body.skip))
+                            }
                             else if(req.body.name == 'Контакты'){
                                 data = {
                                     data: myNew.data,
@@ -266,7 +397,9 @@ router.post('/add', async (req, res) => {
                                     status: myNew.status,
                                     level: myNew.level,
                                     keyword: myNew.keyword,
-                                    discount: myNew.discount
+                                    discount: myNew.discount,
+                                    hit: myNew.hit,
+                                    news: myNew.news
                                 }
                                 console.log(data)
                                 if(req.body.id!=undefined)
@@ -312,13 +445,13 @@ router.post('/add', async (req, res) => {
             }
             else {
                 if(req.body.name == 'Реклама'){
-                        data = {
-                            image: photos,
-                            imageThumbnail: photosThumbnail,
-                            name: myNew.name,
-                            url: myNew.url,
-                            type: myNew.type
-                        }
+                    data = {
+                        image: photos,
+                        imageThumbnail: photosThumbnail,
+                        name: myNew.name,
+                        url: myNew.url,
+                        type: myNew.type
+                    }
                     if(req.body.id==undefined)
                         await AdsMissPolin.addAdsMissPolin(data)
                     else
@@ -327,21 +460,19 @@ router.post('/add', async (req, res) => {
                 }
                 else if(req.body.name == 'Предзаказы'){
                     data = {
-                        price: myNew.price,
+                        prices: myNew.prices,
                         line: myNew.line,
                         material: myNew.material,
                         status: myNew.status,
                         image: photos,
                         imageThumbnail: photosThumbnail,
-                        name: myNew.name,
-                        url: myNew.url,
-                        type: myNew.type
+                        art: myNew.art
                     }
                     if(req.body.id==undefined)
                         await PreitemMissPolin.addPreitemMissPolin(data)
                     else
                         await PreitemMissPolin.setPreitemMissPolin(data, req.body.id)
-                    await res.send(await PreitemMissPolin.setPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
+                    await res.send(await PreitemMissPolin.getPreitemMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
                 else if(req.body.name == 'Предзаказы пользователи'){
                     data = {
@@ -392,9 +523,10 @@ router.post('/add', async (req, res) => {
                         status: myNew.status,
                         level: myNew.level,
                         keyword: myNew.keyword,
-                        discount: myNew.discount
+                        discount: myNew.discount,
+                        hit: myNew.hit,
+                        news: myNew.news
                     }
-                    console.log(data)
                     if(req.body.id!=undefined)
                         await ItemMissPolin.setItemMissPolin(data, req.body.id)
                     await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
@@ -423,15 +555,26 @@ router.post('/add', async (req, res) => {
                     await res.send(await OrderMissPolin.getOrderMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
                 else if(req.body.name == 'Пользователи'){
-                data = {
-                    role: myNew.role,
-                    status: myNew.status,
-                    data: myNew.data,
-                };
-                if(req.body.id!=undefined)
-                    await UserMissPolin.setUserMissPolin(data, req.body.id)
-                await res.send(await UserMissPolin.getUserMissPolin(req.body.search, req.body.sort, req.body.skip))
-            }
+                    data = {
+                        role: myNew.role,
+                        status: myNew.status,
+                        data: myNew.data,
+                    };
+                    if(req.body.id!=undefined)
+                        await UserMissPolin.setUserMissPolin(data, req.body.id)
+                    await res.send(await UserMissPolin.getUserMissPolin(req.body.search, req.body.sort, req.body.skip))
+                }
+                else if(req.body.name == 'Валюта'){
+                    data = {
+                        title: myNew.title,
+                        value: myNew.value,
+                    }
+                    if(req.body.id==undefined)
+                        await CurrencyMissPolin.addCurrencyMissPolin(data)
+                    else
+                        await CurrencyMissPolin.setCurrencyMissPolin(data, req.body.id)
+                    await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
+                }
             }
         }
     });

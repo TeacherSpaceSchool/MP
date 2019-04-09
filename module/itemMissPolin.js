@@ -2,6 +2,75 @@ const ItemMissPolin = require('../models/itemMissPolin');
 const format = require('date-format') ;
 const mongoose = require('mongoose');
 
+const getRecom = async () => {
+    return await ItemMissPolin.findRandom({status: 'в наличие'}).limit(4);
+}
+
+const getNew = async (search) => {
+    console.log(await ItemMissPolin.findRandom({status: 'в наличие', news: 'включено'}).limit(4))
+    return await ItemMissPolin.findRandom({status: 'в наличие', kategoria: {'$regex': search, '$options': 'i'}, news: 'включено'}).limit(4);
+}
+
+const getHit = async (search) => {
+    return await ItemMissPolin.findRandom({status: 'в наличие', $or: [{kategoria: {'$regex': search, '$options': 'i'}}, {podkategoria: {'$regex': search, '$options': 'i'}}], hit: 'включено'}).limit(4);
+}
+
+const getKategoria = async () => {
+    console.log(await ItemMissPolin.find())
+    return await ItemMissPolin.find().distinct('kategoria')
+
+}
+
+const getItem = async (art) => {
+    console.log(await ItemMissPolin
+        .findOne({art: art}))
+   return await ItemMissPolin
+            .findOne({art: art})
+
+}
+
+const getItems = async (search, sort, skip, kategoria) => {
+    if(sort===''){
+        return await ItemMissPolin
+            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .sort('-updatedAt')
+            .skip(parseInt(skip))
+            .limit(9)
+    } else if(sort==='-price'){
+        return await ItemMissPolin
+            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .sort('-prices')
+            .skip(parseInt(skip))
+            .limit(9)
+    } else if(sort==='price'){
+        return await ItemMissPolin
+            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .sort('prices')
+            .skip(parseInt(skip))
+            .limit(9)
+    } else if(sort==='-date'){
+        return await ItemMissPolin
+            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .sort('-updatedAt')
+            .skip(parseInt(skip))
+            .limit(9)
+    } else if(sort==='date'){
+        return await ItemMissPolin
+            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .sort('updatedAt')
+            .skip(parseInt(skip))
+            .limit(9)
+    }
+}
+
+const getDiscountItems = async (skip) => {
+    return await ItemMissPolin
+        .find({status: 'в наличие', discount: {$ne: ''}})
+        .sort('-updatedAt')
+        .skip(parseInt(skip))
+        .limit(9)
+}
+
 const getItemMissPolin = async (search, sort, skip) => {
     //await ItemMissPolin.deleteMany()
     let findResult = [], data = [], count;
@@ -20,6 +89,8 @@ const getItemMissPolin = async (search, sort, skip) => {
         'ключевые слова',
         'скидка',
         'код',
+        'новинка',
+        'хит',
         'создан',
         '_id'
     ];
@@ -122,7 +193,6 @@ const getItemMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10)
-            .select('descriptionRu descriptionKg updatedAt _id');
     } else {
         count = await ItemMissPolin.count({
             $or: [
@@ -207,6 +277,12 @@ const getItemMissPolin = async (search, sort, skip) => {
         let cod = ''
         if (findResult[i].cod!=undefined)
             cod = findResult[i].cod
+        let hit = ''
+        if (findResult[i].hit!=undefined)
+            hit = findResult[i].hit
+        let news = ''
+        if (findResult[i].news!=undefined)
+            news = findResult[i].news
         data.push([
             image,
             art,
@@ -222,6 +298,8 @@ const getItemMissPolin = async (search, sort, skip) => {
             keyword,
             discount,
             cod,
+            news,
+            hit,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
@@ -256,3 +334,10 @@ module.exports.deleteItemMissPolin = deleteItemMissPolin;
 module.exports.getItemMissPolin = getItemMissPolin;
 module.exports.setItemMissPolin = setItemMissPolin;
 module.exports.addItemMissPolin = addItemMissPolin;
+module.exports.getHit = getHit;
+module.exports.getNew = getNew;
+module.exports.getItems = getItems;
+module.exports.getItem = getItem;
+module.exports.getRecom = getRecom;
+module.exports.getDiscountItems = getDiscountItems;
+module.exports.getKategoria = getKategoria;

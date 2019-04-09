@@ -14,4 +14,8 @@ router.post('/signin', async (req, res, next) => {
     passportEngine.signinuser(req, res)
 });
 
+router.post('/signup', async (req, res, next) => {
+    passportEngine.signupuser(req, res)
+});
+
 module.exports = router;
