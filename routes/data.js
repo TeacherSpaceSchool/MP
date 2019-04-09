@@ -217,6 +217,7 @@ router.post('/add', async (req, res) => {
                             statusq = 'нет в наличие'
                         else
                             statusq = 'в наличие'
+                        console.log(Models[i].count.length>0||Models[i].price.length>0, Models[i].count.length>0, Models[i].price.length>0)
                         if(await ModelsItemMissPolin.count({cod: Models[i].cod})===0){
                             if(Models[i].count.length>0&&Models[i].price.length>0){
                                 console.log(Models[i].price)
