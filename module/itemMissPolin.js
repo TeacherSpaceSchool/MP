@@ -3,27 +3,27 @@ const format = require('date-format') ;
 const mongoose = require('mongoose');
 
 const getRecom = async () => {
-    return await ItemMissPolin.findRandom({status: 'в наличие'}).limit(4);
+    return await ItemMissPolin.findRandom({image: {$ne: undefined}, status: 'в наличие'}).limit(4);
 }
 
 const getNew = async (search) => {
-    console.log(await ItemMissPolin.findRandom({status: 'в наличие', news: 'включено'}).limit(4))
-    return await ItemMissPolin.findRandom({status: 'в наличие', kategoria: {'$regex': search, '$options': 'i'}, news: 'включено'}).limit(4);
+    return await ItemMissPolin.findRandom({status: 'в наличие', kategoria: {'$regex': search, '$options': 'i'}, news: 'включено', image: {$ne: undefined}}).limit(4);
 }
 
 const getHit = async (search) => {
-    return await ItemMissPolin.findRandom({status: 'в наличие', $or: [{kategoria: {'$regex': search, '$options': 'i'}}, {podkategoria: {'$regex': search, '$options': 'i'}}], hit: 'включено'}).limit(4);
+    return await ItemMissPolin.findRandom({status: 'в наличие', image: {$ne: undefined}, $or: [{kategoria: {'$regex': search, '$options': 'i'}}, {podkategoria: {'$regex': search, '$options': 'i'}}], hit: 'включено'}).limit(4);
 }
 
 const getKategoria = async () => {
-    console.log(await ItemMissPolin.find())
-    return await ItemMissPolin.find().distinct('kategoria')
+    let a = await ItemMissPolin.find().distinct('kategoria')
+    for(let i=0; i<a.length; i++){
+        a[i] = a[i].toLowerCase()
+    }
+    return a
 
 }
 
 const getItem = async (art) => {
-    console.log(await ItemMissPolin
-        .findOne({art: art}))
    return await ItemMissPolin
             .findOne({art: art})
 
@@ -32,31 +32,31 @@ const getItem = async (art) => {
 const getItems = async (search, sort, skip, kategoria) => {
     if(sort===''){
         return await ItemMissPolin
-            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('-updatedAt')
             .skip(parseInt(skip))
             .limit(9)
     } else if(sort==='-price'){
         return await ItemMissPolin
-            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('-prices')
             .skip(parseInt(skip))
             .limit(9)
     } else if(sort==='price'){
         return await ItemMissPolin
-            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('prices')
             .skip(parseInt(skip))
             .limit(9)
     } else if(sort==='-date'){
         return await ItemMissPolin
-            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('-updatedAt')
             .skip(parseInt(skip))
             .limit(9)
     } else if(sort==='date'){
         return await ItemMissPolin
-            .find({status: 'в наличие', $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
+            .find({status: 'в наличие', image: {$ne: ''}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('updatedAt')
             .skip(parseInt(skip))
             .limit(9)
@@ -65,7 +65,7 @@ const getItems = async (search, sort, skip, kategoria) => {
 
 const getDiscountItems = async (skip) => {
     return await ItemMissPolin
-        .find({status: 'в наличие', discount: {$ne: ''}})
+        .find({status: 'в наличие', discount: {$ne: ''}, image: {$ne: undefined}})
         .sort('-updatedAt')
         .skip(parseInt(skip))
         .limit(9)

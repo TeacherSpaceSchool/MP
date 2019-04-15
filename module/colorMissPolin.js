@@ -1,8 +1,13 @@
 const ColorMissPolin = require('../models/colorMissPolin');
 const format = require('date-format') ;
 
-const getClient = async (search) => {
-    return await ColorMissPolin.findOne({title: search});
+const getClient = async () => {
+    let data = await ColorMissPolin.find();
+    let res = {}
+    for(let i = 0; i<data.length; i++){
+        res[data[i].title] = data[i].RGB;
+    }
+    return res
 }
 
 const getColorMissPolin = async (search, sort, skip) => {

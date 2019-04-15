@@ -6,10 +6,14 @@ const jwtsecret = '@615141ViDiK141516@';
 const UserMissPolin = require('../models/userMissPolin');
 const jwt = require('jsonwebtoken');
 const Mailchimp = require('../module/mailchimp');
-var geoip = require('geoip-lite');
+const geoip = require('geoip-lite');
 const PreitemUserMissPolin = require('../models/preitemUserMissPolin');
-const PreitemMissPolin = require('../models/preitemMissPolin');
 const OrderMissPolin = require('../models/orderMissPolin');
+const CartMissPolin = require('../models/cartMissPolin');
+const FavoriteMissPolin = require('../models/favoriteMissPolin');
+const ItemMissPolin = require('../models/itemMissPolin');
+const PreitemMissPolin = require('../models/preitemMissPolin');
+const AdressMissPolin = require('../models/adressMissPolin');
 
 let start = () => {
 //настройка паспорта
@@ -24,7 +28,6 @@ let start = () => {
                 if (err) {
                     return done(err);
                 }
-                console.log(user)
                 if (!user || !user.checkPassword(password) || user.status!='active') {
                     return done(null, false, {message: 'Нет такого пользователя или пароль неверен.'});
                 }
@@ -72,7 +75,6 @@ const verifydeuser = async (req, res, func) => {
 const signinuser = (req, res) => {
     passport.authenticate('local', async function (err, user) {
         try{
-            console.log(user)
             if (user == false) {
                 res.status(401);
                 res.end('Login failed',401)
@@ -129,7 +131,6 @@ const verifydadmin = async (req, res, func) => {
         }
     } )(req, res)
 }
-
 
 const signupuser = async (req, res) => {
     try{
@@ -210,6 +211,26 @@ const getProfile = async (req, res) => {
     } )(req, res)
 }
 
+const checkFavorite = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                res.status(200);
+                res.end(JSON.stringify(await FavoriteMissPolin.findOne({item: data.item, user: user._id})));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
 const checkPreitemUser = async (req, res) => {
     await passport.authenticate('jwt', async function (err, user) {
         try{
@@ -258,6 +279,108 @@ const addPreitemUser = async (req, res) => {
     } )(req, res)
 }
 
+const addFavoriteUser = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let geo = geoip.lookup(req.ip);
+                if(geo===null)geo={country: '*', city: '*'}
+                let data = JSON.parse(req.body.data);
+                res.status(200);
+                let _object = new FavoriteMissPolin({
+                    item: data.item,
+                    user: user._id,
+                    data: geo.country+' \n'+geo.city
+                });
+                await FavoriteMissPolin.create(_object);
+                res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const addCart = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let geo = geoip.lookup(req.ip);
+                if(geo===null)geo={country: '*', city: '*'}
+                let data = JSON.parse(req.body.data);
+                res.status(200);
+                let _object = new CartMissPolin({
+                    item: data.item,
+                    user: user._id,
+                    data: geo.country+' \n'+geo.city,
+                    priceone: data.priceone,
+                    pricefull: data.pricefull,
+                    color: data.color,
+                    count: data.count
+                });
+                await CartMissPolin.create(_object);
+                res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const delCart = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                await CartMissPolin.deleteMany({_id: data.id, user: user._id})
+                res.status(200);
+                res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const delFavorite = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                await FavoriteMissPolin.deleteMany({item: data.item, user: user._id})
+                res.status(200);
+                res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
 const delPreitemUser = async (req, res) => {
     await passport.authenticate('jwt', async function (err, user) {
         try{
@@ -266,6 +389,30 @@ const delPreitemUser = async (req, res) => {
                 await PreitemUserMissPolin.deleteMany({preitem: data.preitem, user: user._id})
                 res.status(200);
                 res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const getFavorite = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let x = await FavoriteMissPolin.find({user: user._id})
+                let z = []
+                for(let i=0; i<x.length; i++){
+                    z[i]=await ItemMissPolin.findOne({_id: x[i].item})
+                }
+                res.status(200);
+                res.end(JSON.stringify(z));
             } else {
                 console.error('No such user')
                 res.status(401);
@@ -322,12 +469,18 @@ const getBasket = async (req, res) => {
     } )(req, res)
 }
 
-const getOrders = async (req, res) => {
+const checkCart = async (req, res) => {
     await passport.authenticate('jwt', async function (err, user) {
         try{
             if (user&&user.status==='active') {
                 res.status(200);
-                res.end(JSON.stringify(await OrderMissPolin.find({status: {$ne: 'корзина'},user: user._id})));
+                let x = await CartMissPolin.find({user: user._id})
+                let z = []
+                for(let i=0; i<x.length; i++){
+                    z[i] = {item: await ItemMissPolin.findOne({_id: x[i].item}), data: x[i]}
+                }
+                res.status(200);
+                res.end(JSON.stringify(z));
             } else {
                 console.error('No such user')
                 res.status(401);
@@ -340,6 +493,145 @@ const getOrders = async (req, res) => {
         }
     } )(req, res)
 }
+
+const checkAddress = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let x = await AdressMissPolin.findOne({user: user._id})
+                if (x==null)
+                    x = { email: '', user: '', name: '', phone: '', city: '', street: '', room: '', index: ''}
+                res.status(200);
+                res.end(JSON.stringify(x));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const setAddress = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                let x = await AdressMissPolin.findOne({user: user._id})
+                if (x == null) {
+                    data.user = user._id
+                    let _object = new AdressMissPolin(data);
+                    await AdressMissPolin.create(_object);
+                } else {
+                    await AdressMissPolin.findOneAndUpdate({user: user._id}, data)
+                }
+                res.status(200);
+                res.end(JSON.stringify('ok'));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const generateOrder = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let geo = geoip.lookup(req.ip);
+                if(geo===null)geo={country: '*', city: '*'}
+                let data = JSON.parse(req.body.data);
+                data.user = user._id
+                data.status = 'принят'
+                data.data = geo.country+' \n'+geo.city
+                let _object = new OrderMissPolin(data);
+                await OrderMissPolin.create(_object);
+                await CartMissPolin.deleteMany({user: user._id});
+                res.status(200);
+                res.end(JSON.stringify('ok'));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const getOrders = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                res.status(200);
+                res.end(JSON.stringify(await OrderMissPolin.find({user: user._id})));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const getOrder = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                res.status(200);
+                res.end(JSON.stringify(await OrderMissPolin.findOne({user: user._id, _id: data.id})));
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
+const cancelOrder = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                let data = JSON.parse(req.body.data);
+                await OrderMissPolin.findOneAndUpdate({user: user._id, _id: data.id}, {status: 'отмена'})
+                res.status(200);
+                res.end('ok');
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
 
 module.exports.start = start;
 module.exports.verifydeuser = verifydeuser;
@@ -355,3 +647,15 @@ module.exports.getOrders = getOrders;
 module.exports.checkPreitemUser = checkPreitemUser;
 module.exports.addPreitemUser = addPreitemUser;
 module.exports.delPreitemUser = delPreitemUser;
+module.exports.addFavoriteUser = addFavoriteUser;
+module.exports.checkFavorite = checkFavorite;
+module.exports.delFavorite = delFavorite;
+module.exports.getFavorite = getFavorite;
+module.exports.addCart = addCart;
+module.exports.checkCart = checkCart;
+module.exports.delCart = delCart;
+module.exports.checkAddress = checkAddress;
+module.exports.setAddress = setAddress;
+module.exports.generateOrder = generateOrder;
+module.exports.getOrder = getOrder;
+module.exports.cancelOrder = cancelOrder;

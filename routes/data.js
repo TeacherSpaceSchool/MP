@@ -53,8 +53,7 @@ router.post('/getclient', async (req, res) => {
         let data = JSON.parse(req.body.data);
         await res.send(await UserMissPolin.recoveryPass(data.email))
     } else if(req.body.name == 'Цвет'){
-        let data = JSON.parse(req.body.data);
-        await res.send(await ColorMissPolin.getClient(data.color))
+        await res.send(await ColorMissPolin.getClient())
     } else if(req.body.name == 'Категория'){
         await res.send(await KategoriaMissPolin.getClient())
     } else if(req.body.name == 'Предзаказы'){
@@ -87,6 +86,32 @@ router.post('/getclientsecure', async (req, res) => {
         await passportEngine.addPreitemUser(req, res)
     } else if(req.body.name == 'УдалитьПредзаказ'){
         await passportEngine.delPreitemUser(req, res)
+    } else if(req.body.name == 'ДобавитьИзбранное'){
+        await passportEngine.addFavoriteUser(req, res)
+    } else if(req.body.name == 'УдалитьИзбранное'){
+        await passportEngine.delFavorite(req, res)
+    } else if(req.body.name == 'ПроверкаИзбранное'){
+        await passportEngine.checkFavorite(req, res)
+    } else if(req.body.name == 'ИзбранноеПользователь'){
+        await passportEngine.getFavorite(req, res)
+    } else if(req.body.name == 'ДобавитьКорзина'){
+        await passportEngine.addCart(req, res)
+    } else if(req.body.name == 'ПроверкаКорзина'){
+        await passportEngine.checkCart(req, res)
+    } else if(req.body.name == 'УдалитьКорзина'){
+        await passportEngine.delCart(req, res)
+    } else if(req.body.name == 'ПроверитьАдрес'){
+        await passportEngine.checkAddress(req, res)
+    } else if(req.body.name == 'ЗадатьАдрес'){
+        await passportEngine.setAddress(req, res)
+    } else if(req.body.name == 'СоздатьЗаказ'){
+        await passportEngine.generateOrder(req, res)
+    } else if(req.body.name == 'ПолучитьЗаказы'){
+        await passportEngine.getOrders(req, res)
+    } else if(req.body.name == 'ПолучитьЗаказ'){
+        await passportEngine.getOrder(req, res)
+    } else if(req.body.name == 'ОтменитьЗаказ'){
+        await passportEngine.cancelOrder(req, res)
     }
 });
 
@@ -213,11 +238,10 @@ router.post('/add', async (req, res) => {
                     let Models = readsql.getModels(queries[2], Price, Count, Kategoria, Material)
                     for(let i = 0; i<Models.length; i++) {
                         let statusq = ''
-                        if(Models[i].count.length>0||Models[i].price.length>0)
+                        if(Models[i].count.length<0||Models[i].price.length<0)
                             statusq = 'нет в наличие'
                         else
                             statusq = 'в наличие'
-                        console.log(Models[i].count.length>0||Models[i].price.length>0, Models[i].count.length>0, Models[i].price.length>0)
                         if(await ModelsItemMissPolin.count({cod: Models[i].cod})===0){
                             if(Models[i].count.length>0&&Models[i].price.length>0){
                                 console.log(Models[i].price)

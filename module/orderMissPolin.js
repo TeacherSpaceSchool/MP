@@ -1,14 +1,16 @@
 const OrderMissPolin = require('../models/orderMissPolin');
+const ItemMissPolin = require('../models/itemMissPolin');
+const UserMissPolin = require('../models/userMissPolin');
 const format = require('date-format') ;
 
 const getOrderMissPolin = async (search, sort, skip) => {
+    //await OrderMissPolin.deleteMany()
     let findResult = [], data = [], count;
     const row = [
         'товар',
         'клиент',
         'сумма',
         'категория',
-        'тип оплаты',
         'адрес',
         'статус',
         'информация',
@@ -33,10 +35,6 @@ const getOrderMissPolin = async (search, sort, skip) => {
         sort = '-kategory';
     else if(sort[0]=='категория'&&sort[1]=='ascending')
         sort = 'kategory';
-    else if(sort[0]=='тип оплаты'&&sort[1]=='descending')
-        sort = '-typePay';
-    else if(sort[0]=='тип оплаты'&&sort[1]=='ascending')
-        sort = 'typePay';
     else if(sort[0]=='адрес'&&sort[1]=='descending')
         sort = '-adress';
     else if(sort[0]=='адрес'&&sort[1]=='ascending')
@@ -90,13 +88,24 @@ const getOrderMissPolin = async (search, sort, skip) => {
             .limit(10);
     }
     for (let i=0; i<findResult.length; i++){
+        let adress = ''
+        if(findResult[i].adress!==undefined) {
+            adress = JSON.parse(findResult[i].adress)
+            adress = 'email: ' + adress['email'] + ' \nимя: ' + adress['name'] + ' \nтелефон: ' + adress['phone'] + ' \nгород: ' + adress['city'] + ' \nулица: ' + adress['street'] + ' \nквартира: ' + adress['room'] + ' \nиндекс: ' + adress['index']
+        }
+        let items = '', itemsParse = JSON.parse(findResult[i].items)
+        for (let i1=0; i1<itemsParse.length; i1++) {
+            items += ' ART: '+itemsParse[i1].item.art+' '+
+                'цвет: '+itemsParse[i1].data.color+' '+
+                'сумма: '+itemsParse[i1].data.pricefull+' '+
+                'кол: '+itemsParse[i1].data.count
+        }
         data.push([
-            findResult[i].items,
+            items,
             findResult[i].user,
             findResult[i].sum,
             findResult[i].kategory,
-            findResult[i].typePay,
-            findResult[i].adress,
+            adress,
             findResult[i].status,
             findResult[i].data,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);

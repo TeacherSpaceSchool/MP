@@ -9,6 +9,10 @@ const FavoriteMissPolinSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    data: {
+        type: String,
+        required: false
+    },
 }, {
     timestamps: true
 });

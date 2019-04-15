@@ -3,7 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/landing/index.html" afterPath="$PROJECT_DIR$/landing/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/static/js/10.8a2025be.chunk.js.map" afterPath="$PROJECT_DIR$/admin/static/js/10.8a2025be.chunk.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/static/js/3.23fdeafc.chunk.js.map" afterPath="$PROJECT_DIR$/admin/static/js/3.23fdeafc.chunk.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/static/js/7.ffdeb398.chunk.js.map" afterPath="$PROJECT_DIR$/admin/static/js/7.ffdeb398.chunk.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/static/js/9.d2199197.chunk.js.map" afterPath="$PROJECT_DIR$/admin/static/js/9.d2199197.chunk.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/favoriteMissPolin.js" afterPath="$PROJECT_DIR$/models/favoriteMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/orderMissPolin.js" afterPath="$PROJECT_DIR$/models/orderMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/colorMissPolin.js" afterPath="$PROJECT_DIR$/module/colorMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/itemMissPolin.js" afterPath="$PROJECT_DIR$/module/itemMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/orderMissPolin.js" afterPath="$PROJECT_DIR$/module/orderMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/passport.js" afterPath="$PROJECT_DIR$/module/passport.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/data.js" afterPath="$PROJECT_DIR$/routes/data.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,90 +31,125 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tildacopy.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tildacopy.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tildacopy_black.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tildacopy_black.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tildafavicon.ico" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tildafavicon.ico">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6662-3463-4937-b431-396239366563__logo0000.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6662-3463-4937-b431-396239366563__logo0000.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6639-3366-4631-b239-646338376234__image4.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6639-3366-4631-b239-646338376234__image4.svg">
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6562-3632-4637-a133-636337333639__shipped.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6562-3632-4637-a133-636337333639__shipped.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6536-3966-4862-a538-373034306532__verified.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6536-3966-4862-a538-373034306532__verified.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6365-6235-4330-b261-333761316563__11.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6365-6235-4330-b261-333761316563__11.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tild6362-3564-4137-a562-393364643765__xdcrrcoagdadqe81pgug.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/landing/images/tild6362-3564-4137-a562-393364643765__xdcrrcoagdadqe81pgug.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/landing/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            <state relative-caret-position="-289">
+              <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="45" />
               <folding>
-                <marker date="1554835387664" expanded="true" signature="11060:11211" ph="..." />
-                <marker date="1554835387664" expanded="true" signature="11080:11195" ph="{...}" />
+                <element signature="e#12738#16452#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="56" column="185" lean-forward="false" selection-start-line="56" selection-start-column="185" selection-end-line="56" selection-end-column="185" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/orderMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/passport.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3859">
+              <caret line="660" column="26" lean-forward="false" selection-start-line="660" selection-start-column="26" selection-end-line="660" selection-end-column="26" />
+              <folding>
+                <element signature="e#878#2091#0" expanded="false" />
+                <element signature="e#2140#2571#0" expanded="false" />
+                <element signature="e#2606#3301#0" expanded="false" />
+                <element signature="e#3349#3813#0" expanded="false" />
+                <element signature="e#3862#4363#0" expanded="false" />
+                <element signature="e#4404#5387#0" expanded="false" />
+                <element signature="e#5428#6276#0" expanded="false" />
+                <element signature="e#6317#6863#0" expanded="false" />
+                <element signature="e#6907#7529#0" expanded="false" />
+                <element signature="e#7576#8207#0" expanded="false" />
+                <element signature="e#8252#9173#0" expanded="false" />
+                <element signature="e#9219#10128#0" expanded="false" />
+                <element signature="e#11275#11898#0" expanded="false" />
+                <element signature="e#11940#12570#0" expanded="false" />
+                <element signature="e#12615#13254#0" expanded="false" />
+                <element signature="e#14078#14824#0" expanded="false" />
+                <element signature="e#14864#15427#0" expanded="false" />
+                <element signature="e#15467#16255#0" expanded="false" />
+                <element signature="e#16298#17013#0" expanded="false" />
+                <element signature="e#17054#18006#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orderMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1700">
+              <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="favoriteMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="itemMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kategoriaMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/kategoriaMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kategoriaMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/kategoriaMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/userMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,16 +165,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>error.jade</find>
-      <find>|</find>
-      <find>главная</find>
-      <find>92047213</find>
-      <find>t675</find>
-      <find>t396</find>
-      <find>id=&quot;rec92047213&quot;</find>
-      <find>каталог</find>
-      <find>id=&quot;rec92149011&quot;</find>
-      <find>id=&quot;rec92158513&quot;</find>
       <find>Авторизация</find>
       <find>id=&quot;rec92162158&quot;</find>
       <find>script</find>
@@ -150,10 +185,18 @@
       <find>Color</find>
       <find>цвет</find>
       <find>Черный</find>
+      <find>checkF</find>
+      <find>getF</find>
+      <find>console.log</find>
+      <find>Cart</find>
+      <find>add</find>
+      <find>addr</find>
+      <find>getOrder</find>
+      <find>image: {$ne</find>
+      <find>findResult[i].adress</find>
+      <find>for</find>
     </findStrings>
     <replaceStrings>
-      <replace>unique: false</replace>
-      <replace>Тип произведения</replace>
       <replace>тип</replace>
       <replace>(</replace>
       <replace>Contact</replace>
@@ -182,6 +225,8 @@
       <replace />
       <replace>prices</replace>
       <replace>Currency</replace>
+      <replace>Adress</replace>
+      <replace>adress</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -190,11 +235,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/models/referMissPolin.js" />
-        <option value="$PROJECT_DIR$/models/referipMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/referMissPolin.js" />
-        <option value="$PROJECT_DIR$/landing/js/tilda-forms-1.0.min.js" />
-        <option value="$PROJECT_DIR$/node_modules/.gitignore" />
         <option value="$PROJECT_DIR$/public/images/.gitignore" />
         <option value="$PROJECT_DIR$/public/thumbnail/.gitignore" />
         <option value="$PROJECT_DIR$/models/staticMissPolin.js" />
@@ -205,13 +245,9 @@
         <option value="$PROJECT_DIR$/models/itemMissPolin.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/models/colorMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/colorMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/kategoriaMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/orderMissPolin.js" />
         <option value="$PROJECT_DIR$/views/error.jade" />
         <option value="$PROJECT_DIR$/aclient/index.jade" />
         <option value="$PROJECT_DIR$/aclient/index.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/module/adsMissPolin.js" />
         <option value="$PROJECT_DIR$/models/kategoriaMissPolin.js" />
         <option value="$PROJECT_DIR$/project1126573/page5102655.html" />
@@ -227,20 +263,29 @@
         <option value="$PROJECT_DIR$/models/userMissPolin.js" />
         <option value="$PROJECT_DIR$/module/userMissPolin.js" />
         <option value="$PROJECT_DIR$/module/preitemUserMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/passport.js" />
         <option value="$PROJECT_DIR$/project1126573/page5088697.html" />
         <option value="$PROJECT_DIR$/project1126573/page5103602.html" />
         <option value="$PROJECT_DIR$/project1126573/page5276685.html" />
         <option value="$PROJECT_DIR$/project1126573/соскидкой.html" />
-        <option value="$PROJECT_DIR$/module/itemMissPolin.js" />
         <option value="$PROJECT_DIR$/models/currencyMissPolin.js" />
         <option value="$PROJECT_DIR$/module/currencyMissPolin.js" />
         <option value="$PROJECT_DIR$/module/blogMissPolin.js" />
-        <option value="$PROJECT_DIR$/models/blogMissPolin.js" />
         <option value="$PROJECT_DIR$/module/user.js" />
         <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/landing/index.html" />
+        <option value="$PROJECT_DIR$/module/colorMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/favoriteMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/const.js" />
+        <option value="$PROJECT_DIR$/models/cartMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/blogMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/adressMissPolin.js" />
+        <option value="$PROJECT_DIR$/models/orderMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/kategoriaMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/itemMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/orderMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/passport.js" />
+        <option value="$PROJECT_DIR$/routes/data.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -285,7 +330,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -307,17 +351,6 @@
             <path>
               <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
               <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
-              <item name="landing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
-              <item name="landing" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="misspolin-api" type="b2602c69:ProjectViewProjectNode" />
-              <item name="misspolin-api" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -334,6 +367,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,17 +388,17 @@
     <property name="javascript.nodejs.core.library.configured.version" value="11.4.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\projects\misspolin\misspolin-api\models" />
+      <recent name="C:\projects\misspolin\misspolin-api\module" />
+      <recent name="C:\projects\misspolin\misspolin-api\node_modules" />
+      <recent name="C:\projects\misspolin\misspolin-api\routes" />
+      <recent name="C:\projects\museum\museum-api\routes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\projects\misspolin\misspolin-api" />
       <recent name="C:\projects\misspolin\misspolin-api\public" />
       <recent name="C:\projects\museum\museum-api" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\misspolin\misspolin-api\module" />
-      <recent name="C:\projects\misspolin\misspolin-api\models" />
-      <recent name="C:\projects\misspolin\misspolin-api\node_modules" />
-      <recent name="C:\projects\misspolin\misspolin-api\routes" />
-      <recent name="C:\projects\museum\museum-api\routes" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -485,12 +519,16 @@
       <workItem from="1554282764886" duration="6783000" />
       <workItem from="1554357241220" duration="36888000" />
       <workItem from="1554750788121" duration="3186000" />
-      <workItem from="1554794205779" duration="10065000" />
+      <workItem from="1554794205779" duration="11505000" />
+      <workItem from="1554876529649" duration="18000" />
+      <workItem from="1554965427786" duration="26380000" />
+      <workItem from="1555147712731" duration="1225000" />
+      <workItem from="1555302783109" duration="1240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="470428000" />
+    <option name="totallyTimeSpent" value="500731000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -504,14 +542,14 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.76607144" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.72627735" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.23392858" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.27372262" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -543,126 +581,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project1126573/page5417992.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="125" column="33" lean-forward="false" selection-start-line="125" selection-start-column="33" selection-end-line="125" selection-end-column="33" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5417144.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5416956.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5299132.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5291964.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5276924.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5277721.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5276685.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="221" column="26" lean-forward="true" selection-start-line="221" selection-start-column="26" selection-end-line="221" selection-end-column="26" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#2;n#div#0;n#div#5;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#14;n#div#0;n#div#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5189823.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5188367.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5105244.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-298">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5105219.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project1126573/page5105184.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project1126573/page5105176.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -678,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -703,19 +622,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="56" column="12" lean-forward="false" selection-start-line="56" selection-start-column="4" selection-end-line="56" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/currencyMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,23 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="17" column="6" lean-forward="false" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/blogMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="45" lean-forward="false" selection-start-line="0" selection-start-column="45" selection-end-line="0" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,31 +640,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/blogMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/module/const.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/colorMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -779,15 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="219" column="9" lean-forward="false" selection-start-line="219" selection-start-column="9" selection-end-line="219" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,15 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="48" lean-forward="false" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="219" column="114" lean-forward="false" selection-start-line="219" selection-start-column="114" selection-end-line="219" selection-end-column="114" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,7 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -824,7 +673,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -842,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,7 +702,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -893,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -909,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -917,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -930,10 +772,187 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="53" lean-forward="false" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/colorMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/colorMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/preitemUserMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/favoriteMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" lean-forward="false" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/const.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/blogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/cartMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/adressMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="24" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/blogMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="69" column="8" lean-forward="true" selection-start-line="69" selection-start-column="8" selection-end-line="71" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" lean-forward="false" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/userMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/kategoriaMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/kategoriaMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/orderMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/passport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3859">
+          <caret line="660" column="26" lean-forward="false" selection-start-line="660" selection-start-column="26" selection-end-line="660" selection-end-column="26" />
           <folding>
-            <marker date="1554835387664" expanded="true" signature="11060:11211" ph="..." />
-            <marker date="1554835387664" expanded="true" signature="11080:11195" ph="{...}" />
+            <element signature="e#878#2091#0" expanded="false" />
+            <element signature="e#2140#2571#0" expanded="false" />
+            <element signature="e#2606#3301#0" expanded="false" />
+            <element signature="e#3349#3813#0" expanded="false" />
+            <element signature="e#3862#4363#0" expanded="false" />
+            <element signature="e#4404#5387#0" expanded="false" />
+            <element signature="e#5428#6276#0" expanded="false" />
+            <element signature="e#6317#6863#0" expanded="false" />
+            <element signature="e#6907#7529#0" expanded="false" />
+            <element signature="e#7576#8207#0" expanded="false" />
+            <element signature="e#8252#9173#0" expanded="false" />
+            <element signature="e#9219#10128#0" expanded="false" />
+            <element signature="e#11275#11898#0" expanded="false" />
+            <element signature="e#11940#12570#0" expanded="false" />
+            <element signature="e#12615#13254#0" expanded="false" />
+            <element signature="e#14078#14824#0" expanded="false" />
+            <element signature="e#14864#15427#0" expanded="false" />
+            <element signature="e#15467#16255#0" expanded="false" />
+            <element signature="e#16298#17013#0" expanded="false" />
+            <element signature="e#17054#18006#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="45" />
+          <folding>
+            <element signature="e#12738#16452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="56" column="185" lean-forward="false" selection-start-line="56" selection-start-column="185" selection-end-line="56" selection-end-column="185" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -17,12 +17,15 @@ const OrderMissPolinSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    typePay: {
+    adress: {
         type: String,
         required: true
     },
-    adress: mongoose.Schema.Types.Mixed,
     status: {
+        type: String,
+        required: true
+    },
+    number: {
         type: String,
         required: true
     },
