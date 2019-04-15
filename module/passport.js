@@ -287,6 +287,7 @@ const addFavoriteUser = async (req, res) => {
                 if(geo===null)geo={country: '*', city: '*'}
                 let data = JSON.parse(req.body.data);
                 res.status(200);
+                console.log(data.item, user._id)
                 let _object = new FavoriteMissPolin({
                     item: data.item,
                     user: user._id,

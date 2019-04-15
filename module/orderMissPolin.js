@@ -91,14 +91,14 @@ const getOrderMissPolin = async (search, sort, skip) => {
         let adress = ''
         if(findResult[i].adress!==undefined) {
             adress = JSON.parse(findResult[i].adress)
-            adress = 'email: ' + adress['email'] + ' \nимя: ' + adress['name'] + ' \nтелефон: ' + adress['phone'] + ' \nгород: ' + adress['city'] + ' \nулица: ' + adress['street'] + ' \nквартира: ' + adress['room'] + ' \nиндекс: ' + adress['index']
+            adress = 'email: ' + adress['email'] + '; \nимя: ' + adress['name'] + '; \nтелефон: ' + adress['phone'] + '; \nгород: ' + adress['city'] + '; \nулица: ' + adress['street'] + '; \nквартира: ' + adress['room'] + '; \nиндекс: ' + adress['index']
         }
         let items = '', itemsParse = JSON.parse(findResult[i].items)
         for (let i1=0; i1<itemsParse.length; i1++) {
-            items += ' ART: '+itemsParse[i1].item.art+' '+
-                'цвет: '+itemsParse[i1].data.color+' '+
-                'сумма: '+itemsParse[i1].data.pricefull+' '+
-                'кол: '+itemsParse[i1].data.count
+            items += ' ART: '+itemsParse[i1].item.art+'; '+
+                'цвет: '+itemsParse[i1].data.color+'; '+
+                'сумма: '+itemsParse[i1].data.pricefull+'$; '+
+                'кол: '+itemsParse[i1].data.count+'; '
         }
         data.push([
             items,
@@ -110,6 +110,7 @@ const getOrderMissPolin = async (search, sort, skip) => {
             findResult[i].data,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
+    console.log(data)
     return {data: data, count: count, row: row}
 }
 

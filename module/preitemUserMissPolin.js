@@ -1,4 +1,6 @@
 const PreitemUserMissPolin = require('../models/preitemUserMissPolin');
+const UserMissPolin = require('../models/userMissPolin');
+const PreitemMissPolin = require('../models/preitemMissPolin');
 const format = require('date-format') ;
 
 const getPreitemUserMissPolin = async (search, sort, skip) => {
@@ -49,14 +51,29 @@ const getPreitemUserMissPolin = async (search, sort, skip) => {
             .limit(10);
     }
     for (let i=0; i<findResult.length; i++){
+        let item = ''
+        if(findResult[i].preitem!=undefined) {
+            item = await PreitemMissPolin.findOne({_id: findResult[i].preitem})
+            if(item!=null)
+                item = item.art
+            else
+                item = ''
+        }
+        let user = ''
+        if(findResult[i].user!=undefined) {
+            user = await UserMissPolin.findOne({_id: findResult[i].user})
+            if(user!=null)
+                user = user.name+' '+user.email
+            else
+                user = ''
+        }
         data.push([
-            findResult[i].preitem,
-            findResult[i].user,
+            item,
+            user,
             findResult[i].data,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
             findResult[i]._id]);
     }
-    console.log(data)
     return {data: data, count: count, row: row}
 }
 

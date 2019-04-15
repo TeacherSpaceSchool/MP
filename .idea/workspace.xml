@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/favoriteMissPolin.js" afterPath="$PROJECT_DIR$/module/favoriteMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/orderMissPolin.js" afterPath="$PROJECT_DIR$/module/orderMissPolin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/passport.js" afterPath="$PROJECT_DIR$/module/passport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/preitemUserMissPolin.js" afterPath="$PROJECT_DIR$/module/preitemUserMissPolin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +26,8 @@
       <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-289">
-              <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="45" />
+            <state relative-caret-position="157">
+              <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
               <folding>
                 <element signature="e#12738#16452#0" expanded="false" />
               </folding>
@@ -32,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="favoriteMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="56" column="30" lean-forward="false" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="preitemUserMissPolin.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/module/preitemUserMissPolin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="55" column="77" lean-forward="false" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -45,28 +58,28 @@
       <file leaf-file-name="preitemMissPolin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/preitemMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-102">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orderMissPolin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/orderMissPolin.js">
+      <file leaf-file-name="itemMissPolin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
+            <state relative-caret-position="673">
+              <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="passport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/passport.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="939">
-              <caret line="660" column="26" lean-forward="false" selection-start-line="660" selection-start-column="26" selection-end-line="660" selection-end-column="26" />
+            <state relative-caret-position="173">
+              <caret line="289" column="39" lean-forward="false" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
               <folding>
                 <element signature="e#878#2091#0" expanded="false" />
                 <element signature="e#2140#2571#0" expanded="false" />
@@ -79,15 +92,14 @@
                 <element signature="e#6907#7529#0" expanded="false" />
                 <element signature="e#7576#8207#0" expanded="false" />
                 <element signature="e#8252#9173#0" expanded="false" />
-                <element signature="e#9219#10128#0" expanded="false" />
-                <element signature="e#11275#11898#0" expanded="false" />
-                <element signature="e#11940#12570#0" expanded="false" />
-                <element signature="e#12615#13254#0" expanded="false" />
-                <element signature="e#14078#14824#0" expanded="false" />
-                <element signature="e#14864#15427#0" expanded="false" />
-                <element signature="e#15467#16255#0" expanded="false" />
-                <element signature="e#16298#17013#0" expanded="false" />
-                <element signature="e#17054#18006#0" expanded="false" />
+                <element signature="e#11324#11947#0" expanded="false" />
+                <element signature="e#11989#12619#0" expanded="false" />
+                <element signature="e#12664#13303#0" expanded="false" />
+                <element signature="e#14127#14873#0" expanded="false" />
+                <element signature="e#14913#15476#0" expanded="false" />
+                <element signature="e#15516#16304#0" expanded="false" />
+                <element signature="e#16347#17062#0" expanded="false" />
+                <element signature="e#17103#18055#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -96,48 +108,8 @@
       <file leaf-file-name="orderMissPolin.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1700">
-              <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="itemMissPolin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/itemMissPolin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="50" lean-forward="false" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kategoriaMissPolin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/kategoriaMissPolin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kategoriaMissPolin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/kategoriaMissPolin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userMissPolin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module/userMissPolin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="-231">
+              <caret line="108" column="12" lean-forward="false" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -154,9 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Авторизация</find>
-      <find>id=&quot;rec92162158&quot;</find>
-      <find>script</find>
       <find>id=&quot;rec97395488&quot;</find>
       <find>getP</find>
       <find>Блог</find>
@@ -184,6 +153,9 @@
       <find>image: {$ne</find>
       <find>findResult[i].adress</find>
       <find>for</find>
+      <find>Заказы</find>
+      <find>setFavoriteMissPolin</find>
+      <find>findone</find>
     </findStrings>
     <replaceStrings>
       <replace>тип</replace>
@@ -224,7 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/images/.gitignore" />
         <option value="$PROJECT_DIR$/public/thumbnail/.gitignore" />
         <option value="$PROJECT_DIR$/models/staticMissPolin.js" />
         <option value="$PROJECT_DIR$/module/staticMissPolin.js" />
@@ -251,7 +222,6 @@
         <option value="$PROJECT_DIR$/models/preitemUserMissPolin.js" />
         <option value="$PROJECT_DIR$/models/userMissPolin.js" />
         <option value="$PROJECT_DIR$/module/userMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/preitemUserMissPolin.js" />
         <option value="$PROJECT_DIR$/project1126573/page5088697.html" />
         <option value="$PROJECT_DIR$/project1126573/page5103602.html" />
         <option value="$PROJECT_DIR$/project1126573/page5276685.html" />
@@ -271,10 +241,12 @@
         <option value="$PROJECT_DIR$/models/orderMissPolin.js" />
         <option value="$PROJECT_DIR$/module/kategoriaMissPolin.js" />
         <option value="$PROJECT_DIR$/module/itemMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/orderMissPolin.js" />
-        <option value="$PROJECT_DIR$/module/passport.js" />
         <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/module/orderMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/passport.js" />
+        <option value="$PROJECT_DIR$/module/favoriteMissPolin.js" />
+        <option value="$PROJECT_DIR$/module/preitemUserMissPolin.js" />
       </list>
     </option>
   </component>
@@ -512,12 +484,12 @@
       <workItem from="1554876529649" duration="18000" />
       <workItem from="1554965427786" duration="26380000" />
       <workItem from="1555147712731" duration="1225000" />
-      <workItem from="1555302783109" duration="3845000" />
+      <workItem from="1555302783109" duration="8952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503336000" />
+    <option name="totallyTimeSpent" value="508443000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -570,13 +542,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/project1126573/page5105166.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project1126573/page5105153.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
@@ -778,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/favoriteMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -835,14 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module/userMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -875,29 +825,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" column="34" lean-forward="false" selection-start-line="100" selection-start-column="34" selection-end-line="100" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/orderMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="10" lean-forward="false" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="112" column="45" lean-forward="false" selection-start-line="112" selection-start-column="32" selection-end-line="112" selection-end-column="45" />
-          <folding>
-            <element signature="e#12738#16452#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,18 +841,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/preitemMissPolin.js">
+    <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="673">
+          <caret line="40" column="19" lean-forward="false" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/orderMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="108" column="12" lean-forward="false" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="939">
-          <caret line="660" column="26" lean-forward="false" selection-start-line="660" selection-start-column="26" selection-end-line="660" selection-end-column="26" />
+        <state relative-caret-position="173">
+          <caret line="289" column="39" lean-forward="false" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
           <folding>
             <element signature="e#878#2091#0" expanded="false" />
             <element signature="e#2140#2571#0" expanded="false" />
@@ -933,16 +873,49 @@
             <element signature="e#6907#7529#0" expanded="false" />
             <element signature="e#7576#8207#0" expanded="false" />
             <element signature="e#8252#9173#0" expanded="false" />
-            <element signature="e#9219#10128#0" expanded="false" />
-            <element signature="e#11275#11898#0" expanded="false" />
-            <element signature="e#11940#12570#0" expanded="false" />
-            <element signature="e#12615#13254#0" expanded="false" />
-            <element signature="e#14078#14824#0" expanded="false" />
-            <element signature="e#14864#15427#0" expanded="false" />
-            <element signature="e#15467#16255#0" expanded="false" />
-            <element signature="e#16298#17013#0" expanded="false" />
-            <element signature="e#17054#18006#0" expanded="false" />
+            <element signature="e#11324#11947#0" expanded="false" />
+            <element signature="e#11989#12619#0" expanded="false" />
+            <element signature="e#12664#13303#0" expanded="false" />
+            <element signature="e#14127#14873#0" expanded="false" />
+            <element signature="e#14913#15476#0" expanded="false" />
+            <element signature="e#15516#16304#0" expanded="false" />
+            <element signature="e#16347#17062#0" expanded="false" />
+            <element signature="e#17103#18055#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="86" column="24" lean-forward="false" selection-start-line="86" selection-start-column="24" selection-end-line="86" selection-end-column="24" />
+          <folding>
+            <element signature="e#12738#16452#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/favoriteMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/preitemMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/module/preitemUserMissPolin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="55" column="77" lean-forward="false" selection-start-line="55" selection-start-column="77" selection-end-line="55" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
