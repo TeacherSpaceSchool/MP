@@ -101,16 +101,15 @@ const getOrderMissPolin = async (search, sort, skip) => {
                 'кол: '+itemsParse[i1].data.count+'; '
         }
         data.push([
-            items,
+            findResult[i].items,
             findResult[i].user,
             findResult[i].sum,
             findResult[i].kategory,
-            adress,
+            findResult[i].adress,
             findResult[i].status,
             findResult[i].data,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
-    console.log(data)
     return {data: data, count: count, row: row}
 }
 

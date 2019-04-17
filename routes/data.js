@@ -10,6 +10,7 @@ const FavoriteMissPolin = require('../module/favoriteMissPolin');
 const ItemMissPolin = require('../module/itemMissPolin');
 const ModelsItemMissPolin = require('../models/itemMissPolin');
 const ColorMissPolin = require('../module/colorMissPolin');
+const DisRazdelMissPolin = require('../module/disRazdelMissPolin');
 const CurrencyMissPolin = require('../module/currencyMissPolin');
 const StaticMissPolinModel = require('../models/staticMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
@@ -70,6 +71,8 @@ router.post('/getclient', async (req, res) => {
         await res.send(await CurrencyMissPolin.getClient())
     } else if(req.body.name == 'БлогПоИмени'){
         await res.send(await BlogMissPolin.getClient1(data.title))
+    } else if(req.body.name == 'Разделы'){
+        await res.send(await DisRazdelMissPolin.getClient())
     }
 });
 
@@ -112,6 +115,8 @@ router.post('/getclientsecure', async (req, res) => {
         await passportEngine.getOrder(req, res)
     } else if(req.body.name == 'ОтменитьЗаказ'){
         await passportEngine.cancelOrder(req, res)
+    } else if(req.body.name == 'Уровень'){
+        await passportEngine.getLvl(req, res)
     }
 });
 
@@ -151,6 +156,8 @@ router.post('/get', async (req, res) => {
           await res.send(await ItemMissPolin.getKategoria())
       } else if(req.body.name == 'Валюта'){
           await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Разделы'){
+          await res.send(await DisRazdelMissPolin.getDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
       }
   });
 });
@@ -196,6 +203,8 @@ router.post('/delete', async (req, res) => {
         } else if(req.body.name == 'Валюта'){
             await CurrencyMissPolin.deleteCurrencyMissPolin(JSON.parse(req.body.deleted))
             await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Разделы'){
+            await res.send(await DisRazdelMissPolin.deleteDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
         }
     });
 });
@@ -385,6 +394,7 @@ router.post('/add', async (req, res) => {
                                     image: photos,
                                     imageThumbnail: photosThumbnail,
                                     title: myNew.title,
+                                    status: myNew.status,
                                 }
                                 if(req.body.id==undefined)
                                     await KategoriaMissPolin.addKategoriaMissPolin(data)
@@ -456,13 +466,22 @@ router.post('/add', async (req, res) => {
                             }
                             else if(req.body.name == 'Пользователи'){
                                 data = {
-                                    role: myNew.role,
+                                    lvl: myNew.lvl,
                                     status: myNew.status,
-                                    data: myNew.data,
                                 };
                                 if(req.body.id!=undefined)
                                     await UserMissPolin.setUserMissPolin(data, req.body.id)
                                 await res.send(await UserMissPolin.getUserMissPolin(req.body.search, req.body.sort, req.body.skip))
+                            } else if(req.body.name == 'Разделы'){
+                                data = {
+                                    discount: myNew.discount,
+                                    preorder: myNew.preorder,
+                                };
+                                if(req.body.id===undefined)
+                                    await DisRazdelMissPolin.addDisRazdelMissPolin(data)
+                                else
+                                    await DisRazdelMissPolin.setDisRazdelMissPolin(data, req.body.id)
+                                await res.send(await DisRazdelMissPolin.getDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
                             }
                         }
                     })
@@ -581,13 +600,25 @@ router.post('/add', async (req, res) => {
                 }
                 else if(req.body.name == 'Пользователи'){
                     data = {
-                        role: myNew.role,
+                        lvl: myNew.lvl,
                         status: myNew.status,
-                        data: myNew.data,
                     };
                     if(req.body.id!=undefined)
                         await UserMissPolin.setUserMissPolin(data, req.body.id)
                     await res.send(await UserMissPolin.getUserMissPolin(req.body.search, req.body.sort, req.body.skip))
+                }
+                else if(req.body.name == 'Категория'){
+                    data = {
+                        image: photos,
+                        imageThumbnail: photosThumbnail,
+                        title: myNew.title,
+                        status: myNew.status,
+                    }
+                    if(req.body.id==undefined)
+                        await KategoriaMissPolin.addKategoriaMissPolin(data)
+                    else
+                        await KategoriaMissPolin.setKategoriaMissPolin(data, req.body.id)
+                    await res.send(await KategoriaMissPolin.getKategoriaMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
                 else if(req.body.name == 'Валюта'){
                     data = {
@@ -599,6 +630,16 @@ router.post('/add', async (req, res) => {
                     else
                         await CurrencyMissPolin.setCurrencyMissPolin(data, req.body.id)
                     await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
+                } else if(req.body.name == 'Разделы'){
+                    data = {
+                        discount: myNew.discount,
+                        preorder: myNew.preorder,
+                    };
+                    if(req.body.id===undefined)
+                        await DisRazdelMissPolin.addDisRazdelMissPolin(data)
+                    else
+                        await DisRazdelMissPolin.setDisRazdelMissPolin(data, req.body.id)
+                    await res.send(await DisRazdelMissPolin.getDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
             }
         }

@@ -36,7 +36,7 @@ router.get('/', async (req, res, next) => {
             }
         }
     }
-    res.sendFile(path.join(dirname1, 'landing', 'index.html'));
+    res.sendFile(path.join(dirname1, 'aclient', 'land.html'));
 });
 
 router.post('/', async (req, res, next) => {
@@ -83,7 +83,7 @@ router.post('/', async (req, res, next) => {
         refer: req.body.Refer
     });
     await CatalogMissPolin.create(_object);
-    res.sendFile(path.join(dirname1, 'landing', 'index.html'));
+    res.sendFile(path.join(dirname1, 'aclient', 'land.html'));
 });
 
 module.exports = router;

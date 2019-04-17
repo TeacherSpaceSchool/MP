@@ -633,6 +633,25 @@ const cancelOrder = async (req, res) => {
     } )(req, res)
 }
 
+const getLvl = async (req, res) => {
+    await passport.authenticate('jwt', async function (err, user) {
+        try{
+            if (user&&user.status==='active') {
+                res.status(200);
+                res.end(user.lvl);
+            } else {
+                console.error('No such user')
+                res.status(401);
+                res.end('No such user');
+            }
+        } catch (err) {
+            console.error(err)
+            res.status(401);
+            res.end('err')
+        }
+    } )(req, res)
+}
+
 
 module.exports.start = start;
 module.exports.verifydeuser = verifydeuser;
@@ -660,3 +679,4 @@ module.exports.setAddress = setAddress;
 module.exports.generateOrder = generateOrder;
 module.exports.getOrder = getOrder;
 module.exports.cancelOrder = cancelOrder;
+module.exports.getLvl = getLvl;

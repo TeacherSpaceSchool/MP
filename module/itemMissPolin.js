@@ -16,9 +16,6 @@ const getHit = async (search) => {
 
 const getKategoria = async () => {
     let a = await ItemMissPolin.find().distinct('kategoria')
-    for(let i=0; i<a.length; i++){
-        a[i] = a[i].toLowerCase()
-    }
     return a
 
 }

@@ -9,6 +9,10 @@ const KategoriaMissPolinSchema = mongoose.Schema({
         type: String,
         required: false,
     },
+    status: {
+        type: String,
+        required: false,
+    },
     title: {
         type: String,
         unique: true,

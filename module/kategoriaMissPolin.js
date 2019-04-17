@@ -3,7 +3,7 @@ const format = require('date-format') ;
 const mongoose = require('mongoose');
 
 const getClient = async () => {
-    return await KategoriaMissPolin.find();
+    return await KategoriaMissPolin.find({status: 'active'});
 }
 
 const getKategoriaMissPolin = async (search, sort, skip) => {
@@ -12,6 +12,7 @@ const getKategoriaMissPolin = async (search, sort, skip) => {
     const row = [
         'изображение',
         'название',
+        'статус',
         'создан',
         '_id'
     ];
@@ -60,9 +61,14 @@ const getKategoriaMissPolin = async (search, sort, skip) => {
             .limit(10);
     }
     for (let i=0; i<findResult.length; i++){
+        let status = ''
+        if(findResult[i].status!==undefined){
+            status = findResult[i].status
+        }
         data.push([
             findResult[i].image,
             findResult[i].title,
+            status,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
             findResult[i]._id]);
     }

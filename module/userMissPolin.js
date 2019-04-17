@@ -46,6 +46,7 @@ let recoveryPass = async (email) => {
 
 const getUserMissPolin = async (search, sort, skip) => {
     try{
+        //await UserMissPolin.deleteMany()
         let findResult = [], data = [], count;
         const row = [
             'имя',
@@ -195,19 +196,7 @@ const addUserMissPolin = async (object) => {
 
 const setUserMissPolin = async (object, id) => {
     try{
-        if(object.password!==undefined&&object.password.length>0) {
-            let user = await UserMissPolin.findById({_id: id});
-            user.email = object.email;
-            user.name = object.name;
-            user.surname = object.surname;
-            user.phonenumber = object.phonenumber;
-            user.role = object.role;
-            user.status = object.status;
-            user.password = object.password;
-            await user.save();
-        } else {
             await UserMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-        }
     } catch(error) {
         console.error(error)
     }
