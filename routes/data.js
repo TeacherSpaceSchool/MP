@@ -124,6 +124,7 @@ router.post('/getclientsecure', async (req, res) => {
 
 router.post('/get', async (req, res) => {
   await passportEngine.verifydadmin(req, res, async ()=>{
+      console.log(req.body.name)
       if(req.body.name == 'Реклама'){
           await res.send(await AdsMissPolin.getAdsMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Блог'){
