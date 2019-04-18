@@ -22,6 +22,7 @@ const getPodkategoria = async (search) => {
 
 const getKategoria = async () => {
     let a = await ItemMissPolin.find().distinct('kategoria')
+    console.log(a)
     return a
 
 }
