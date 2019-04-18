@@ -1,5 +1,9 @@
 window.startCarousel = function () {
-    $(document).ready(function() { console.log('lol'); t_sldsInit('91968907'); t675_init('91968907'); }); $('.t675').bind('displayChanged',function(){ t_slds_updateSlider('91968907'); });
+    $(document).ready(function() { t_sldsInit('91968907'); t675_init('91968907'); }); $('.t675').bind('displayChanged',function(){ t_slds_updateSlider('91968907'); });
+}
+
+window.start97395488 = function () {
+    $( document ).ready(function() { t396_init('97395488');});
 }
 
 window.startSubscribe = function () {
@@ -36,6 +40,12 @@ window.startCart = function () {
 
 window.rerun = function () {
     window.ok()
+}
+
+
+
+window.start97024387 = function () {
+    t396_init('97024387')
 }
 
 

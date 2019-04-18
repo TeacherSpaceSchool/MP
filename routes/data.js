@@ -39,6 +39,8 @@ router.post('/getclient', async (req, res) => {
         await res.send(await ItemMissPolin.getHit(data.search))
     } else if(req.body.name == 'Категории'){
         await res.send(await ItemMissPolin.getKategory())
+    } else if(req.body.name == 'Податегории'){
+        await res.send(await ItemMissPolin.getPodkategoria(data.search))
     } else if(req.body.name == 'Подписка'){
         Mailchimp.send(data.email)
         await res.send('ok')
