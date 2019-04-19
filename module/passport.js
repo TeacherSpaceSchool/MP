@@ -146,7 +146,7 @@ const signupuser = async (req, res) => {
             status: 'active',
             name: '',
             phonenumber: '',
-            lvl: '0',
+            lvl: '1',
             password: req.query.password,
         });
         const user = await UserMissPolin.create(_user);

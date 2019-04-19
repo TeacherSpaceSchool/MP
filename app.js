@@ -54,7 +54,7 @@ app.use(formData.stream());
 // union body and files
 app.use(formData.union());
 
-app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory\/[\s\S]+|signin|resetpass|signup|profile|item\/[\s\S]+|blogs|preorders|preorder\/[\s\S]+|mypreorders|search|skidki|blog\/[\s\S]+|favorite|cart|myorders|order\/[\s\S]+)?/), indexRouter);
+app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory?|signin|resetpass|signup|profile|item?|blogs|preorders|preorder?|mypreorders|search|skidki|blog?|favorite|cart|myorders|order?)?/), indexRouter);
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 app.use('/data', dataRouter);
@@ -70,7 +70,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-
+    console.log(err)
   // render the error page
   res.status(err.status || 500);
   res.render('error');

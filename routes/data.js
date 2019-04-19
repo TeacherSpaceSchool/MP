@@ -437,9 +437,9 @@ router.post('/add', async (req, res) => {
                                     keyword: myNew.keyword,
                                     discount: myNew.discount,
                                     hit: myNew.hit,
+                                    art: myNew.art,
                                     news: myNew.news
                                 }
-                                console.log(data)
                                 if(req.body.id!=undefined)
                                     await ItemMissPolin.setItemMissPolin(data, req.body.id)
                                 await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
@@ -572,6 +572,7 @@ router.post('/add', async (req, res) => {
                         keyword: myNew.keyword,
                         discount: myNew.discount,
                         hit: myNew.hit,
+                        art: myNew.art,
                         news: myNew.news
                     }
                     if(req.body.id!=undefined)

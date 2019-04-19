@@ -6,7 +6,7 @@ dirname = dirname.replace('/routes', '')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render(path.join(dirname, 'aclient', 'index.html'));
+    res.sendFile(path.join(dirname, 'aclient', 'index.html'));
 
 });
 
