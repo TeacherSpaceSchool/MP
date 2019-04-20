@@ -15,6 +15,7 @@ const cors = require('cors');
 const user = require('./module/user');
 const formData = require('express-form-data');
 const nocache = require('nocache')
+const expressAMP = require('express-amp');
 const os = require('os');
 const compression = require('compression');
 module.exports.dirname = __dirname;
@@ -53,6 +54,11 @@ app.use(formData.format());
 app.use(formData.stream());
 // union body and files
 app.use(formData.union());
+
+app.use(expressAMP({
+    override: true,
+    staticsPath: path.join(__dirname, 'aclient')
+}));
 
 app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory?|signin|resetpass|signup|profile|item?|blogs|preorders|preorder?|mypreorders|search|skidki|blog?|favorite|cart|myorders|order?)?/), indexRouter);
 app.use('/admin', adminRouter);
