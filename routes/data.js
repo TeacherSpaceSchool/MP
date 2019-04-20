@@ -206,8 +206,9 @@ router.post('/delete', async (req, res) => {
         } else if(req.body.name == 'Валюта'){
             await CurrencyMissPolin.deleteCurrencyMissPolin(JSON.parse(req.body.deleted))
             await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
-        } else if(req.body.name == 'Разделы'){
-            await res.send(await DisRazdelMissPolin.deleteDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
+        } else if(req.body.name == 'Товары'){
+            await ItemMissPolin.deleteItemMissPolin(JSON.parse(req.body.deleted))
+            await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
         }
     });
 });
