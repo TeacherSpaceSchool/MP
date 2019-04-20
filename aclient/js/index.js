@@ -42,6 +42,10 @@ window.rerun = function () {
     window.ok()
 }
 
+window.scrollTop = function () {
+    $(document).ready(function(){ $('.t190').css("display","none"); $(window).bind('scroll', t_throttle(function(){ if ($(window).scrollTop() > $(window).height()) { if($('.t190').css('display')=="none"){$('.t190').css("display","block");} }else{ if($('.t190').css('display')=="block"){$('.t190').css("display","none");} } }, 200)); });
+}
+
 
 
 window.start97024387 = function () {

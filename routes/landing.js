@@ -14,6 +14,7 @@ const nodemailer = require('nodemailer');
 
 /* GET users listing. */
 router.get('/', async (req, res, next) => {
+    console.log('landing')
     if(req.param('refer')!==undefined&&req.param('refer')!==''){
         if(await ReferMissPolin.count({refer: req.param('refer')})===0){
             let _object = new ReferMissPolin({
