@@ -33,11 +33,14 @@ const getItem = async (art) => {
 
 }
 
-const getItems = async (search, sort, skip, kategoria) => {
-    console.log(search, sort, skip, kategoria)
+const getItems = async (search, sort, skip, kategoria, podkategory) => {
+    if(kategoria == undefined)
+        kategoria = ''
+    if(podkategory == undefined)
+        podkategory = ''
     if(sort===''){
         return await ItemMissPolin
-            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}, {podkategoria: {'$regex': kategoria, '$options': 'i'}}, {kategoria: {'$regex': kategoria, '$options': 'i'}}]})
+            .find({status: 'в наличие', image: {$ne: undefined}, $or: [{material: {'$regex': search, '$options': 'i'}}, {art: {'$regex': search, '$options': 'i'}}, {keyword: {'$regex': search, '$options': 'i'}}], podkategoria: {'$regex': podkategory, '$options': 'i'}, kategoria: {'$regex': kategoria, '$options': 'i'}})
             .sort('-updatedAt')
             .skip(parseInt(skip))
             .limit(9)
