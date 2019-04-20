@@ -2,287 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/asset-manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-animation-1.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-blocks-2.12.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-grid-3.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-popup-1.1.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-slds-1.4.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/css/tilda-zoom-2.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5088697body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5102655body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5102937body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103239body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103289body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103526body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103602body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103627body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103802body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103869body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5103971body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5104267body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5104322body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5104721body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5104736body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105118body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105132body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105153body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105166body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105176body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105184body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105219body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5105244body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5188367body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5189823body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5276685body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5276924body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5277721body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5291964body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5299132body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5416956body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5417144body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5417992body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5418011body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5423380body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5423608body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5424125body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5424946body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425062body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425622body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425653body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425853body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425879body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425899body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5425984body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426078body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426145body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426227body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426255body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426313body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426521body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426594body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426643body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426673body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/files/page5426710body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/12ce6b4a-3d4c-4bc8-9037-c363045ae0b3__photo145579322212098f37a8d4ede.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/307df10c-fb67-469d-8718-e9bcc7c1f48c__photo1455793067932146d5b4a694f.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/586f97c2-a573-4ac6-b8cf-fdc98c19b520__photo14557355834935ab52897f7eb.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3036-3933-4162-a135-366163383932__misslogo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3037-6432-4736-b763-643637313962__imagethree3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3061-3632-4335-b330-326330393937__imagetwo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3062-6634-4637-b030-666638336632__image7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3066-3464-4437-b233-656136386533__3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3131-3966-4133-a237-363531393761__image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3135-6364-4162-b565-353334613663__3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3137-3131-4264-a362-363736323464__3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3138-6330-4539-a331-316330663834__image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3161-3236-4034-b066-333939366432__instagram_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3161-6438-4063-b835-663164343632__1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3163-3533-4665-b565-383066363839__image5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3164-3264-4432-a434-326434326135__image4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3230-3132-4131-b430-333339343936__9224423623d_101.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3233-6239-4539-a430-616266663666__-__resize__20x__2500X566.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3233-6239-4539-a430-616266663666__2500x566.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3234-6263-4063-b765-383366316531__image4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3262-3864-4564-b864-373834336636__-__resizeb__20x__beverlynguyen39520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3262-3864-4564-b864-373834336636__beverlynguyen39520.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3263-6230-4433-b331-643034623733__right-arrow.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3264-3962-4131-b761-636437636634__6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3331-3361-4433-a136-356466343230__3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3332-3938-4930-a635-643931393634__4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3332-6533-4566-a136-393530356131__5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3338-6465-4539-a135-336535363263__photo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3339-3162-4437-b362-633664303237__2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3361-6464-4463-a462-646230626562__tilda-color_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3365-3434-4964-b862-323732306239__devochka_stilnaya_fo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3431-3165-4634-b363-393337666133__magnifying-glass.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3431-3634-4166-b262-623365386566__1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3432-3134-4439-b765-656564356163__image4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3432-6235-4263-a531-643332346661__odnoklassniki-logo_3.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3433-6135-4132-b431-313733623638__image5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3434-3531-4835-b936-396461623262__error.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3434-6565-4639-b164-626338643337__9224106306_1_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3436-3564-4963-b331-653563623333__image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3439-6333-4335-b631-656436663831__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3463-6530-4064-a233-663436313533__imageone1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3465-6138-4265-b837-646139313332__2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3531-3864-4735-a630-313134313537__9224108308_58_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3531-6632-4234-a432-343638623336__left-arrow.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3534-3832-4733-b537-316234663936__imagetwo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3534-6639-4739-a430-623035626130__image15.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3635-6338-4164-b035-623833363730__image4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3639-3166-4932-b634-393532326138__9224110310_58_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3663-3032-4666-a462-643166323361__telephone.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3664-3266-4238-a233-353137343739__imagethree3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3664-3861-4537-b937-343538643336__2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3665-6435-4164-a565-636538373831__delete.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3730-3331-4165-b831-613138623835__image4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3731-3864-4165-b562-656637646662__imagefo4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3762-3336-4563-b736-666535396262__image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3764-6133-4664-b464-386164373230__359.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3765-3266-4430-a237-336562313636__2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3766-3633-4336-b637-656337653731__shopping-purse-icon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3863-3465-4237-b161-333736333763__photo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3936-3461-4038-b331-336132656166__nicole_scherzinger_g.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3966-3633-4431-b838-613837636461__image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3966-3732-4933-a237-663232666165__photo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild3966-3938-4638-a163-333862623831__tabletka.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6139-6535-4565-b837-333532353330__image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6162-3266-4836-a534-333366373433__-__resize__20x__eb-slide-2015_17-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6162-3266-4836-a534-333366373433__eb-slide-2015_17-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6164-6234-4636-b634-376162643836__imagethree3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6166-3066-4438-b264-616666326131__nicole_scherzinger_o.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6166-3330-4664-b631-353263343861__tilda-color_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6166-6662-4665-b664-303632626532__imageone1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6230-3930-4838-b338-343739373232__star.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6235-3264-4038-a131-666534623836__facebook-logo-button.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6236-3037-4436-b437-313134643236__17498892_1291216330955656_1498178798262891047_n.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6236-6235-4136-b537-363632653038__image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6239-3263-4135-a437-653735616263__image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6261-3030-4231-a635-336533613762__-.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6265-3836-4636-b663-333363386639__scroll-arrow-to-down.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6266-6563-4031-a232-656234356564__5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6333-3435-4663-a239-313530316236__4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6334-3034-4034-a135-353665366564__image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6334-6165-4732-b139-386566386335____4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6336-3635-4935-b538-313137666430__imagetwo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6338-3339-4638-b731-623366303239__-__resizeb__20x__kylecesmat211986.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6338-3339-4638-b731-623366303239__kylecesmat211986.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6338-3731-4339-b031-633230646430____3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6339-3161-4035-a462-613335656536__image5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6361-6235-4365-b565-383835376337___.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6431-3366-4132-b534-643165356432__6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6431-3565-4634-a365-393938313332__image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6435-3237-4466-a136-363135386534__-__resize__504x__eb-slide-2015_17-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6435-3237-4466-a136-363135386534__eb-slide-2015_17-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6435-6139-4537-a431-646564653437__image2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6439-6366-4531-b537-643432666230__4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6461-3133-4836-b261-626230306363__image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6461-6635-4561-a336-383139613034__9224122322_97_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6462-6265-4434-b432-656239386530__nicole_scherzinger_b.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6466-3035-4136-b835-396638633264__image3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6530-3133-4231-b036-616465633438__image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6534-3839-4365-a638-363761623438__1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6538-6466-4035-b239-356233333062__5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6561-6432-4832-b638-666363643538____1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6562-3036-4436-b763-353232633134__image6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6630-3262-4239-b663-346461613033__image1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6630-6162-4561-b037-356163613834__4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6632-3965-4661-a363-376661393133__-__resizeb__20x__lucabravo134059.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6632-3965-4661-a363-376661393133__lucabravo134059.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6633-6532-4561-b439-646238616337__photo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6639-3366-4631-b239-646338376234__image4.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6662-3463-4937-b431-396239366563__-__resize__504x__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6662-3463-4937-b431-396239366563__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6662-6361-4239-b037-643231666636__img_20161210123107.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6662-6466-4338-a331-313331333530__imageone1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tild6665-6336-4234-b737-333632366561__1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tildacopy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tildacopy_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/images/tildafavicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/hammer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/lazyload-1.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-animation-1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-blocks-2.7.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-forms-1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-scripts-2.8.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-slds-1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-zero-forms-1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/js/tilda-zoom-2.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/land.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/404.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-animation-1.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-blocks-2.12.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-grid-3.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-popup-1.1.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-slds-1.4.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/css/tilda-zoom-2.0.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/files/page4855641body.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/rea.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3031-6538-4332-b162-386232633330__-__resize__20x__sss.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3031-6538-4332-b162-386232633330__sss.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3032-3063-4330-a431-646235626663__sewing-machine_2.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3065-3631-4164-b134-326139323439__vip_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3066-3134-4838-a639-346539343731__online-shop.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3134-3936-4138-a665-356339623033__-__resize__504x__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3134-3936-4138-a665-356339623033__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3233-3231-4336-a665-313832653938__shipped.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3261-3762-4833-b161-323961316663__-__resize__20x__3C1395-B_enl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3261-3762-4833-b161-323961316663__3c1395-b_enl.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3262-3433-4937-b433-353831353264__support.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3264-3937-4863-b436-333534323230__verified_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3334-3736-4436-b433-363761643632__22.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3366-3433-4363-b431-653131666330__-__resize__20x__large_-_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3366-3433-4363-b431-653131666330__large_-_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3433-3539-4030-a330-313662316535__pay.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3434-3033-4761-a234-313437306239__kosik.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3439-6333-4335-b631-656436663831__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3534-3762-4563-b032-373135366666__-------.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3534-3762-4563-b032-373135366666__-__resize__20x__-------.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3534-6233-4236-b737-663433333833__like1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3534-6639-4739-a430-623035626130__image15.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3538-3631-4631-a535-366163653439__website.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3539-3363-4936-a263-333364623665__44.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3634-3365-4432-a539-663464306432__-__resizeb__20x__otzyv2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3634-3365-4432-a539-663464306432__otzyv2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3637-3032-4263-b361-373865613339__-__resize__20x__36495-large_default.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3637-3032-4263-b361-373865613339__36495-large_default.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3734-6130-4566-a339-353962633936__discount_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3736-3833-4866-a530-373333386462__sewing-machine_1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3764-3337-4630-b861-613732313932__gold-medal.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3830-3065-4232-b465-383134373731__-__resizeb__20x__otzyvv3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3830-3065-4232-b465-383134373731__otzyvv3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3932-6536-4537-b737-393733366236__faviconmisspolin.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3962-3237-4538-a139-366330303138__-__resizeb__20x__otzyv1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild3962-3237-4538-a139-366330303138__otzyv1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6132-3830-4365-b536-613164663930__devochka_stil_model_.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6136-3636-4235-a630-616264613132__dash.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6137-3363-4261-b536-323566333632__flash.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6234-3332-4533-a330-373063616164__-__resize__20x__gogi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6234-3332-4533-a330-373063616164__gogi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6239-6637-4139-a337-663463306561__recommended.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6336-3639-4139-b431-626132646162__-__resize__20x__devgradi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6336-3639-4139-b431-626132646162__devgradi.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6362-3564-4137-a562-393364643765__-__resize__20x__xDcRRCoAgDADQE81pGUG.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6362-3564-4137-a562-393364643765__xdcrrcoagdadqe81pgug.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6365-6235-4330-b261-333761316563__11.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6533-6333-4133-b061-326566393739__faalse4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6536-3966-4862-a538-373034306532__verified.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6562-3632-4637-a133-636337333639__shipped.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6631-6331-4134-a133-366432656331__community.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6639-3366-4631-b239-646338376234__image4.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tild6662-3463-4937-b431-396239366563__logo0000.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tildacopy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tildacopy_black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/images/tildafavicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/hammer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/jquery-1.10.2.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/lazyload-1.3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-animation-1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-blocks-2.7.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-forms-1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-scripts-2.8.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-slds-1.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/js/tilda-zoom-2.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/readme.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/robots.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/landing/sitemap.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/manifest.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/precache-manifest.5433616a22c345533d988303af578da9.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/service-worker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/main.18784a9a.chunk.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/css/main.18784a9a.chunk.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/0.947816df.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/0.947816df.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.0dc75d07.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.0dc75d07.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/10.3903531b.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/10.3903531b.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/precache-manifest.8a2bc5ec965ee7c2b0e7cec035a76a26.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/0.99a7f441.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/0.99a7f441.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.55deaa8b.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/1.55deaa8b.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/10.d0c9f639.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/10.d0c9f639.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/11.cf24c060.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/11.cf24c060.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/12.f2c74068.chunk.js" afterPath="" />
@@ -295,20 +21,20 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/15.3300739c.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/16.2d370b84.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/16.2d370b84.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/17.97805d15.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/17.97805d15.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/18.4102e68e.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/18.4102e68e.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/17.655658bc.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/17.655658bc.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/18.58cdc0ac.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/18.58cdc0ac.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/19.068ae5e0.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/19.068ae5e0.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/2.464b3e75.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/2.464b3e75.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/20.59f2f2db.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/20.59f2f2db.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/21.18e6fe1a.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/21.18e6fe1a.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/22.f18dd59e.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/22.f18dd59e.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/2.871c0677.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/2.871c0677.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/20.7676ea3c.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/20.7676ea3c.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/21.ee0bc4bd.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/21.ee0bc4bd.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/22.4876ec1e.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/22.4876ec1e.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/23.dfa937fc.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/23.dfa937fc.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/24.4d925991.chunk.js" afterPath="" />
@@ -321,29 +47,29 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/27.b3434bf5.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/28.e5cff356.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/28.e5cff356.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/29.12bbb232.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/29.12bbb232.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/3.92fcf5de.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/3.92fcf5de.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/29.5eae9f69.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/29.5eae9f69.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/3.6739d5b1.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/3.6739d5b1.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/5.87e70085.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/5.87e70085.chunk.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/6.8a2e7988.chunk.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/6.8a2e7988.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/7.dbc66d20.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/7.dbc66d20.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/8.68907ec1.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/8.68907ec1.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/9.5e989456.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/9.5e989456.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.285ab52b.chunk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.285ab52b.chunk.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.16bdc447.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.16bdc447.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/star.43285adf.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/star1.fd6a5c48.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/7.d9f38251.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/7.d9f38251.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/8.780948e5.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/8.780948e5.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/9.d6b774a1.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/9.d6b774a1.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.cca769a1.chunk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/main.cca769a1.chunk.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.fc77050a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/js/runtime~main.fc77050a.js.map" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/aclient/static/media/vverhstrelka.10f5df3a.svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/landing.js" afterPath="$PROJECT_DIR$/routes/landing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/asset-manifest.json" afterPath="$PROJECT_DIR$/aclient/asset-manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/index.html" afterPath="$PROJECT_DIR$/aclient/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aclient/service-worker.js" afterPath="$PROJECT_DIR$/aclient/service-worker.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -815,12 +541,12 @@
       <workItem from="1555587074013" duration="7396000" />
       <workItem from="1555652094938" duration="3192000" />
       <workItem from="1555674604352" duration="29000" />
-      <workItem from="1555736825058" duration="5944000" />
+      <workItem from="1555736825058" duration="7438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545312000" />
+    <option name="totallyTimeSpent" value="546806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -833,13 +559,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.75547445" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.24452555" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.121673" sideWeight="0.24452555" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
