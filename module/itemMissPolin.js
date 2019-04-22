@@ -284,7 +284,8 @@ const getItemMissPolin = async (search, sort, skip) => {
             cod,
             news,
             hit,
-            format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
+            format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
+            findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
 }

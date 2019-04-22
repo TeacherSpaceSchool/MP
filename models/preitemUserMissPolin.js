@@ -14,7 +14,7 @@ const PreitemUserMissPolinSchema = mongoose.Schema({
         required: false
     },
 }, {
-    timestamps: false
+    timestamps: true
 });
 
 var PreitemUserMissPolin = mongoose.model('PreitemUserMissPolin', PreitemUserMissPolinSchema);

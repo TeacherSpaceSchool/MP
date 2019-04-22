@@ -19,7 +19,7 @@ const KategoriaMissPolinSchema = mongoose.Schema({
         required: false
     },
 }, {
-    timestamps: false
+    timestamps: true
 });
 
 var KategoriaMissPolin = mongoose.model('KategoriaMissPolin', KategoriaMissPolinSchema);

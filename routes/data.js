@@ -438,10 +438,19 @@ router.post('/add', async (req, res) => {
                                     discount: myNew.discount,
                                     hit: myNew.hit,
                                     art: myNew.art,
-                                    news: myNew.news
+                                    news: myNew.news,
+                                    kategoria: myNew.kategoria,
+                                    count: JSON.stringify(myNew.count),
+                                    material: myNew.material,
+                                    line: myNew.line,
+                                    prices: myNew.price[0].price,
+                                    price: JSON.stringify(myNew.price),
+                                    weight: myNew.weight
                                 }
                                 if(req.body.id!=undefined)
                                     await ItemMissPolin.setItemMissPolin(data, req.body.id)
+                                else
+                                    await ItemMissPolin.addItemMissPolin(data)
                                 await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
                             }
                             else if(req.body.name == 'Рассылка'){
@@ -573,10 +582,19 @@ router.post('/add', async (req, res) => {
                         discount: myNew.discount,
                         hit: myNew.hit,
                         art: myNew.art,
-                        news: myNew.news
+                        news: myNew.news,
+                        kategoria: myNew.kategoria,
+                        count: JSON.stringify(myNew.count),
+                        material: myNew.material,
+                        line: myNew.line,
+                        prices: myNew.price[0].price,
+                        price: JSON.stringify(myNew.price),
+                        weight: myNew.weight
                     }
                     if(req.body.id!=undefined)
                         await ItemMissPolin.setItemMissPolin(data, req.body.id)
+                    else
+                        await ItemMissPolin.addItemMissPolin(data)
                     await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
                 else if(req.body.name == 'Рассылка'){

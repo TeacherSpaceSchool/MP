@@ -75,7 +75,7 @@ const ItemMissPolinSchema = mongoose.Schema({
         required: false
     }
 }, {
-    timestamps: false
+    timestamps: true
 });
 
 ItemMissPolinSchema.plugin(random, { path: 'r' });

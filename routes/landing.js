@@ -73,7 +73,7 @@ router.post('/', async (req, res, next) => {
                 console.log('Email sent: ' + info.response);
             }
         });
-       // Mailchimp.send(req.body.Email)
+        Mailchimp.send(req.body.Email)
     }
     if(geo===null)geo={country: '*', city: '*'}
     let _object = new CatalogMissPolin({
