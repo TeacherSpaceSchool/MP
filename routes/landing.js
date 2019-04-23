@@ -48,6 +48,7 @@ router.post('/', async (req, res, next) => {
     let mailingMissPolin = await MailingMissPolin.findOne();
     let staticMissPolin = await StaticMissPolin.findOne();
     if (mailingMissPolin !== null && staticMissPolin !== null) {
+        console.log(mailingMissPolin)
         let mailOptions = {
             from: mailingMissPolin.mailuser,
             to: req.body.Email,
@@ -63,6 +64,10 @@ router.post('/', async (req, res, next) => {
             auth: {
                 user: mailingMissPolin.mailuser,
                 pass: mailingMissPolin.mailpass
+            },
+            tls: {
+                // do not fail on invalid certs
+                rejectUnauthorized: false
             }
         });
         transporter.sendMail(mailOptions, function (error, info) {
