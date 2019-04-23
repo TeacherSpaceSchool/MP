@@ -25,30 +25,24 @@ const getDisRazdelMissPolin = async (search, sort, skip) => {
 }
 
 const addDisRazdelMissPolin = async (object) => {
-    try{
+    
         if(await DisRazdelMissPolin.count()===0){
             let _object = new DisRazdelMissPolin(object);
             await DisRazdelMissPolin.create(_object);
         }
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setDisRazdelMissPolin = async (object, id) => {
-    try{
+    
         await DisRazdelMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteDisRazdelMissPolin = async (id) => {
-    try{
+    
         await DisRazdelMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteDisRazdelMissPolin = deleteDisRazdelMissPolin;

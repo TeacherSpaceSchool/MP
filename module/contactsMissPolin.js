@@ -56,28 +56,22 @@ const getContactsMissPolin = async (search, sort, skip) => {
 }
 
 const addContactsMissPolin = async (object) => {
-    try{
+    
         let _object = new ContactsMissPolin(object);
         await ContactsMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setContactsMissPolin = async (object, id) => {
-    try{
+    
         await ContactsMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteContactsMissPolin = async (id) => {
-    try{
+    
         await ContactsMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteContactsMissPolin = deleteContactsMissPolin;

@@ -80,28 +80,22 @@ const getCatalogMissPolin = async (search, sort, skip) => {
 }
 
 const addCatalogMissPolin = async (object) => {
-    try{
+    
         let _object = new CatalogMissPolin(object);
         await CatalogMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setCatalogMissPolin = async (object, id) => {
-    try{
+    
         await CatalogMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteCatalogMissPolin = async (id) => {
-    try{
+    
         await CatalogMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteCatalogMissPolin = deleteCatalogMissPolin;

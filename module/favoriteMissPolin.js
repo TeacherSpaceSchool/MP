@@ -75,28 +75,22 @@ const getFavoriteMissPolin = async (search, sort, skip) => {
 }
 
 const addFavoriteMissPolin = async (object) => {
-    try{
+    
         let _object = new FavoriteMissPolin(object);
         await FavoriteMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setFavoriteMissPolin = async (object, id) => {
-    try{
+    
         await FavoriteMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteFavoriteMissPolin = async (id) => {
-    try{
+    
         await FavoriteMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteFavoriteMissPolin = deleteFavoriteMissPolin;

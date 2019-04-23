@@ -30,101 +30,110 @@ const path = require('path');
 const Mailchimp = require('../module/mailchimp');
 
 router.post('/getclient', async (req, res) => {
-    let data;
-    if(req.body.data!==undefined)
-        data = JSON.parse(req.body.data)
-    if(req.body.name == 'Новинки'){
-        await res.send(await ItemMissPolin.getNew(data.search))
-    } else if(req.body.name == 'Хиты'){
-        await res.send(await ItemMissPolin.getHit(data.search))
-    } else if(req.body.name == 'Категории'){
-        await res.send(await ItemMissPolin.getKategory())
-    } else if(req.body.name == 'Податегории'){
-        await res.send(await ItemMissPolin.getPodkategoria(data.search))
-    } else if(req.body.name == 'Подписка'){
-        Mailchimp.send(data.email)
-        await res.send('ok')
-    } else if(req.body.name == 'Товары'){
-        await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria))
-    } else if(req.body.name == 'Товар'){
-        await res.send(await ItemMissPolin.getItem(data.art))
-    } else if(req.body.name == 'Рекомендуем'){
-        await res.send(await ItemMissPolin.getRecom())
-    } else if(req.body.name == 'Скидки'){
-        await res.send(await ItemMissPolin.getDiscountItems(data.skip))
-    } else if(req.body.name == 'ВосстановлениеПароля'){
-        let data = JSON.parse(req.body.data);
-        await res.send(await UserMissPolin.recoveryPass(data.email))
-    } else if(req.body.name == 'Цвет'){
-        await res.send(await ColorMissPolin.getClient())
-    } else if(req.body.name == 'Категория'){
-        await res.send(await KategoriaMissPolin.getClient())
-    } else if(req.body.name == 'Предзаказы'){
-        await res.send(await PreitemMissPolin.getClient())
-    } else if(req.body.name == 'Биллборд'){
-        await res.send(await AdsMissPolin.getBillboard())
-    } else if(req.body.name == 'Баннер'){
-        await res.send(await AdsMissPolin.getBanner())
-    } else if(req.body.name == 'Блог'){
-        await res.send(await BlogMissPolin.getClient())
-    } else if(req.body.name == 'Предзаказ'){
-        await res.send(await PreitemMissPolin.getItem(data.art))
-    } else if(req.body.name == 'Валюта'){
-        await res.send(await CurrencyMissPolin.getClient())
-    } else if(req.body.name == 'БлогПоИмени'){
-        await res.send(await BlogMissPolin.getClient1(data.title))
-    } else if(req.body.name == 'Разделы'){
-        await res.send(await DisRazdelMissPolin.getClient())
+    try{
+        let data;
+        if(req.body.data!==undefined)
+            data = JSON.parse(req.body.data)
+        if(req.body.name == 'Новинки'){
+            await res.send(await ItemMissPolin.getNew(data.search))
+        } else if(req.body.name == 'Хиты'){
+            await res.send(await ItemMissPolin.getHit(data.search))
+        } else if(req.body.name == 'Категории'){
+            await res.send(await ItemMissPolin.getKategory())
+        } else if(req.body.name == 'Податегории'){
+            await res.send(await ItemMissPolin.getPodkategoria(data.search))
+        } else if(req.body.name == 'Подписка'){
+            Mailchimp.send(data.email)
+            await res.send('ok')
+        } else if(req.body.name == 'Товары'){
+            await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria))
+        } else if(req.body.name == 'Товар'){
+            await res.send(await ItemMissPolin.getItem(data.art))
+        } else if(req.body.name == 'Рекомендуем'){
+            await res.send(await ItemMissPolin.getRecom())
+        } else if(req.body.name == 'Скидки'){
+            await res.send(await ItemMissPolin.getDiscountItems(data.skip))
+        } else if(req.body.name == 'ВосстановлениеПароля'){
+            let data = JSON.parse(req.body.data);
+            await res.send(await UserMissPolin.recoveryPass(data.email))
+        } else if(req.body.name == 'Цвет'){
+            await res.send(await ColorMissPolin.getClient())
+        } else if(req.body.name == 'Категория'){
+            await res.send(await KategoriaMissPolin.getClient())
+        } else if(req.body.name == 'Предзаказы'){
+            await res.send(await PreitemMissPolin.getClient())
+        } else if(req.body.name == 'Биллборд'){
+            await res.send(await AdsMissPolin.getBillboard())
+        } else if(req.body.name == 'Баннер'){
+            await res.send(await AdsMissPolin.getBanner())
+        } else if(req.body.name == 'Блог'){
+            await res.send(await BlogMissPolin.getClient())
+        } else if(req.body.name == 'Предзаказ'){
+            await res.send(await PreitemMissPolin.getItem(data.art))
+        } else if(req.body.name == 'Валюта'){
+            await res.send(await CurrencyMissPolin.getClient())
+        } else if(req.body.name == 'БлогПоИмени'){
+            await res.send(await BlogMissPolin.getClient1(data.title))
+        } else if(req.body.name == 'Разделы'){
+            await res.send(await DisRazdelMissPolin.getClient())
+        }
+    } catch(error) {
+        console.error(error)
+        app.logger1.error(error)
     }
 });
 
 router.post('/getclientsecure', async (req, res) => {
-    if(req.body.name === 'Профиль'){
-        await passportEngine.getProfile(req, res)
-    } else if(req.body.name == 'ПроверкаПредзаказ'){
-        await passportEngine.checkPreitemUser(req, res)
-    } else if(req.body.name === 'ИзменитьПрофиль'){
-        await passportEngine.setProfile(req, res)
-    } else if(req.body.name == 'ПредзаказПользователь'){
-        await passportEngine.getPreitemUser(req, res)
-    } else if(req.body.name == 'ДобавитьПредзаказ'){
-        await passportEngine.addPreitemUser(req, res)
-    } else if(req.body.name == 'УдалитьПредзаказ'){
-        await passportEngine.delPreitemUser(req, res)
-    } else if(req.body.name == 'ДобавитьИзбранное'){
-        await passportEngine.addFavoriteUser(req, res)
-    } else if(req.body.name == 'УдалитьИзбранное'){
-        await passportEngine.delFavorite(req, res)
-    } else if(req.body.name == 'ПроверкаИзбранное'){
-        await passportEngine.checkFavorite(req, res)
-    } else if(req.body.name == 'ИзбранноеПользователь'){
-        await passportEngine.getFavorite(req, res)
-    } else if(req.body.name == 'ДобавитьКорзина'){
-        await passportEngine.addCart(req, res)
-    } else if(req.body.name == 'ПроверкаКорзина'){
-        await passportEngine.checkCart(req, res)
-    } else if(req.body.name == 'УдалитьКорзина'){
-        await passportEngine.delCart(req, res)
-    } else if(req.body.name == 'ПроверитьАдрес'){
-        await passportEngine.checkAddress(req, res)
-    } else if(req.body.name == 'ЗадатьАдрес'){
-        await passportEngine.setAddress(req, res)
-    } else if(req.body.name == 'СоздатьЗаказ'){
-        await passportEngine.generateOrder(req, res)
-    } else if(req.body.name == 'ПолучитьЗаказы'){
-        await passportEngine.getOrders(req, res)
-    } else if(req.body.name == 'ПолучитьЗаказ'){
-        await passportEngine.getOrder(req, res)
-    } else if(req.body.name == 'ОтменитьЗаказ'){
-        await passportEngine.cancelOrder(req, res)
-    } else if(req.body.name == 'Уровень'){
-        await passportEngine.getLvl(req, res)
+    try{
+        if(req.body.name === 'Профиль'){
+            await passportEngine.getProfile(req, res)
+        } else if(req.body.name == 'ПроверкаПредзаказ'){
+            await passportEngine.checkPreitemUser(req, res)
+        } else if(req.body.name === 'ИзменитьПрофиль'){
+            await passportEngine.setProfile(req, res)
+        } else if(req.body.name == 'ПредзаказПользователь'){
+            await passportEngine.getPreitemUser(req, res)
+        } else if(req.body.name == 'ДобавитьПредзаказ'){
+            await passportEngine.addPreitemUser(req, res)
+        } else if(req.body.name == 'УдалитьПредзаказ'){
+            await passportEngine.delPreitemUser(req, res)
+        } else if(req.body.name == 'ДобавитьИзбранное'){
+            await passportEngine.addFavoriteUser(req, res)
+        } else if(req.body.name == 'УдалитьИзбранное'){
+            await passportEngine.delFavorite(req, res)
+        } else if(req.body.name == 'ПроверкаИзбранное'){
+            await passportEngine.checkFavorite(req, res)
+        } else if(req.body.name == 'ИзбранноеПользователь'){
+            await passportEngine.getFavorite(req, res)
+        } else if(req.body.name == 'ДобавитьКорзина'){
+            await passportEngine.addCart(req, res)
+        } else if(req.body.name == 'ПроверкаКорзина'){
+            await passportEngine.checkCart(req, res)
+        } else if(req.body.name == 'УдалитьКорзина'){
+            await passportEngine.delCart(req, res)
+        } else if(req.body.name == 'ПроверитьАдрес'){
+            await passportEngine.checkAddress(req, res)
+        } else if(req.body.name == 'ЗадатьАдрес'){
+            await passportEngine.setAddress(req, res)
+        } else if(req.body.name == 'СоздатьЗаказ'){
+            await passportEngine.generateOrder(req, res)
+        } else if(req.body.name == 'ПолучитьЗаказы'){
+            await passportEngine.getOrders(req, res)
+        } else if(req.body.name == 'ПолучитьЗаказ'){
+            await passportEngine.getOrder(req, res)
+        } else if(req.body.name == 'ОтменитьЗаказ'){
+            await passportEngine.cancelOrder(req, res)
+        } else if(req.body.name == 'Уровень'){
+            await passportEngine.getLvl(req, res)
+        }
+    } catch(error) {
+        console.error(error)
+        app.logger1.error(error)
     }
 });
 
 router.post('/get', async (req, res) => {
   await passportEngine.verifydadmin(req, res, async ()=>{
-      console.log(req.body.name)
       if(req.body.name == 'Реклама'){
           await res.send(await AdsMissPolin.getAdsMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Блог'){
@@ -217,7 +226,8 @@ router.post('/add', async (req, res) => {
     await passportEngine.verifydadmin(req, res, async ()=>{
         if(req.body.name == 'Файлы') {
             let staticMissPolinModel = await StaticMissPolinModel.findOne();
-            fs.unlink(staticMissPolinModel.catalog, ()=>{console.log('successfully deleted');})
+            if(staticMissPolinModel!==null)
+                fs.unlink(staticMissPolinModel.catalog, ()=>{console.log('successfully deleted');})
             let filename = randomstring.generate(7) + '.pdf';
             let filepath = path.join(app.dirname, 'public', 'catalog', filename);
             let fstream = fs.createWriteStream(filepath);

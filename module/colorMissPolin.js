@@ -58,28 +58,22 @@ const getColorMissPolin = async (search, sort, skip) => {
 }
 
 const addColorMissPolin = async (object) => {
-    try{
+    
         let _object = new ColorMissPolin(object);
         await ColorMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setColorMissPolin = async (object, id) => {
-    try{
+    
         await ColorMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteColorMissPolin = async (id) => {
-    try{
+    
         await ColorMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteColorMissPolin = deleteColorMissPolin;

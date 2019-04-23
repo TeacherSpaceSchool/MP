@@ -68,18 +68,16 @@ const getAdsMissPolin = async (search, sort, skip) => {
             .select('image name url type updatedAt _id');
     }
     for (let i=0; i<findResult.length; i++){
+        findResult[i].lo.lol
         data.push([findResult[i].image, findResult[i].name, findResult[i].url, findResult[i].type, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
 }
 
 const addAdsMissPolin = async (object) => {
-    try{
         let _object = new AdsMissPolin(object);
         await AdsMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+
 }
 
 const setAdsMissPolin = async (object, id) => {
@@ -91,11 +89,7 @@ const setAdsMissPolin = async (object, id) => {
 }
 
 const deleteAdsMissPolin = async (id) => {
-    try{
         await AdsMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
 }
 
 module.exports.deleteAdsMissPolin = deleteAdsMissPolin;

@@ -14,6 +14,7 @@ const FavoriteMissPolin = require('../models/favoriteMissPolin');
 const ItemMissPolin = require('../models/itemMissPolin');
 const PreitemMissPolin = require('../models/preitemMissPolin');
 const AdressMissPolin = require('../models/adressMissPolin');
+const app = require('../app');
 
 let start = () => {
 //настройка паспорта
@@ -126,6 +127,7 @@ const verifydadmin = async (req, res, func) => {
             }
         } catch (err) {
             console.error(err)
+            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }
@@ -162,6 +164,7 @@ const signupuser = async (req, res) => {
         res.end(token)
     } catch (err) {
         console.error(err)
+        app.logger1.error(err)
         res.status(401);
         res.end('email not be unique')
     }
@@ -287,7 +290,6 @@ const addFavoriteUser = async (req, res) => {
                 if(geo===null)geo={country: '*', city: '*'}
                 let data = JSON.parse(req.body.data);
                 res.status(200);
-                console.log(data.item, user._id)
                 let _object = new FavoriteMissPolin({
                     item: data.item,
                     user: user._id,
@@ -302,6 +304,7 @@ const addFavoriteUser = async (req, res) => {
             }
         } catch (err) {
             console.error(err)
+            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }
@@ -334,6 +337,7 @@ const addCart = async (req, res) => {
             }
         } catch (err) {
             console.error(err)
+            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }

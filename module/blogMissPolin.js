@@ -2,7 +2,6 @@ const BlogMissPolin = require('../models/blogMissPolin');
 const format = require('date-format') ;
 
 const getClient1 = async(title)=>{
-    console.log(await BlogMissPolin.findOne({title: title}))
     return await BlogMissPolin.findOne({title: title})
 }
 
@@ -67,29 +66,20 @@ const getBlogMissPolin = async (search, sort, skip) => {
 }
 
 const addBlogMissPolin = async (object) => {
-    try{
+    
         let _object = new BlogMissPolin(object);
         await BlogMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
     }
-}
 
 const setBlogMissPolin = async (object, id) => {
-    try{
+    
         await BlogMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
     }
-}
 
 const deleteBlogMissPolin = async (id) => {
-    try{
+    
         await BlogMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
     }
-}
 
 module.exports.deleteBlogMissPolin = deleteBlogMissPolin;
 module.exports.getBlogMissPolin = getBlogMissPolin;

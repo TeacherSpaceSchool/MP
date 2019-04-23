@@ -76,28 +76,22 @@ const getKategoriaMissPolin = async (search, sort, skip) => {
 }
 
 const addKategoriaMissPolin = async (object) => {
-    try{
+    
         let _object = new KategoriaMissPolin(object);
         await KategoriaMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setKategoriaMissPolin = async (object, id) => {
-    try{
+    
         await KategoriaMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteKategoriaMissPolin = async (id) => {
-    try{
+    
         await KategoriaMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteKategoriaMissPolin = deleteKategoriaMissPolin;

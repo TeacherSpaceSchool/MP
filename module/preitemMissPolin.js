@@ -139,28 +139,22 @@ const getPreitemMissPolin = async (search, sort, skip) => {
 }
 
 const addPreitemMissPolin = async (object) => {
-    try{
+    
         let _object = new PreitemMissPolin(object);
         await PreitemMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setPreitemMissPolin = async (object, id) => {
-    try{
+    
         await PreitemMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deletePreitemMissPolin = async (id) => {
-    try{
+    
         await PreitemMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deletePreitemMissPolin = deletePreitemMissPolin;

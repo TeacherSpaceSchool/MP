@@ -45,7 +45,7 @@ let recoveryPass = async (email) => {
 }
 
 const getUserMissPolin = async (search, sort, skip) => {
-    try{
+    
         //await UserMissPolin.deleteMany()
         let findResult = [], data = [], count;
         const row = [
@@ -179,27 +179,21 @@ const getUserMissPolin = async (search, sort, skip) => {
                 findResult[i]._id]);
         }
         return {data: data, count: count, row: row}
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const addUserMissPolin = async (object) => {
-    try{
+    
         let _object = new UserMissPolin(object);
         await UserMissPolin.create(_object);
         await mailchimp.send(object.email, object.name, object.surname, object._id)
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setUserMissPolin = async (object, id) => {
-    try{
+    
             await UserMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 /*
 let recoveryPass = async (email) => {
@@ -239,11 +233,9 @@ let recoveryPass = async (email) => {
 }*/
 
 const deleteUserMissPolin = async (id) => {
-    try{
+    
         await UserMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.recoveryPass = recoveryPass;

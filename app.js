@@ -18,7 +18,9 @@ const nocache = require('nocache')
 const expressAMP = require('express-amp');
 const os = require('os');
 const compression = require('compression');
+const logger1 = require('logger').createLogger('development.log');
 module.exports.dirname = __dirname;
+module.exports.logge1r = logger1;
 
 
 //run passport
@@ -76,7 +78,7 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-    console.log(err)
+    logger1.error(err)
   // render the error page
   res.status(err.status || 500);
   res.render('error');

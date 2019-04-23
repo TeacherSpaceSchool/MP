@@ -57,28 +57,22 @@ const getCurrencyMissPolin = async (search, sort, skip) => {
 }
 
 const addCurrencyMissPolin = async (object) => {
-    try{
+    
         let _object = new CurrencyMissPolin(object);
         await CurrencyMissPolin.create(_object);
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setCurrencyMissPolin = async (object, id) => {
-    try{
+    
         await CurrencyMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteCurrencyMissPolin = async (id) => {
-    try{
+    
         await CurrencyMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.deleteCurrencyMissPolin = deleteCurrencyMissPolin;

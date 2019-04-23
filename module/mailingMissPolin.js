@@ -6,7 +6,7 @@ const getClient = async () => {
 }
 
 const getMailingMissPolin = async (search, sort, skip) => {
-    try{
+    
         let findResult = [], data = [], count;
         const row = [
             'mailuser',
@@ -28,36 +28,28 @@ const getMailingMissPolin = async (search, sort, skip) => {
             data.push([findResult[i].mailuser, findResult[i].mailpass, findResult[i].mailchimpInstance, findResult[i].listUniqueId, findResult[i].mailchimpApiKey, format(findResult[i].updatedAt), findResult[i]._id]);
         }
         return {data: data, count: count, row: row}
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const addMailingMissPolin = async (object) => {
-    try{
+    
         if(await MailingMissPolin.count()===0){
             let _object = new MailingMissPolin(object);
             await MailingMissPolin.create(_object);
         }
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const setMailingMissPolin = async (object, id) => {
-    try{
+    
         await MailingMissPolin.findOneAndUpdate({_id: id}, {$set: object});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 const deleteMailingMissPolin = async (id) => {
-    try{
+    
         await MailingMissPolin.deleteMany({_id: {$in: id}});
-    } catch(error) {
-        console.error(error)
-    }
+    
 }
 
 module.exports.getClient = getClient;

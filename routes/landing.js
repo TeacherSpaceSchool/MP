@@ -47,8 +47,7 @@ router.post('/', async (req, res, next) => {
     let geo = geoip.lookup(ip);
     let mailingMissPolin = await MailingMissPolin.findOne();
     let staticMissPolin = await StaticMissPolin.findOne();
-    if (mailingMissPolin !== null) {
-        console.log(mailingMissPolin.mailuser, mailingMissPolin.mailpass)
+    if (mailingMissPolin !== null && staticMissPolin !== null) {
         let mailOptions = {
             from: mailingMissPolin.mailuser,
             to: req.body.Email,
