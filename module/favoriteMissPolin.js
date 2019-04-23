@@ -4,7 +4,7 @@ const ItemMissPolin = require('../models/itemMissPolin');
 const format = require('date-format') ;
 
 const getFavoriteMissPolin = async (search, sort, skip) => {
-    await FavoriteMissPolin.deleteMany()
+    //await FavoriteMissPolin.deleteMany()
     let findResult = [], data = [], count;
     const row = [
         'товар',
