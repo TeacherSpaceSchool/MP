@@ -62,11 +62,11 @@ app.use(expressAMP({
     staticsPath: path.join(__dirname, 'aclient')
 }));
 
-app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory?|signin|resetpass|signup|profile|item?|blogs|preorders|preorder?|mypreorders|search|skidki|blog?|favorite|cart|myorders|order?)?/), indexRouter);
+//app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory?|signin|resetpass|signup|profile|item?|blogs|preorders|preorder?|mypreorders|search|skidki|blog?|favorite|cart|myorders|order?)?/), indexRouter);
 app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 app.use('/data', dataRouter);
-app.use('/landing', landingRouter);
+app.use('/', landingRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

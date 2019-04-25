@@ -662,6 +662,16 @@ router.post('/add', async (req, res) => {
                     else
                         await CurrencyMissPolin.setCurrencyMissPolin(data, req.body.id)
                     await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
+                } else if(req.body.name == 'Цвет'){
+                    data = {
+                        title: myNew.title,
+                        RGB: myNew.RGB,
+                    }
+                    if(req.body.id==undefined)
+                        await ColorMissPolin.addColorMissPolin(data)
+                    else
+                        await ColorMissPolin.setColorMissPolin(data, req.body.id)
+                    await res.send(await ColorMissPolin.getColorMissPolin(req.body.search, req.body.sort, req.body.skip))
                 } else if(req.body.name == 'Разделы'){
                     data = {
                         discount: myNew.discount,
