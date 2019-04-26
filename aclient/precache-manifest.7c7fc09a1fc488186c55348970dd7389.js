@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "url": "/static/media/star1.fd6a5c48.svg"
   },
   {
-    "revision": "c398c97ca3313ead9df8e0f8dfff0fe5",
+    "revision": "cf26fdfe2a37f2b45225bd367e1d68a7",
     "url": "/index.html"
   }
 ];
