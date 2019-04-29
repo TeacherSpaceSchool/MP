@@ -5,7 +5,7 @@ const url = '/',
 const searchRepeat = (arr1)=>{
     let mf = 1;
     let m = 0;
-    let item;
+    let item = 'error';
     for (let i=0; i<arr1.length; i++)
     {
         for (let j=i; j<arr1.length; j++)
@@ -16,6 +16,7 @@ const searchRepeat = (arr1)=>{
             {
                 mf=m;
                 item = arr1[i];
+                console.log(item)
             }
         }
         m=0;
