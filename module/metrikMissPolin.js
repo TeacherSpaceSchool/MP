@@ -10,6 +10,7 @@ const SearchMissPolin = require('../models/searchMissPolin');
 const UserMissPolin = require('../models/userMissPolin');
 const SearchGeoMissPolin = require('../models/searchGeoMissPolin');
 const KategoryGeoMissPolin = require('../models/kategoryGeoMissPolin');
+const CatalogMissPolin = require('../models/catalogMissPolin');
 const ItemGeoMissPolin = require('../models/itemGeoMissPolin');
 const const1 = require('../module/const');
 
@@ -500,33 +501,41 @@ const getGeoMetrik = async (search, sort, skip) => {
         'корзина',
         'заказали',
         'купили',
-        'отмена'
+        'отмена',
+        'каталог',
     ];
     count = await UserMissPolin.count();
     findResult = await UserMissPolin
         .find({role: {$ne: 'admin'}}).distinct('data');
 
     for(let i = 0; i<findResult.length; i++){
-        let searchArr = await SearchGeoMissPolin.count({geo: findResult[i]}).distinct('word')
-        if(searchArr==undefined||searchArr.length<1)
+        let searchArr1 = await SearchGeoMissPolin.count({geo: findResult[i]}), searchArr = []
+        if(searchArr1==undefined||searchArr1.length<1) {
             searchArr = ''
-        else
+        } else {
+            for(let i1 = 0; i1<searchArr1.length; i1++) {
+                searchArr.push(searchArr1[i1])
+            }
             searchArr = const1.searchRepeat(searchArr)
-
-        let itemArr = await ItemGeoMissPolin.count({geo: findResult[i]}).distinct('word')
-        console.log(itemArr)
-        if(itemArr==undefined||itemArr.length<1)
+        }
+        let itemArr1 = await ItemGeoMissPolin.count({geo: findResult[i]}), itemArr = []
+        if(itemArr1==undefined||itemArr1.length<1) {
             itemArr = ''
-        else
+        } else {
+            for(let i1 = 0; i1<itemArr1.length; i1++) {
+                itemArr.push(itemArr1[i1])
+            }
             itemArr = const1.searchRepeat(itemArr)
-        let kategoryArr = await KategoryGeoMissPolin.count({geo: findResult[i]}).distinct('word')
-        console.log(itemArr)
-        console.log(kategoryArr)
-        if(kategoryArr==undefined||kategoryArr.length<1)
+        }
+        let kategoryArr1 = await KategoryGeoMissPolin.count({geo: findResult[i]}), kategoryArr = []
+        if(kategoryArr1==undefined||kategoryArr1.length<1) {
             kategoryArr = ''
-        else
+        } else {
+            for(let i1 = 0; i1<kategoryArr1.length; i1++) {
+                kategoryArr.push(kategoryArr1[i1])
+            }
             kategoryArr = const1.searchRepeat(kategoryArr)
-        console.log(kategoryArr)
+        }
         data.push([
             findResult[i],
             searchArr,
@@ -537,6 +546,7 @@ const getGeoMetrik = async (search, sort, skip) => {
             await OrderMissPolin.count({status: 'принят', geo: findResult[i]}),
             await OrderMissPolin.count({status: 'выполнен', geo: findResult[i]}),
             await OrderMissPolin.count({status: 'отменен', geo: findResult[i]}),
+            await CatalogMissPolin.count({data: findResult[i]}),
         ]);
     }
     if(sort[0]=='избранное'&&sort[1]=='descending')
@@ -559,6 +569,10 @@ const getGeoMetrik = async (search, sort, skip) => {
         data.sort((a, b) => (a[8] > b[8]) ? 1 : -1)
     else if(sort[0]=='отмена'&&sort[1]=='ascending')
         data.sort((a, b) => (a[8] < b[8]) ? 1 : -1)
+    else if(sort[0]=='каталог'&&sort[1]=='descending')
+        data.sort((a, b) => (a[9] > b[9]) ? 1 : -1)
+    else if(sort[0]=='каталог'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[9] < b[9]) ? 1 : -1)
     console.log(data)
     return {data: data.slice(parseInt(skip), parseInt(skip)+10), count: count, row: row}
 }
