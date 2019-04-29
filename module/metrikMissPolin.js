@@ -519,12 +519,14 @@ const getGeoMetrik = async (search, sort, skip) => {
             itemArr = ''
         else
             itemArr = const1.searchRepeat(itemArr)
-        console.log(kategoryArr)
         let kategoryArr = await KategoryGeoMissPolin.count({geo: findResult[i]}).distinct('word')
+        console.log(itemArr)
+        console.log(kategoryArr)
         if(kategoryArr==undefined||kategoryArr.length<1)
             kategoryArr = ''
         else
             kategoryArr = const1.searchRepeat(kategoryArr)
+        console.log(kategoryArr)
         data.push([
             findResult[i],
             searchArr,
