@@ -127,7 +127,6 @@ const verifydadmin = async (req, res, func) => {
             }
         } catch (err) {
             console.error(err)
-            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }
@@ -164,7 +163,6 @@ const signupuser = async (req, res) => {
         res.end(token)
     } catch (err) {
         console.error(err)
-        app.logger1.error(err)
         res.status(401);
         res.end('email not be unique')
     }
@@ -265,7 +263,9 @@ const addPreitemUser = async (req, res) => {
                 let _object = new PreitemUserMissPolin({
                     preitem: data.preitem,
                     user: user._id,
-                    data: geo.country+' \n'+geo.city
+                    status: 'принят',
+                    data: geo.country+' \n'+geo.city,
+                    geo: geo.country+' \n'+geo.city
                 });
                 await PreitemUserMissPolin.create(_object);
                 res.end('ok');
@@ -293,7 +293,8 @@ const addFavoriteUser = async (req, res) => {
                 let _object = new FavoriteMissPolin({
                     item: data.item,
                     user: user._id,
-                    data: geo.country+' \n'+geo.city
+                    data: geo.country+' \n'+geo.city,
+                    geo: geo.country+' \n'+geo.city
                 });
                 await FavoriteMissPolin.create(_object);
                 res.end('ok');
@@ -304,7 +305,6 @@ const addFavoriteUser = async (req, res) => {
             }
         } catch (err) {
             console.error(err)
-            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }
@@ -326,7 +326,8 @@ const addCart = async (req, res) => {
                     priceone: data.priceone,
                     pricefull: data.pricefull,
                     color: data.color,
-                    count: data.count
+                    count: data.count,
+                    geo: geo.country+' \n'+geo.city
                 });
                 await CartMissPolin.create(_object);
                 res.end('ok');
@@ -337,7 +338,6 @@ const addCart = async (req, res) => {
             }
         } catch (err) {
             console.error(err)
-            app.logger1.error(err)
             res.status(401);
             res.end('err')
         }
@@ -559,6 +559,7 @@ const generateOrder = async (req, res) => {
                 data.user = user._id
                 data.status = 'принят'
                 data.data = geo.country+' \n'+geo.city
+                data.geo = geo.country+' \n'+geo.city
                 let _object = new OrderMissPolin(data);
                 await OrderMissPolin.create(_object);
                 await CartMissPolin.deleteMany({user: user._id});

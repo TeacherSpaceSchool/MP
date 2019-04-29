@@ -1,5 +1,6 @@
 const BlogMissPolin = require('../models/blogMissPolin');
 const format = require('date-format') ;
+const mongoose = require('mongoose');
 
 const getClient1 = async(title)=>{
     return await BlogMissPolin.findOne({title: title})
@@ -33,13 +34,34 @@ const getBlogMissPolin = async (search, sort, skip) => {
         sort = '-updatedAt';
     else if(sort[0]=='создан'&&sort[1]=='ascending')
         sort = 'updatedAt';
-    if(search == ''){
+    if(search == '') {
         count = await BlogMissPolin.count();
         findResult = await BlogMissPolin
             .find()
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10);
+    } else if (mongoose.Types.ObjectId.isValid(search)) {
+        count = await BlogMissPolin.count({
+            $or: [
+                {_id: search},
+                {image: {'$regex': search, '$options': 'i'}},
+                {title: {'$regex': search, '$options': 'i'}},
+                {text: {'$regex': search, '$options': 'i'}},
+            ]
+        });
+        findResult = await BlogMissPolin.find({
+            $or: [
+                {_id: search},
+                {image: {'$regex': search, '$options': 'i'}},
+                {title: {'$regex': search, '$options': 'i'}},
+                {text: {'$regex': search, '$options': 'i'}},
+            ]
+        })
+            .sort(sort)
+            .skip(parseInt(skip))
+            .limit(10);
+
     } else {
         count = await BlogMissPolin.count({
             $or: [

@@ -4,6 +4,7 @@ const mailchimp = require('../module/mailchimp');
 const nodemailer = require('nodemailer');
 const randomstring = require('randomstring');
 const format = require('date-format') ;
+const mongoose = require('mongoose');
 
 let recoveryPass = async (email) => {
     if(await MailingMissPolin.count({email: email})>0){
@@ -105,27 +106,60 @@ const getUserMissPolin = async (search, sort, skip) => {
                 .sort(sort)
                 .skip(parseInt(skip))
                 .limit(10);
-        } else {
+        } else if (mongoose.Types.ObjectId.isValid(search)) {
+
             count = await UserMissPolin.count({
                 $and: [
                     {
                         $or: [
-                            {_id: {'$regex': search, '$options': 'i'}},
+                            {_id: search},
                             {name: {'$regex': search, '$options': 'i'}},
                             {email: {'$regex': search, '$options': 'i'}},
                             {phonenumber: {'$regex': search, '$options': 'i'}},
                             {status: {'$regex': search, '$options': 'i'}},
                             {data: {'$regex': search, '$options': 'i'}},
-        ]}, {
-                        role:
-                            {$ne: 'admin'}
+                        ]
+                    }, {
+                        role: {$ne: 'admin'}
                     }]
             });
             findResult = await UserMissPolin.find({
                 $and: [
                     {
                         $or: [
-                            {_id: {'$regex': search, '$options': 'i'}},
+                            {_id: search},
+                            {name: {'$regex': search, '$options': 'i'}},
+                            {email: {'$regex': search, '$options': 'i'}},
+                            {phonenumber: {'$regex': search, '$options': 'i'}},
+                            {status: {'$regex': search, '$options': 'i'}},
+                            {data: {'$regex': search, '$options': 'i'}},
+                        ]}, {
+                        role:
+                            {$ne: 'admin'}
+                    }]
+            })
+                .sort(sort)
+                .skip(parseInt(skip))
+                .limit(10);
+        } else {
+            count = await UserMissPolin.count({
+                $and: [
+                    {
+                        $or: [
+                            {name: {'$regex': search, '$options': 'i'}},
+                            {email: {'$regex': search, '$options': 'i'}},
+                            {phonenumber: {'$regex': search, '$options': 'i'}},
+                            {status: {'$regex': search, '$options': 'i'}},
+                            {data: {'$regex': search, '$options': 'i'}},
+                        ]
+                    }, {
+                        role: {$ne: 'admin'}
+                    }]
+            });
+            findResult = await UserMissPolin.find({
+                $and: [
+                    {
+                        $or: [
                             {name: {'$regex': search, '$options': 'i'}},
                             {email: {'$regex': search, '$options': 'i'}},
                             {phonenumber: {'$regex': search, '$options': 'i'}},

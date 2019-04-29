@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: misspolin.com
+Sitemap: http://misspolin.com/sitemap.xml

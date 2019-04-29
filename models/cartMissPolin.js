@@ -29,6 +29,10 @@ const CartMissPolinSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    geo: {
+        type: String,
+        required: false
+    },
 }, {
     timestamps: true
 });

@@ -9,6 +9,7 @@ const getPreitemUserMissPolin = async (search, sort, skip) => {
         'товар',
         'клиент',
         'информация',
+        'статус',
         'создан',
         '_id'
     ];
@@ -67,10 +68,16 @@ const getPreitemUserMissPolin = async (search, sort, skip) => {
             else
                 user = ''
         }
+        let status = ''
+        if(findResult[i].status!=undefined) {
+            if(status!=undefined)
+                status = findResult[i].status
+        }
         data.push([
             item,
             user,
             findResult[i].data,
+            status,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
             findResult[i]._id]);
     }

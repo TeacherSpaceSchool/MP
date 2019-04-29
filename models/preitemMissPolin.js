@@ -30,6 +30,10 @@ const PreitemMissPolinSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    final: {
+        type: Date,
+        required: false
+    },
 }, {
     timestamps: true
 });

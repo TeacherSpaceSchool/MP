@@ -22,6 +22,7 @@ const getPreitemMissPolin = async (search, sort, skip) => {
         'материал',
         'цена',
         'статус',
+        'окончание',
         'создан',
         '_id'
     ];
@@ -80,7 +81,6 @@ const getPreitemMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10)
-            .select('descriptionRu descriptionKg updatedAt _id');
     } else {
         count = await PreitemMissPolin.count({
             $or: [
@@ -125,6 +125,9 @@ const getPreitemMissPolin = async (search, sort, skip) => {
         let status = ''
         if (findResult[i].status!=undefined)
             status = findResult[i].status
+        let final = ''
+        if (findResult[i].final!=undefined)
+            final = findResult[i].final
         data.push([
             image,
             art,
@@ -132,9 +135,9 @@ const getPreitemMissPolin = async (search, sort, skip) => {
             material,
             prices,
             status,
+            final,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
-    console.log(data)
     return {data: data, count: count, row: row}
 }
 

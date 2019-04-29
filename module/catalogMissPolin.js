@@ -1,5 +1,6 @@
 const CatalogMissPolin = require('../models/catalogMissPolin');
 const format = require('date-format') ;
+const mongoose = require('mongoose');
 
 const getCatalogMissPolin = async (search, sort, skip) => {
     //await CatalogMissPolin.deleteMany()
@@ -50,6 +51,31 @@ const getCatalogMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10);
+    }  else if (mongoose.Types.ObjectId.isValid(search)) {
+        count = await CatalogMissPolin.count({
+            $or: [
+                {_id: search},
+                {name: {'$regex': search, '$options': 'i'}},
+                {phone: {'$regex': search, '$options': 'i'}},
+                {email: {'$regex': search, '$options': 'i'}},
+                {data: {'$regex': search, '$options': 'i'}},
+                {refer: {'$regex': search, '$options': 'i'}},
+            ]
+        });
+        findResult = await CatalogMissPolin.find({
+            $or: [
+                {_id: search},
+                {name: {'$regex': search, '$options': 'i'}},
+                {phone: {'$regex': search, '$options': 'i'}},
+                {email: {'$regex': search, '$options': 'i'}},
+                {data: {'$regex': search, '$options': 'i'}},
+                {refer: {'$regex': search, '$options': 'i'}},
+            ]
+        })
+            .sort(sort)
+            .skip(parseInt(skip))
+            .limit(10);
+
     } else {
         count = await CatalogMissPolin.count({
             $or: [

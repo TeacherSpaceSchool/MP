@@ -33,6 +33,10 @@ const OrderMissPolinSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    geo: {
+        type: String,
+        required: false
+    },
 }, {
     timestamps: true
 });

@@ -11,6 +11,7 @@ const ItemMissPolin = require('../module/itemMissPolin');
 const ModelsItemMissPolin = require('../models/itemMissPolin');
 const ColorMissPolin = require('../module/colorMissPolin');
 const DisRazdelMissPolin = require('../module/disRazdelMissPolin');
+const MetrikMissPolin = require('../module/metrikMissPolin');
 const CurrencyMissPolin = require('../module/currencyMissPolin');
 const StaticMissPolinModel = require('../models/staticMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
@@ -28,6 +29,7 @@ const app = require('../app');
 const fs = require('fs');
 const path = require('path');
 const Mailchimp = require('../module/mailchimp');
+var geoip = require('geoip-lite');
 
 router.post('/getclient', async (req, res) => {
     try{
@@ -46,8 +48,16 @@ router.post('/getclient', async (req, res) => {
             Mailchimp.send(data.email)
             await res.send('ok')
         } else if(req.body.name == 'Товары'){
-            await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria))
+            let ip = req.ip
+            let geo = geoip.lookup(ip);
+            if(geo===null)geo={country: '*', city: '*'}
+            await MetrikMissPolin.setKategoryGeoMetrik(data.kategoria, geo.country+' \n'+geo.city)
+            await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria, data.podkategory))
         } else if(req.body.name == 'Товар'){
+            let ip = req.ip
+            let geo = geoip.lookup(ip);
+            if(geo===null)geo={country: '*', city: '*'}
+            await MetrikMissPolin.setItemGeoMetrik(data.art, geo.country+' \n'+geo.city)
             await res.send(await ItemMissPolin.getItem(data.art))
         } else if(req.body.name == 'Рекомендуем'){
             await res.send(await ItemMissPolin.getRecom())
@@ -76,6 +86,12 @@ router.post('/getclient', async (req, res) => {
             await res.send(await BlogMissPolin.getClient1(data.title))
         } else if(req.body.name == 'Разделы'){
             await res.send(await DisRazdelMissPolin.getClient())
+        } else if(req.body.name == 'Аналитика поиск'){
+            let ip = req.ip
+            let geo = geoip.lookup(ip);
+            if(geo===null)geo={country: '*', city: '*'}
+            await MetrikMissPolin.setSearchGeoMetrik(data.search, geo.country+' \n'+geo.city)
+            await res.send(await MetrikMissPolin.setSearchMetrik(data.search))
         }
     } catch(error) {
         console.error(error)
@@ -138,6 +154,14 @@ router.post('/get', async (req, res) => {
           await res.send(await AdsMissPolin.getAdsMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Блог'){
           await res.send(await BlogMissPolin.getBlogMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика товар'){
+          await res.send(await MetrikMissPolin.getItemMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика категория'){
+          await res.send(await MetrikMissPolin.getKategoryMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика предзаказ'){
+          await res.send(await MetrikMissPolin.getPreitemMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика заказы'){
+          await res.send(await MetrikMissPolin.getOrderMetrik())
       } else if(req.body.name == 'Каталог'){
           await res.send(await CatalogMissPolin.getCatalogMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Файлы'){
@@ -170,6 +194,12 @@ router.post('/get', async (req, res) => {
           await res.send(await CurrencyMissPolin.getCurrencyMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Разделы'){
           await res.send(await DisRazdelMissPolin.getDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика поиск'){
+          await res.send(await MetrikMissPolin.getSearchMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика пользователь'){
+          await res.send(await MetrikMissPolin.getUserMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика геолокация'){
+          await res.send(await MetrikMissPolin.getGeoMetrik(req.body.search, req.body.sort, req.body.skip))
       }
   });
 });
@@ -363,7 +393,8 @@ router.post('/add', async (req, res) => {
                                     status: myNew.status,
                                     image: photos,
                                     imageThumbnail: photosThumbnail,
-                                    art: myNew.art
+                                    art: myNew.art,
+                                    final: myNew.final
                                 }
                                 if(req.body.id==undefined)
                                     await PreitemMissPolin.addPreitemMissPolin(data)
@@ -532,7 +563,8 @@ router.post('/add', async (req, res) => {
                         status: myNew.status,
                         image: photos,
                         imageThumbnail: photosThumbnail,
-                        art: myNew.art
+                        art: myNew.art,
+                        final: myNew.final
                     }
                     if(req.body.id==undefined)
                         await PreitemMissPolin.addPreitemMissPolin(data)

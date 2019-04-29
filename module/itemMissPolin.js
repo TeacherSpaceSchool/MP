@@ -135,7 +135,8 @@ const getItemMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10);
-    } else if (mongoose.Types.ObjectId.isValid(search)) {
+    }
+    else if (mongoose.Types.ObjectId.isValid(search)) {
         count = await ItemMissPolin.count({
             $or: [
                 {_id: search},
@@ -177,7 +178,8 @@ const getItemMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10)
-    } else {
+    }
+    else {
         count = await ItemMissPolin.count({
             $or: [
                 {image: {'$regex': search, '$options': 'i'}},

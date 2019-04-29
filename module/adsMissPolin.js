@@ -1,5 +1,6 @@
 const AdsMissPolin = require('../models/adsMissPolin');
 const format = require('date-format') ;
+const mongoose = require('mongoose');
 
 const getBillboard = async () => {
     return await AdsMissPolin.find({type: 'билборд'});
@@ -45,6 +46,28 @@ const getAdsMissPolin = async (search, sort, skip) => {
             .skip(parseInt(skip))
             .limit(10)
             .select('image name url type updatedAt _id');
+    } else if (mongoose.Types.ObjectId.isValid(search)) {
+        count = await AdsMissPolin.count({
+            $or: [
+                {_id: search},
+                {image: {'$regex': search, '$options': 'i'}},
+                {name: {'$regex': search, '$options': 'i'}},
+                {url: {'$regex': search, '$options': 'i'}},
+                {type: {'$regex': search, '$options': 'i'}},
+            ]
+        });
+        findResult = await AdsMissPolin.find({
+            $or: [
+                {_id: search},
+                {image: {'$regex': search, '$options': 'i'}},
+                {name: {'$regex': search, '$options': 'i'}},
+                {url: {'$regex': search, '$options': 'i'}},
+                {type: {'$regex': search, '$options': 'i'}},
+            ]
+        })
+            .sort(sort)
+            .skip(parseInt(skip))
+            .limit(10)
     } else {
         count = await AdsMissPolin.count({
             $or: [
@@ -65,7 +88,6 @@ const getAdsMissPolin = async (search, sort, skip) => {
             .sort(sort)
             .skip(parseInt(skip))
             .limit(10)
-            .select('image name url type updatedAt _id');
     }
     for (let i=0; i<findResult.length; i++){
         findResult[i].lo.lol
