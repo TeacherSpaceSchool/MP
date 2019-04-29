@@ -20,6 +20,7 @@ const searchRepeat = (arr1)=>{
         }
         m=0;
     }
+    console.log(item)
     return item;
 }
 
