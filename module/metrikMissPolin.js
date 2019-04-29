@@ -509,8 +509,7 @@ const getGeoMetrik = async (search, sort, skip) => {
         .find({role: {$ne: 'admin'}}).distinct('data');
 
     for(let i = 0; i<findResult.length; i++){
-        let searchArr1 = await SearchGeoMissPolin.count({geo: findResult[i]}), searchArr = []
-        console.log(searchArr1)
+        let searchArr1 = await SearchGeoMissPolin.find({geo: findResult[i]}), searchArr = []
         if(searchArr1==undefined||searchArr1.length<1) {
             searchArr = ''
         } else {
@@ -519,8 +518,7 @@ const getGeoMetrik = async (search, sort, skip) => {
             }
             searchArr = const1.searchRepeat(searchArr)
         }
-        console.log(searchArr)
-        let itemArr1 = await ItemGeoMissPolin.count({geo: findResult[i]}), itemArr = []
+        let itemArr1 = await ItemGeoMissPolin.find({geo: findResult[i]}), itemArr = []
         if(itemArr1==undefined||itemArr1.length<1) {
             itemArr = ''
         } else {
@@ -529,7 +527,7 @@ const getGeoMetrik = async (search, sort, skip) => {
             }
             itemArr = const1.searchRepeat(itemArr)
         }
-        let kategoryArr1 = await KategoryGeoMissPolin.count({geo: findResult[i]}), kategoryArr = []
+        let kategoryArr1 = await KategoryGeoMissPolin.find({geo: findResult[i]}), kategoryArr = []
         if(kategoryArr1==undefined||kategoryArr1.length<1) {
             kategoryArr = ''
         } else {
@@ -579,6 +577,55 @@ const getGeoMetrik = async (search, sort, skip) => {
     return {data: data.slice(parseInt(skip), parseInt(skip)+10), count: count, row: row}
 }
 
+const getRefMetrik = async (search, sort, skip) => {
+    let findResult = [], data = [], count;
+    const row = [
+        'рефералка',
+        'избранное',
+        'корзина',
+        'заказали',
+        'купили',
+        'отмена',
+    ];
+    count = await UserMissPolin.count();
+    findResult = await UserMissPolin
+        .find({role: {$ne: 'admin'}}).distinct('ref');
+    for(let i = 0; i<findResult.length; i++){
+        let userArr = await UserMissPolin.find({ref: findResult[i]}).distinct('_id')
+
+        data.push([
+            findResult[i],
+            await FavoriteMissPolin.count({user: findResult[i]}),
+            await CartMissPolin.count({user: findResult[i]}),
+            await OrderMissPolin.count({status: 'принят', user: {'$in' : userArr}}),
+            await OrderMissPolin.count({status: 'выполнен', user: {'$in' : userArr}}),
+            await OrderMissPolin.count({status: 'отменен', user: {'$in' : userArr}}),
+        ]);
+    }
+    if(sort[0]=='избранное'&&sort[1]=='descending')
+        data.sort((a, b) => (a[1] > b[1]) ? 1 : -1)
+    else if(sort[0]=='избранное'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[1] < b[1]) ? 1 : -1)
+    else if(sort[0]=='корзина'&&sort[1]=='descending')
+        data.sort((a, b) => (a[2] > b[2]) ? 1 : -1)
+    else if(sort[0]=='корзина'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[2] < b[2]) ? 1 : -1)
+    else if(sort[0]=='заказали'&&sort[1]=='descending')
+        data.sort((a, b) => (a[3] > b[3]) ? 1 : -1)
+    else if(sort[0]=='заказали'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[3] < b[3]) ? 1 : -1)
+    else if(sort[0]=='купили'&&sort[1]=='descending')
+        data.sort((a, b) => (a[4] > b[4]) ? 1 : -1)
+    else if(sort[0]=='купили'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[4] < b[4]) ? 1 : -1)
+    else if(sort[0]=='отмена'&&sort[1]=='descending')
+        data.sort((a, b) => (a[5] > b[5]) ? 1 : -1)
+    else if(sort[0]=='отмена'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[5] < b[5]) ? 1 : -1)
+    console.log(data)
+    return {data: data.slice(parseInt(skip), parseInt(skip)+10), count: count, row: row}
+}
+
 
 module.exports.getItemMetrik = getItemMetrik;
 module.exports.getKategoryMetrik = getKategoryMetrik;
@@ -591,3 +638,4 @@ module.exports.setSearchGeoMetrik = setSearchGeoMetrik;
 module.exports.getGeoMetrik = getGeoMetrik;
 module.exports.setItemGeoMetrik = setItemGeoMetrik;
 module.exports.setKategoryGeoMetrik = setKategoryGeoMetrik;
+module.exports.getRefMetrik = getRefMetrik;

@@ -200,6 +200,8 @@ router.post('/get', async (req, res) => {
           await res.send(await MetrikMissPolin.getUserMetrik(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Аналитика геолокация'){
           await res.send(await MetrikMissPolin.getGeoMetrik(req.body.search, req.body.sort, req.body.skip))
+      } else if(req.body.name == 'Аналитика рефералка'){
+          await res.send(await MetrikMissPolin.getRefMetrik(req.body.search, req.body.sort, req.body.skip))
       }
   });
 });
