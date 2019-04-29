@@ -510,20 +510,22 @@ const getGeoMetrik = async (search, sort, skip) => {
 
     for(let i = 0; i<findResult.length; i++){
         let searchArr1 = await SearchGeoMissPolin.count({geo: findResult[i]}), searchArr = []
+        console.log(searchArr1)
         if(searchArr1==undefined||searchArr1.length<1) {
             searchArr = ''
         } else {
             for(let i1 = 0; i1<searchArr1.length; i1++) {
-                searchArr.push(searchArr1[i1])
+                searchArr.push(searchArr1[i1].word)
             }
             searchArr = const1.searchRepeat(searchArr)
         }
+        console.log(searchArr)
         let itemArr1 = await ItemGeoMissPolin.count({geo: findResult[i]}), itemArr = []
         if(itemArr1==undefined||itemArr1.length<1) {
             itemArr = ''
         } else {
             for(let i1 = 0; i1<itemArr1.length; i1++) {
-                itemArr.push(itemArr1[i1])
+                itemArr.push(itemArr1[i1].word)
             }
             itemArr = const1.searchRepeat(itemArr)
         }
@@ -532,7 +534,7 @@ const getGeoMetrik = async (search, sort, skip) => {
             kategoryArr = ''
         } else {
             for(let i1 = 0; i1<kategoryArr1.length; i1++) {
-                kategoryArr.push(kategoryArr1[i1])
+                kategoryArr.push(kategoryArr1[i1].word)
             }
             kategoryArr = const1.searchRepeat(kategoryArr)
         }

@@ -4,7 +4,6 @@
     <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development.log" afterPath="$PROJECT_DIR$/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/const.js" afterPath="$PROJECT_DIR$/module/const.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/metrikMissPolin.js" afterPath="$PROJECT_DIR$/module/metrikMissPolin.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -25,8 +24,8 @@
       <file leaf-file-name="metrikMissPolin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/metrikMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="572" column="39" lean-forward="false" selection-start-line="572" selection-start-column="39" selection-end-line="572" selection-end-column="39" />
+            <state relative-caret-position="216">
+              <caret line="521" column="29" lean-forward="false" selection-start-line="521" selection-start-column="29" selection-end-line="521" selection-end-column="29" />
               <folding>
                 <element signature="e#968#7123#0" expanded="false" />
                 <element signature="e#1404#2333#0" expanded="false" />
@@ -453,12 +452,12 @@
       <workItem from="1556182835864" duration="5954000" />
       <workItem from="1556261270018" duration="572000" />
       <workItem from="1556267882669" duration="22533000" />
-      <workItem from="1556540938918" duration="1893000" />
+      <workItem from="1556540938918" duration="2065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="598580000" />
+    <option name="totallyTimeSpent" value="598752000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -478,7 +477,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1311787" sideWeight="0.17153284" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -779,6 +778,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -896,8 +896,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/module/metrikMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="572" column="39" lean-forward="false" selection-start-line="572" selection-start-column="39" selection-end-line="572" selection-end-column="39" />
+        <state relative-caret-position="216">
+          <caret line="521" column="29" lean-forward="false" selection-start-line="521" selection-start-column="29" selection-end-line="521" selection-end-column="29" />
           <folding>
             <element signature="e#968#7123#0" expanded="false" />
             <element signature="e#1404#2333#0" expanded="false" />
