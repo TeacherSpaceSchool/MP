@@ -10,7 +10,7 @@ const OrderMissPolinSchema = mongoose.Schema({
         required: true,
     },
     sum: {
-        type: Number,
+        type: String,
         required: true
     },
     kategory: {
