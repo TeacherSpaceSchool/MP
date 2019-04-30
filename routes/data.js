@@ -92,7 +92,7 @@ router.post('/getclient', async (req, res) => {
             let geo = geoip.lookup(ip);
             if(geo===null)geo={country: '*', city: '*'}
             await MetrikMissPolin.setSearchGeoMetrik(data.search, geo.country+' \n'+geo.city)
-            await res.send(await MetrikMissPolin.setSearchMetrik(data.search))
+            await MetrikMissPolin.setSearchMetrik(data.search)
         } else if(req.body.name == 'Рефералка'){
             let ip = JSON.stringify(req.ip)
             if(await ReferMissPolin.count({refer: data.refer})===0){
@@ -122,7 +122,6 @@ router.post('/getclient', async (req, res) => {
         }
     } catch(error) {
         console.error(error)
-        app.logger1.error(error)
     }
 });
 
