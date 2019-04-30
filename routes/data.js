@@ -14,6 +14,7 @@ const DisRazdelMissPolin = require('../module/disRazdelMissPolin');
 const MetrikMissPolin = require('../module/metrikMissPolin');
 const CurrencyMissPolin = require('../module/currencyMissPolin');
 const StaticMissPolinModel = require('../models/staticMissPolin');
+const ReferipMissPolin = require('../models/referipMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
 const OrderMissPolin = require('../module/orderMissPolin');
 const UserMissPolin = require('../module/userMissPolin');
@@ -92,6 +93,32 @@ router.post('/getclient', async (req, res) => {
             if(geo===null)geo={country: '*', city: '*'}
             await MetrikMissPolin.setSearchGeoMetrik(data.search, geo.country+' \n'+geo.city)
             await res.send(await MetrikMissPolin.setSearchMetrik(data.search))
+        } else if(req.body.name == 'Рефералка'){
+            let ip = JSON.stringify(req.ip)
+            if(await ReferMissPolin.count({refer: data.refer})===0){
+                let _object = new ReferMissPolin({
+                    refer: data.refer,
+                    count: 1,
+                    type: 'store'
+                });
+                await ReferMissPolin.create(_object);
+                _object = new ReferipMissPolin({
+                    refer: data.refer,
+                    ip: ip,
+                });
+                await ReferipMissPolin.create(_object);
+            } else {
+                if(ReferipMissPolin.count({ip: ip, refer: data.refer})===0){
+                    let _object = new ReferipMissPolin({
+                        refer: data.refer,
+                        ip: ip,
+                    });
+                    await ReferipMissPolin.create(_object);
+                    _object = await ReferMissPolin.findOne({refer: data.refer});
+                    _object.count+=1
+                    await ReferMissPolin.findOneAndUpdate({refer: data.refer}, {$set: _object});
+                }
+            }
         }
     } catch(error) {
         console.error(error)

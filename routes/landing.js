@@ -16,6 +16,7 @@ const nodemailer = require('nodemailer');
 router.get('/', async (req, res, next) => {
     console.log('landing')
     if(req.param('refer')!==undefined&&req.param('refer')!==''){
+        let ip = JSON.stringify(req.ip)
         if(await ReferMissPolin.count({refer: req.param('refer')})===0){
             let _object = new ReferMissPolin({
                 refer: req.param('refer'),
@@ -23,9 +24,13 @@ router.get('/', async (req, res, next) => {
                 type: 'landing'
             });
             await ReferMissPolin.create(_object);
+            _object = new ReferipMissPolin({
+                refer: req.param('refer'),
+                ip: ip,
+            });
+            await ReferipMissPolin.create(_object);
         } else {
-            let ip = JSON.stringify(req.ip)
-            if(ReferipMissPolin.count({ip: req.param(ip)})===0){
+            if(ReferipMissPolin.count({ip: ip, refer: req.param('refer')})===0){
                 let _object = new ReferipMissPolin({
                     refer: req.param('refer'),
                     ip: ip,

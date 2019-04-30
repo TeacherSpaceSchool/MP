@@ -12,6 +12,7 @@ const SearchGeoMissPolin = require('../models/searchGeoMissPolin');
 const KategoryGeoMissPolin = require('../models/kategoryGeoMissPolin');
 const CatalogMissPolin = require('../models/catalogMissPolin');
 const ItemGeoMissPolin = require('../models/itemGeoMissPolin');
+const ReferipMissPolin = require('../models/referipMissPolin');
 const const1 = require('../module/const');
 
 const getItemMetrik = async (search, sort, skip) => {
@@ -581,47 +582,48 @@ const getRefMetrik = async (search, sort, skip) => {
     let findResult = [], data = [], count;
     const row = [
         'рефералка',
+        'посещение',
         'избранное',
         'корзина',
         'заказали',
         'купили',
         'отмена',
     ];
-    count = await UserMissPolin.count();
-    findResult = await UserMissPolin
-        .find({role: {$ne: 'admin'}}).distinct('ref');
+    count = await ReferipMissPolin.count();
+    findResult = await ReferipMissPolin
+        .find().distinct('refer');
     for(let i = 0; i<findResult.length; i++){
         let userArr = await UserMissPolin.find({ref: findResult[i]}).distinct('_id')
-
         data.push([
             findResult[i],
-            await FavoriteMissPolin.count({user: findResult[i]}),
-            await CartMissPolin.count({user: findResult[i]}),
+            await ReferipMissPolin.count({refer: findResult[i]}),
+            await FavoriteMissPolin.count({user: {'$in' : userArr}}),
+            await CartMissPolin.count({user: {'$in' : userArr}}),
             await OrderMissPolin.count({status: 'принят', user: {'$in' : userArr}}),
             await OrderMissPolin.count({status: 'выполнен', user: {'$in' : userArr}}),
             await OrderMissPolin.count({status: 'отменен', user: {'$in' : userArr}}),
         ]);
     }
     if(sort[0]=='избранное'&&sort[1]=='descending')
-        data.sort((a, b) => (a[1] > b[1]) ? 1 : -1)
-    else if(sort[0]=='избранное'&&sort[1]=='ascending')
-        data.sort((a, b) => (a[1] < b[1]) ? 1 : -1)
-    else if(sort[0]=='корзина'&&sort[1]=='descending')
         data.sort((a, b) => (a[2] > b[2]) ? 1 : -1)
-    else if(sort[0]=='корзина'&&sort[1]=='ascending')
+    else if(sort[0]=='избранное'&&sort[1]=='ascending')
         data.sort((a, b) => (a[2] < b[2]) ? 1 : -1)
-    else if(sort[0]=='заказали'&&sort[1]=='descending')
+    else if(sort[0]=='корзина'&&sort[1]=='descending')
         data.sort((a, b) => (a[3] > b[3]) ? 1 : -1)
-    else if(sort[0]=='заказали'&&sort[1]=='ascending')
+    else if(sort[0]=='корзина'&&sort[1]=='ascending')
         data.sort((a, b) => (a[3] < b[3]) ? 1 : -1)
-    else if(sort[0]=='купили'&&sort[1]=='descending')
+    else if(sort[0]=='заказали'&&sort[1]=='descending')
         data.sort((a, b) => (a[4] > b[4]) ? 1 : -1)
-    else if(sort[0]=='купили'&&sort[1]=='ascending')
+    else if(sort[0]=='заказали'&&sort[1]=='ascending')
         data.sort((a, b) => (a[4] < b[4]) ? 1 : -1)
-    else if(sort[0]=='отмена'&&sort[1]=='descending')
+    else if(sort[0]=='купили'&&sort[1]=='descending')
         data.sort((a, b) => (a[5] > b[5]) ? 1 : -1)
-    else if(sort[0]=='отмена'&&sort[1]=='ascending')
+    else if(sort[0]=='купили'&&sort[1]=='ascending')
         data.sort((a, b) => (a[5] < b[5]) ? 1 : -1)
+    else if(sort[0]=='отмена'&&sort[1]=='descending')
+        data.sort((a, b) => (a[6] > b[6]) ? 1 : -1)
+    else if(sort[0]=='отмена'&&sort[1]=='ascending')
+        data.sort((a, b) => (a[6] < b[6]) ? 1 : -1)
     console.log(data)
     return {data: data.slice(parseInt(skip), parseInt(skip)+10), count: count, row: row}
 }
