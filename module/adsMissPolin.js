@@ -90,7 +90,6 @@ const getAdsMissPolin = async (search, sort, skip) => {
             .limit(10)
     }
     for (let i=0; i<findResult.length; i++){
-        findResult[i].lo.lol
         data.push([findResult[i].image, findResult[i].name, findResult[i].url, findResult[i].type, format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt), findResult[i]._id]);
     }
     return {data: data, count: count, row: row}
