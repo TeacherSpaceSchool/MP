@@ -364,11 +364,13 @@ const setSearchGeoMetrik = async (search, geo) => {
 }
 
 const setKategoryGeoMetrik = async (search, geo) => {
-    let data = new KategoryGeoMissPolin({
-        word: search,
-        geo: geo,
-    });
-    await KategoryGeoMissPolin.create(data);
+    if(search!=undefined&&search.length>0) {
+        let data = new KategoryGeoMissPolin({
+            word: search,
+            geo: geo,
+        });
+        await KategoryGeoMissPolin.create(data);
+    }
 }
 
 const setItemGeoMetrik = async (search, geo) => {

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="" />
+    <list default="true" id="aef3c9e9-2922-42a5-aaa5-79ce22b59d1a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/metrikMissPolin.js" afterPath="$PROJECT_DIR$/module/metrikMissPolin.js" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -27,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/data.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -40,11 +43,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="metrikMissPolin.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="metrikMissPolin.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/module/metrikMissPolin.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="365" column="6" lean-forward="false" selection-start-line="365" selection-start-column="6" selection-end-line="365" selection-end-column="6" />
+            <state relative-caret-position="313">
+              <caret line="372" column="5" lean-forward="false" selection-start-line="372" selection-start-column="5" selection-end-line="372" selection-end-column="5" />
               <folding>
                 <element signature="e#1032#7187#0" expanded="false" />
                 <element signature="e#1468#2397#0" expanded="false" />
@@ -58,12 +61,11 @@
                 <element signature="e#11708#12650#0" expanded="false" />
                 <element signature="e#13184#13522#0" expanded="false" />
                 <element signature="e#13578#14595#0" expanded="false" />
-                <element signature="e#15450#15580#0" expanded="false" />
-                <element signature="e#15634#20211#0" expanded="false" />
-                <element signature="e#15861#15997#0" expanded="false" />
-                <element signature="e#16052#17306#0" expanded="false" />
-                <element signature="e#17316#18492#0" expanded="false" />
-                <element signature="e#20264#23806#0" expanded="false" />
+                <element signature="e#15521#15651#0" expanded="false" />
+                <element signature="e#15705#20282#0" expanded="false" />
+                <element signature="e#15932#16068#0" expanded="false" />
+                <element signature="e#16123#17377#0" expanded="false" />
+                <element signature="e#17387#18563#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -267,10 +269,10 @@
         <option value="$PROJECT_DIR$/models/itemGeoMissPolin.js" />
         <option value="$PROJECT_DIR$/module/const.js" />
         <option value="$PROJECT_DIR$/routes/landing.js" />
-        <option value="$PROJECT_DIR$/module/metrikMissPolin.js" />
         <option value="$PROJECT_DIR$/module/adsMissPolin.js" />
         <option value="$PROJECT_DIR$/models/orderMissPolin.js" />
         <option value="$PROJECT_DIR$/routes/data.js" />
+        <option value="$PROJECT_DIR$/module/metrikMissPolin.js" />
       </list>
     </option>
   </component>
@@ -315,7 +317,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -369,6 +370,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -543,12 +545,13 @@
       <workItem from="1556267882669" duration="22533000" />
       <workItem from="1556540938918" duration="14968000" />
       <workItem from="1556776834543" duration="22000" />
-      <workItem from="1556779469002" duration="2436000" />
+      <workItem from="1556779469002" duration="2577000" />
+      <workItem from="1556782562832" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="614113000" />
+    <option name="totallyTimeSpent" value="614311000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -561,17 +564,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1311787" sideWeight="0.80892855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1311787" sideWeight="0.79744524" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1311787" sideWeight="0.19107144" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26244953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1311787" sideWeight="0.20255475" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24629879" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -970,10 +974,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+          <folding>
+            <element signature="e#16670#17600#0" expanded="false" />
+            <element signature="e#17656#21309#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/metrikMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="365" column="6" lean-forward="false" selection-start-line="365" selection-start-column="6" selection-end-line="365" selection-end-column="6" />
+        <state relative-caret-position="313">
+          <caret line="372" column="5" lean-forward="false" selection-start-line="372" selection-start-column="5" selection-end-line="372" selection-end-column="5" />
           <folding>
             <element signature="e#1032#7187#0" expanded="false" />
             <element signature="e#1468#2397#0" expanded="false" />
@@ -987,23 +1002,11 @@
             <element signature="e#11708#12650#0" expanded="false" />
             <element signature="e#13184#13522#0" expanded="false" />
             <element signature="e#13578#14595#0" expanded="false" />
-            <element signature="e#15450#15580#0" expanded="false" />
-            <element signature="e#15634#20211#0" expanded="false" />
-            <element signature="e#15861#15997#0" expanded="false" />
-            <element signature="e#16052#17306#0" expanded="false" />
-            <element signature="e#17316#18492#0" expanded="false" />
-            <element signature="e#20264#23806#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/data.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="56" column="13" lean-forward="false" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
-          <folding>
-            <element signature="e#16670#17600#0" expanded="false" />
-            <element signature="e#17656#21309#0" expanded="false" />
+            <element signature="e#15521#15651#0" expanded="false" />
+            <element signature="e#15705#20282#0" expanded="false" />
+            <element signature="e#15932#16068#0" expanded="false" />
+            <element signature="e#16123#17377#0" expanded="false" />
+            <element signature="e#17387#18563#0" expanded="false" />
           </folding>
         </state>
       </provider>
