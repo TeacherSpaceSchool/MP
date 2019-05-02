@@ -49,10 +49,12 @@ router.post('/getclient', async (req, res) => {
             Mailchimp.send(data.email)
             await res.send('ok')
         } else if(req.body.name == 'Товары'){
-            let ip = req.ip
-            let geo = geoip.lookup(ip);
-            if(geo===null)geo={country: '*', city: '*'}
-            await MetrikMissPolin.setKategoryGeoMetrik(data.kategoria, geo.country+' \n'+geo.city)
+            if(data.kategoria!=undefined) {
+                let ip = req.ip
+                let geo = geoip.lookup(ip);
+                if (geo === null) geo = {country: '*', city: '*'}
+                await MetrikMissPolin.setKategoryGeoMetrik(data.kategoria, geo.country + ' \n' + geo.city)
+            }
             await res.send(await ItemMissPolin.getItems(data.search, data.sort, data.skip, data.kategoria, data.podkategory))
         } else if(req.body.name == 'Товар'){
             let ip = req.ip
