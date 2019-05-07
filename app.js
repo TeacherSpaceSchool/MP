@@ -35,13 +35,12 @@ const options = {
 //datebase
 connectDB.connect()
 // view engine setup
-app.use(minify());
 app.use(compression());
-app.use('/', express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
 app.use(expressAMP({
     override: true,
     //staticsPath: path.join(__dirname, 'public')
 }));
+app.use(minify());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
@@ -50,7 +49,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'aclient')));
 app.use(express.static(path.join(__dirname, 'landing')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
 app.use(express.static(path.join(__dirname, 'admin')));
 app.use(cors());
 // parse data with connect-multiparty.
