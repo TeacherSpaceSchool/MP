@@ -220,7 +220,6 @@ const getItemMissPolin = async (search, sort, skip) => {
             .skip(parseInt(skip))
             .limit(10);
     }
-    console.log(findResult)
     for (let i=0; i<findResult.length; i++){
         let image = ''
         if (findResult[i].image!=undefined)
