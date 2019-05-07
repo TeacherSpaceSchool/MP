@@ -18,6 +18,7 @@ const expressAMP = require('express-amp');
 const os = require('os');
 const compression = require('compression');
 const logger1 = require('logger').createLogger('development.log');
+const minify = require('express-minify');
 module.exports.dirname = __dirname;
 module.exports.logge1r = logger1;
 let oneYear = 365 * 24 * 60 * 60 * 1000;
@@ -34,6 +35,13 @@ const options = {
 //datebase
 connectDB.connect()
 // view engine setup
+app.use(minify());
+app.use(compression());
+app.use('/', express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
+app.use(expressAMP({
+    override: true,
+    //staticsPath: path.join(__dirname, 'public')
+}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
@@ -45,7 +53,6 @@ app.use(express.static(path.join(__dirname, 'landing')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'admin')));
 app.use(cors());
-app.use(compression());
 // parse data with connect-multiparty.
 app.use(formData.parse(options));
 // clear from the request and delete all empty files (size == 0)
@@ -54,11 +61,6 @@ app.use(formData.format());
 app.use(formData.stream());
 // union body and files
 app.use(formData.union());
-app.use('/', express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
-app.use(expressAMP({
-    override: true,
-    //staticsPath: path.join(__dirname, 'public')
-}));
 
 app.use(new RegExp(/^\/(about|contact|delivery|faq|size|uslovia|kategory?|signin|resetpass|signup|profile|item?|blogs|preorders|preorder?|mypreorders|search|skidki|blog?|favorite|cart|myorders|order?)?/), indexRouter);
 app.use('/admin', adminRouter);

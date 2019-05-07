@@ -15,6 +15,7 @@
     "express": "~4.16.0",
     "express-amp": "^1.0.8",
     "express-form-data": "^2.0.7",
+    "express-minify": "^1.0.0",
     "geoip-lite": "^1.3.6",
     "http-errors": "~1.6.2",
     "jade": "~1.11.0",
