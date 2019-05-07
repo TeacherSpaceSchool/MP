@@ -40,7 +40,7 @@ app.use(expressAMP({
     override: true,
     //staticsPath: path.join(__dirname, 'public')
 }));
-//app.use(minify());
+app.use(minify());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
