@@ -4,6 +4,8 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 
 
 router.post('/', async (req, res, next) => {
+    console.log('lol')
+
     console.log(req.param('count'))
     let statusq = ''
     let count1 = req.param('count'), count2 = [];
