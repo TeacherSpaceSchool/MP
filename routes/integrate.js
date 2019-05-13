@@ -4,9 +4,7 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 
 
 router.post('/', async (req, res, next) => {
-    console.log('lol')
-
-    console.log(req.param('count'))
+    console.log(req.param('material'))
     let statusq = ''
     let count1 = req.param('count'), count2 = [];
     count1 = count1.split(';');
@@ -14,7 +12,6 @@ router.post('/', async (req, res, next) => {
         if(count1[i].split(':')[1]!==undefined)
             count2[i] = {'color': count1[i].split(':')[0].replace('\n', '').trim(), 'kolichestvo': count1[i].split(':')[1].trim()}
     }
-    console.log(count2)
     let price1 = req.param('price'), price2 = [];
     price1 = price1.split(';');
     for (let i=0; i<price1.length; i++){
