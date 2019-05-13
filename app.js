@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index');
 const adminRouter = require('./routes/admin');
 const usersRouter = require('./routes/users');
 const landingRouter = require('./routes/landing');
+const integrateRouter = require('./routes/integrate');
 const dataRouter = require('./routes/data');
 const passportEngine = require('./module/passport');
 const cors = require('cors');
@@ -66,6 +67,7 @@ app.use('/admin', adminRouter);
 app.use('/users', usersRouter);
 app.use('/data', dataRouter);
 app.use('/landing', landingRouter);
+app.use('/integrate', integrateRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
