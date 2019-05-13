@@ -20,6 +20,7 @@ const os = require('os');
 const compression = require('compression');
 const logger1 = require('logger').createLogger('development.log');
 const bodyParser = require('body-parser');
+require('body-parser-xml-json')(bodyParser);
 module.exports.dirname = __dirname;
 module.exports.logge1r = logger1;
 let oneYear = 365 * 24 * 60 * 60 * 1000;
