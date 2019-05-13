@@ -1,18 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const ModelsItemMissPolin = require('../models/itemMissPolin');
-
+const windows1251 = require('windows-1251');
 
 router.post('/', async (req, res, next) => {
-    console.log(req.param('art'))
+    console.log(windows1251.decode(req.param('art')))
     let statusq = ''
-    let count1 = req.param('count'), count2 = [];
+    let count1 = windows1251.decode(req.param('count')), count2 = [];
     count1 = count1.split(';');
     for (let i=0; i<count1.length; i++){
         if(count1[i].split(':')[1]!==undefined)
             count2[i] = {'color': count1[i].split(':')[0].replace('\n', '').trim(), 'kolichestvo': count1[i].split(':')[1].trim()}
     }
-    let price1 = req.param('price'), price2 = [];
+    let price1 = windows1251.decode(req.param('price')), price2 = [];
     price1 = price1.split(';');
     for (let i=0; i<price1.length; i++){
         if(price1[i].split(':')[1]!==undefined)
@@ -23,18 +23,18 @@ router.post('/', async (req, res, next) => {
         statusq = 'нет в наличие'
     else
         statusq = 'в наличие'
-    if(await ModelsItemMissPolin.count({cod: req.param('cod')})===0){
+    if(await ModelsItemMissPolin.count({cod: windows1251.decode(req.param('cod'))})===0){
         if(count2.length>0&&price2.length>0){
             let _object = new ModelsItemMissPolin({
-                art: req.param('art'),
+                art: windows1251.decode(req.param('art')),
                 price: JSON.stringify(price2),
-                line: req.param('line'),
+                line: windows1251.decode(req.param('line')),
                 count: JSON.stringify(count2),
-                kategoria: req.param('kategoria'),
-                cod: req.param('cod'),
-                weight: req.param('weight'),
+                kategoria: windows1251.decode(req.param('kategoria')),
+                cod: windows1251.decode(req.param('cod')),
+                weight: windows1251.decode(req.param('weight')),
                 status: statusq,
-                material: req.param('material'),
+                material: windows1251.decode(req.param('material')),
                 hit: 'отключено',
                 prices: price2[0]!==undefined?price2[0].price:'0',
                 news: 'отключено'
@@ -43,19 +43,19 @@ router.post('/', async (req, res, next) => {
         }
     }
     else {
-        if(await ModelsItemMissPolin.findOne({cod: req.param('cod')}).status=='отключен')
+        if(await ModelsItemMissPolin.findOne({cod: windows1251.decode(req.param('cod'))}).status=='отключен')
             statusq = 'отключен'
-        await ModelsItemMissPolin.findOneAndUpdate({cod: req.param('cod')}, {$set: {
-            art: req.param('art'),
+        await ModelsItemMissPolin.findOneAndUpdate({cod: windows1251.decode(req.param('cod'))}, {$set: {
+            art: windows1251.decode(req.param('art')),
             prices: price2[0]!==undefined?price2[0].price:'0',
             price: JSON.stringify(price2),
-            line: req.param('line'),
+            line: windows1251.decode(req.param('line')),
             count: JSON.stringify(count2),
-            kategoria: req.param('kategoria'),
-            cod: req.param('cod'),
+            kategoria: windows1251.decode(req.param('kategoria')),
+            cod: windows1251.decode(req.param('cod')),
             status: statusq,
-            weight: req.param('weight'),
-            material: req.param('material')
+            weight: windows1251.decode(req.param('weight')),
+            material: windows1251.decode(req.param('material'))
         }});
     }
     await res.send('ok')
