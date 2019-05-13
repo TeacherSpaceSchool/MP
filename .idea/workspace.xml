@@ -5,7 +5,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/development.log" afterPath="$PROJECT_DIR$/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/integrate.js" afterPath="$PROJECT_DIR$/routes/integrate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/types/urlencoded.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/types/urlencoded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/raw-body/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/raw-body/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/raw-body/package.json" afterPath="$PROJECT_DIR$/node_modules/raw-body/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +32,8 @@
       <file leaf-file-name="data.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+            <state relative-caret-position="-272">
+              <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
               <folding>
                 <element signature="e#16670#17600#0" expanded="false" />
                 <element signature="e#20164#21122#0" expanded="false" />
@@ -36,11 +43,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="integrate.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="integrate.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/integrate.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="34">
+              <caret line="2" column="63" lean-forward="false" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -57,7 +74,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>console.error(err)</find>
       <find>try{</find>
       <find>файлы</find>
       <find>Цвет</find>
@@ -83,13 +99,13 @@
       <find>lol</find>
       <find>compression</find>
       <find>nocache</find>
-      <find>ModelsItemMissPolin</find>
       <find>Models[i].count</find>
       <find>req.param('count')</find>
       <find>req.param('price')</find>
+      <find>Models[i].</find>
+      <find>ModelsItemMissPolin</find>
     </findStrings>
     <replaceStrings>
-      <replace>verifydadmin</replace>
       <replace>Preitem</replace>
       <replace>PreitemUser</replace>
       <replace>Refer</replace>
@@ -119,6 +135,7 @@
       <replace>find</replace>
       <replace>req.param('count')</replace>
       <replace>price2</replace>
+      <replace>req.param('</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -176,8 +193,8 @@
         <option value="$PROJECT_DIR$/module/metrikMissPolin.js" />
         <option value="$PROJECT_DIR$/routes/data.js" />
         <option value="$PROJECT_DIR$/module/itemMissPolin.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/routes/integrate.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -455,12 +472,12 @@
       <workItem from="1557228035473" duration="210000" />
       <workItem from="1557230248851" duration="1163000" />
       <workItem from="1557571004931" duration="852000" />
-      <workItem from="1557734177001" duration="1357000" />
+      <workItem from="1557734177001" duration="2497000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="631519000" />
+    <option name="totallyTimeSpent" value="632659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,14 +887,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="69" column="19" lean-forward="false" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/itemMissPolin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -904,10 +913,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/integrate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="63" lean-forward="false" selection-start-line="2" selection-start-column="63" selection-end-line="2" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/data.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="50" lean-forward="true" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+        <state relative-caret-position="-272">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding>
             <element signature="e#16670#17600#0" expanded="false" />
             <element signature="e#20164#21122#0" expanded="false" />
@@ -916,10 +933,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/integrate.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="228">
+          <caret line="60" column="26" lean-forward="false" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="26" />
           <folding />
         </state>
       </provider>

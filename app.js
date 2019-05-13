@@ -19,7 +19,7 @@ const expressAMP = require('express-amp');
 const os = require('os');
 const compression = require('compression');
 const logger1 = require('logger').createLogger('development.log');
-const minify = require('express-minify');
+const bodyParser = require('body-parser');
 module.exports.dirname = __dirname;
 module.exports.logge1r = logger1;
 let oneYear = 365 * 24 * 60 * 60 * 1000;
@@ -45,9 +45,20 @@ app.use(expressAMP({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookieParser());
+app.use(function(req, res, next){
+    if (req.is('text/*')) {
+        req.text = '';
+        req.setEncoding('utf8');
+        req.on('data', function(chunk){ req.text += chunk });
+        req.on('end', function(){ req.body = JSON.parse(req.text); next() });
+    } else {
+        next();
+    }
+});
+app.use(bodyParser.json());
+app.use(bodyParser.xml());
 app.use(express.static(path.join(__dirname, 'aclient')));
 app.use(express.static(path.join(__dirname, 'landing')));
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
