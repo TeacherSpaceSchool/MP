@@ -4,7 +4,7 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 
 
 router.post('/', async (req, res, next) => {
-    console.log(req.param('material'))
+    console.log(req.param('art'))
     let statusq = ''
     let count1 = req.param('count'), count2 = [];
     count1 = count1.split(';');
@@ -26,7 +26,7 @@ router.post('/', async (req, res, next) => {
     if(await ModelsItemMissPolin.count({cod: req.param('cod')})===0){
         if(count2.length>0&&price2.length>0){
             let _object = new ModelsItemMissPolin({
-                art: req.param('name'),
+                art: req.param('art'),
                 price: JSON.stringify(price2),
                 line: req.param('line'),
                 count: JSON.stringify(count2),
@@ -46,7 +46,7 @@ router.post('/', async (req, res, next) => {
         if(await ModelsItemMissPolin.findOne({cod: req.param('cod')}).status=='отключен')
             statusq = 'отключен'
         await ModelsItemMissPolin.findOneAndUpdate({cod: req.param('cod')}, {$set: {
-            art: req.param('name'),
+            art: req.param('art'),
             prices: price2[0]!==undefined?price2[0].price:'0',
             price: JSON.stringify(price2),
             line: req.param('line'),
