@@ -65,4 +65,14 @@ router.post('/', async (req, res, next) => {
 
 });
 
+
+
+router.get('/', async (req, res, next) => {
+    console.log('lol')
+
+    console.log(req.param('lol'))
+
+});
+
+
 module.exports = router;
