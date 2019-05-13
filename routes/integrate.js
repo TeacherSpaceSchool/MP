@@ -61,7 +61,7 @@ router.post('/', async (req, res, next) => {
             material: req.param('material')
         }});
     }
-
+    await res.send('ok')
 
 });
 
