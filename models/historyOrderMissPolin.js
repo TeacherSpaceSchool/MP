@@ -17,7 +17,7 @@ const HistoryMissPolinSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    get: {
+    geted: {
         type: String
     }
 }, {
