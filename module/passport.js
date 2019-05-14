@@ -12,6 +12,7 @@ const OrderMissPolin = require('../models/orderMissPolin');
 const CartMissPolin = require('../models/cartMissPolin');
 const FavoriteMissPolin = require('../models/favoriteMissPolin');
 const ItemMissPolin = require('../models/itemMissPolin');
+const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const PreitemMissPolin = require('../models/preitemMissPolin');
 const AdressMissPolin = require('../models/adressMissPolin');
 const app = require('../app');
@@ -560,11 +561,36 @@ const generateOrder = async (req, res) => {
                 data.status = 'принят'
                 data.data = geo.country+' \n'+geo.city
                 data.geo = geo.country+' \n'+geo.city
+
+                let items = JSON.parse(data.items)
+                for(let i=0; i<items.length; i++){
+
+                    let a = await ItemMissPolin.findOne({cod: items[i].item.cod});
+                    let count = JSON.parse(a.count)
+                    for(let ii=0; ii<count.length; ii++){
+                        if(count[ii].color===items[i].data.color){
+                            count[ii].kolichestvo -= items[i].data.count
+                        }
+                        if(count[ii].kolichestvo<0){
+                            res.status(200);
+                            res.end(JSON.stringify(items[i].item.art+' нет в наличие'));
+                        }
+                    }
+                    await ItemMissPolin.findOneAndUpdate({cod: items[i].item.cod}, {count: JSON.stringify(count)});
+
+                    let _object = new HistoryOrderMissPolin({
+                        email: JSON.parse(data.adress).email,
+                        code:  items[i].item.cod,
+                        color: items[i].data.color,
+                        count: items[i].data.count
+                    });
+                    await HistoryOrderMissPolin.create(_object);
+                }
                 let _object = new OrderMissPolin(data);
                 await OrderMissPolin.create(_object);
                 await CartMissPolin.deleteMany({user: user._id});
                 res.status(200);
-                res.end(JSON.stringify('ok'));
+                res.end(JSON.stringify('Ваш заказ оформлен'));
             } else {
                 console.error('No such user')
                 res.status(401);
@@ -583,7 +609,7 @@ const getOrders = async (req, res) => {
         try{
             if (user&&user.status==='active') {
                 res.status(200);
-                res.end(JSON.stringify(await OrderMissPolin.find({user: user._id})));
+                res.end(JSON.stringify(await OrderMissPolin.find({user: user._id}).sort('-updatedAt')));
             } else {
                 console.error('No such user')
                 res.status(401);

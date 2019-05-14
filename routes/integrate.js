@@ -1,10 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const ModelsItemMissPolin = require('../models/itemMissPolin');
+const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const windows1251 = require('windows-1251');
 
+router.get('/', async (req, res, next) => {
+    await res.send(JSON.stringify(await HistoryOrderMissPolin.find()))
+})
+
 router.post('/', async (req, res, next) => {
-    console.log(windows1251.decode(req.param('art')))
     let statusq = ''
     let count1 = windows1251.decode(req.param('count')), count2 = [];
     count1 = count1.split(';');
