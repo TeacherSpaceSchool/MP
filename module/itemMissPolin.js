@@ -75,6 +75,7 @@ const getItemMissPolin = async (search, sort, skip) => {
         'код',
         'новинка',
         'хит',
+        'описание',
         'создан',
         '_id'
     ];
@@ -269,6 +270,9 @@ const getItemMissPolin = async (search, sort, skip) => {
         let news = ''
         if (findResult[i].news!=undefined)
             news = findResult[i].news
+        let description = ''
+        if (findResult[i].description!=undefined)
+            description = findResult[i].description
         data.push([
             image,
             art,
@@ -286,6 +290,7 @@ const getItemMissPolin = async (search, sort, skip) => {
             cod,
             news,
             hit,
+            description,
             format.asString('dd.MM.yyyy hh:mm', findResult[i].updatedAt),
             findResult[i]._id]);
     }

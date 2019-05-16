@@ -70,6 +70,10 @@ const ItemMissPolinSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    description: {
+        type: String,
+        required: false
+    },
     prices: {
         type: String,
         required: false

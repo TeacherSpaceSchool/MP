@@ -519,7 +519,8 @@ router.post('/add', async (req, res) => {
                                     line: myNew.line,
                                     prices: myNew.price[0].price,
                                     price: JSON.stringify(myNew.price),
-                                    weight: myNew.weight
+                                    weight: myNew.weight,
+                                    description: myNew.description
                                 }
                                 if(req.body.id!=undefined)
                                     await ItemMissPolin.setItemMissPolin(data, req.body.id)
@@ -664,7 +665,8 @@ router.post('/add', async (req, res) => {
                         line: myNew.line,
                         prices: myNew.price[0].price,
                         price: JSON.stringify(myNew.price),
-                        weight: myNew.weight
+                        weight: myNew.weight,
+                        description: myNew.description
                     }
                     if(req.body.id!=undefined)
                         await ItemMissPolin.setItemMissPolin(data, req.body.id)
