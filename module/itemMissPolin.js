@@ -28,6 +28,8 @@ const getKategoria = async () => {
 }
 
 const getItem = async (art) => {
+    console.log(await ItemMissPolin
+        .findOne({art: art}))
    return await ItemMissPolin
             .findOne({art: art})
 
