@@ -61,7 +61,7 @@ router.post('/getclient', async (req, res) => {
             let geo = geoip.lookup(ip);
             if(geo===null)geo={country: '*', city: '*'}
             await MetrikMissPolin.setItemGeoMetrik(data.art, geo.country+' \n'+geo.city)
-            await res.send(await ItemMissPolin.getItem(data.art))
+            await res.send(await ItemMissPolin.getItem(data.art.trim()))
         } else if(req.body.name == 'Рекомендуем'){
             await res.send(await ItemMissPolin.getRecom())
         } else if(req.body.name == 'Скидки'){
