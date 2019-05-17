@@ -4,6 +4,11 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const windows1251 = require('windows-1251');
 
+router.get('/clear', async (req, res, next) => {
+    await HistoryOrderMissPolin.deleteMany()
+    await res.send('ok')
+})
+
 router.get('/', async (req, res, next) => {
     let find = await HistoryOrderMissPolin.find().select('email code color count')
     let result = []
