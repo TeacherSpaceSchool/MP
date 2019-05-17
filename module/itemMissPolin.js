@@ -28,7 +28,7 @@ const getKategoria = async () => {
 }
 
 const getItem = async (art) => {
-    console.log(await ItemMissPolin
+    console.log(art, await ItemMissPolin
         .findOne({art: art}))
    return await ItemMissPolin
             .findOne({art: art})
