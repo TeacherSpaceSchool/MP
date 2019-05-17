@@ -5,7 +5,13 @@ const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const windows1251 = require('windows-1251');
 
 router.get('/', async (req, res, next) => {
-    await res.send(windows1251.encode(JSON.stringify(await HistoryOrderMissPolin.find().select('email code color count'))))
+    let find = await HistoryOrderMissPolin.find().select('email code color count')
+    let result = []
+    for (let i=0; i<find.length; i++) {
+        result[i] = {email: find[i].email, 'код': find[i].code, 'цвет': find[i].color, 'количество': find[i].count}
+    }
+    result = JSON.stringify(result)
+    await res.send(result)
 })
 
 router.post('/', async (req, res, next) => {
