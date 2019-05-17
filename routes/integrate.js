@@ -4,7 +4,7 @@ const ModelsItemMissPolin = require('../models/itemMissPolin');
 const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const windows1251 = require('windows-1251');
 
-router.get('/clear', async (req, res, next) => {
+router.post('/clear', async (req, res, next) => {
     await HistoryOrderMissPolin.deleteMany()
     await res.send('ok')
 })
