@@ -16,6 +16,7 @@ const CurrencyMissPolin = require('../module/currencyMissPolin');
 const StaticMissPolinModel = require('../models/staticMissPolin');
 const ReferipMissPolin = require('../models/referipMissPolin');
 const MailingMissPolin = require('../module/mailingMissPolin');
+const MailingMissPolinModel = require('../models/mailingMissPolin');
 const OrderMissPolin = require('../module/orderMissPolin');
 const UserMissPolin = require('../module/userMissPolin');
 const ReferMissPolin = require('../module/referMissPolin');
@@ -30,7 +31,8 @@ const app = require('../app');
 const fs = require('fs');
 const path = require('path');
 const Mailchimp = require('../module/mailchimp');
-var geoip = require('geoip-lite');
+const geoip = require('geoip-lite');
+const nodemailer = require('nodemailer');
 
 router.post('/getclient', async (req, res) => {
     try{
@@ -45,8 +47,43 @@ router.post('/getclient', async (req, res) => {
             await res.send(await ItemMissPolin.getKategory())
         } else if(req.body.name == 'Податегории'){
             await res.send(await ItemMissPolin.getPodkategoria(data.search))
+        } else if(req.body.name == 'ВосстановлениеПароля'){
+            await res.send(await UserMissPolin.recoveryPass(data.email))
         } else if(req.body.name == 'Подписка'){
             Mailchimp.send(data.email)
+            let mailingMissPolin = await MailingMissPolinModel.findOne();
+            let staticMissPolin = await StaticMissPolinModel.findOne();
+            if (mailingMissPolin !== null && staticMissPolin !== null) {
+                let mailOptions = {
+                    from: mailingMissPolin.mailuser,
+                    to: data.email,
+                    subject: 'Каталог MissPolin',
+                    text: 'Здравствуйте!\n' +
+                    'Благодарим за проявленный интерес к нашей компании!\n' +
+                    'Ниже представляем Вам каталог наших товаров для более детального ознакомления.\n' +
+                    'C уважением, компания Miss Polin',
+                    attachments: [{path: staticMissPolin.catalog, filename: 'Каталог MissPolin.pdf',}],
+                };
+                const transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: mailingMissPolin.mailuser,
+                        pass: mailingMissPolin.mailpass
+                    },
+                    tls: {
+                        // do not fail on invalid certs
+                        rejectUnauthorized: false
+                    }
+                });
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                    }
+                });
+                Mailchimp.send(req.body.Email)
+            }
             await res.send('ok')
         } else if(req.body.name == 'Товары'){
             if(data.kategoria!=undefined) {

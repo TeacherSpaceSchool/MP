@@ -14,7 +14,6 @@ const nodemailer = require('nodemailer');
 
 /* GET users listing. */
 router.get('/', async (req, res, next) => {
-    console.log('landing')
     if(req.param('refer')!==undefined&&req.param('refer')!==''){
         let ip = JSON.stringify(req.ip)
         if(await ReferMissPolin.count({refer: req.param('refer')})===0){
@@ -53,7 +52,6 @@ router.post('/', async (req, res, next) => {
     let mailingMissPolin = await MailingMissPolin.findOne();
     let staticMissPolin = await StaticMissPolin.findOne();
     if (mailingMissPolin !== null && staticMissPolin !== null) {
-        console.log(mailingMissPolin)
         let mailOptions = {
             from: mailingMissPolin.mailuser,
             to: req.body.Email,

@@ -6,45 +6,6 @@ const randomstring = require('randomstring');
 const format = require('date-format') ;
 const mongoose = require('mongoose');
 
-let recoveryPass = async (email) => {
-    if(await MailingMissPolin.count({email: email})>0){
-        let newPassword = randomstring.generate(7);
-        let user = await MailingMissPolin.findOne({email: email});
-        user.password = newPassword;
-        await user.save();
-        let mailingBiletiki = await MailingMissPolin.findOne();
-        let mailOptions = {
-            from: mailingBiletiki.mailuser,
-            to: email,
-            subject: 'Восстановление пароля',
-            text: 'Ваш новый пароль: '+newPassword
-        };
-        if(mailingBiletiki!==null){
-            const transporter = nodemailer.createTransport({
-                service: 'gmail',
-                auth: {
-                    user: mailingBiletiki.mailuser,
-                    pass: mailingBiletiki.mailpass
-                },
-                tls: {
-                    // do not fail on invalid certs
-                    rejectUnauthorized: false
-                }
-            });
-            transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log('Email sent: ' + info.response);
-                }
-            });
-        }
-        return 'ok'
-    } else {
-        return 'lol'
-    }
-}
-
 const getUserMissPolin = async (search, sort, skip) => {
     
         //await UserMissPolin.deleteMany()
@@ -229,7 +190,7 @@ const setUserMissPolin = async (object, id) => {
             await UserMissPolin.findOneAndUpdate({_id: id}, {$set: object});
     
 }
-/*
+
 let recoveryPass = async (email) => {
     if(await UserMissPolin.count({email: email})>0){
         let newPassword = randomstring.generate(7);
@@ -258,13 +219,15 @@ let recoveryPass = async (email) => {
             transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
                     console.log(error);
+                    return 'error'
                 } else {
                     console.log('Email sent: ' + info.response);
+                    return 'ok'
                 }
             });
         }
-    }
-}*/
+    } else return 'error'
+}
 
 const deleteUserMissPolin = async (id) => {
     
@@ -277,3 +240,4 @@ module.exports.deleteUserMissPolin = deleteUserMissPolin;
 module.exports.getUserMissPolin = getUserMissPolin;
 module.exports.setUserMissPolin = setUserMissPolin;
 module.exports.addUserMissPolin = addUserMissPolin;
+module.exports.recoveryPass = recoveryPass;
