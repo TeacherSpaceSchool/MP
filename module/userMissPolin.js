@@ -193,7 +193,7 @@ const setUserMissPolin = async (object, id) => {
 
 let recoveryPass = async (email) => {
     if(await UserMissPolin.count({email: email})>0){
-        let newPassword = randomstring.generate(7);
+        let newPassword = randomstring.generate(8);
         let user = await UserMissPolin.findOne({email: email});
         user.password = newPassword;
         await user.save();
