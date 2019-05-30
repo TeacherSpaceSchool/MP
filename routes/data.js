@@ -116,6 +116,8 @@ router.post('/getclient', async (req, res) => {
             await res.send(await AdsMissPolin.getBillboard())
         } else if(req.body.name == 'Баннер'){
             await res.send(await AdsMissPolin.getBanner())
+        } else if(req.body.name == 'Вверх'){
+            await res.send(await AdsMissPolin.getUp())
         } else if(req.body.name == 'Блог'){
             await res.send(await BlogMissPolin.getClient())
         } else if(req.body.name == 'Предзаказ'){

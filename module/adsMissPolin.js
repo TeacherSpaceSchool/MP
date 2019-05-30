@@ -10,6 +10,10 @@ const getBanner = async () => {
     return await AdsMissPolin.findRandom({type: 'банер'}).limit(1);
 };
 
+const getUp = async () => {
+    return await AdsMissPolin.findOne({type: 'вверх'});
+};
+
 const getAdsMissPolin = async (search, sort, skip) => {
     let findResult = [], data = [], count;
     const row = [
@@ -118,4 +122,5 @@ module.exports.getAdsMissPolin = getAdsMissPolin;
 module.exports.setAdsMissPolin = setAdsMissPolin;
 module.exports.addAdsMissPolin = addAdsMissPolin;
 module.exports.getBillboard = getBillboard;
+module.exports.getUp = getUp;
 module.exports.getBanner = getBanner;
