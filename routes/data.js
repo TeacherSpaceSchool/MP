@@ -129,7 +129,6 @@ router.post('/getclient', async (req, res) => {
         } else if(req.body.name == 'Разделы'){
             await res.send(await DisRazdelMissPolin.getClient())
         } else if(req.body.name == 'Аналитика поиск'){
-            console.log(data.search)
             if(data.search!=undefined){
                 let ip = req.ip
                 let geo = geoip.lookup(ip);
