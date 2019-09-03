@@ -5,11 +5,14 @@ const HistoryOrderMissPolin = require('../models/historyOrderMissPolin');
 const windows1251 = require('windows-1251');
 
 router.post('/clear', async (req, res, next) => {
+    try{
     await HistoryOrderMissPolin.deleteMany()
     await res.send('ok')
+} catch(error) {console.error(error)}
 })
 
 router.get('/', async (req, res, next) => {
+    try{
     let find = await HistoryOrderMissPolin.find().select('email code color count')
     let result = []
     for (let i=0; i<find.length; i++) {
@@ -17,9 +20,11 @@ router.get('/', async (req, res, next) => {
     }
     result = JSON.stringify(result)
     await res.send(result)
+} catch(error) {console.error(error)}
 })
 
 router.post('/', async (req, res, next) => {
+    try{
     let statusq = ''
     let count1 = windows1251.decode(req.param('count')), count2 = [];
     count1 = count1.split(';');
@@ -74,17 +79,11 @@ router.post('/', async (req, res, next) => {
         }});
     }
     await res.send('ok')
-
+} catch(error) {console.error(error)}
 });
 
 
 
-router.get('/', async (req, res, next) => {
-    console.log('lol')
-
-    console.log(req.param('lol'))
-
-});
 
 
 module.exports = router;

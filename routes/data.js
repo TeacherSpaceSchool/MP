@@ -219,7 +219,7 @@ router.post('/getclientsecure', async (req, res) => {
 
 router.post('/get', async (req, res) => {
   await passportEngine.verifydadmin(req, res, async ()=>{
-      if(req.body.name == 'Реклама'){
+      try{if(req.body.name == 'Реклама'){
           await res.send(await AdsMissPolin.getAdsMissPolin(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Блог'){
           await res.send(await BlogMissPolin.getBlogMissPolin(req.body.search, req.body.sort, req.body.skip))
@@ -271,13 +271,13 @@ router.post('/get', async (req, res) => {
           await res.send(await MetrikMissPolin.getGeoMetrik(req.body.search, req.body.sort, req.body.skip))
       } else if(req.body.name == 'Аналитика рефералка'){
           await res.send(await MetrikMissPolin.getRefMetrik(req.body.search, req.body.sort, req.body.skip))
-      }
+      }} catch(error) {console.error(error)}
   });
 });
 
 router.post('/delete', async (req, res) => {
     await passportEngine.verifydadmin(req, res, async ()=>{
-        if(req.body.oldFile!=undefined) {
+        try{if(req.body.oldFile!=undefined) {
             let photos = req.body.oldFile.split('\n');
             for(let i=0; i<photos.length; i++){
                 if(photos[i].length>0){
@@ -319,13 +319,13 @@ router.post('/delete', async (req, res) => {
         } else if(req.body.name == 'Товары'){
             await ItemMissPolin.deleteItemMissPolin(JSON.parse(req.body.deleted))
             await res.send(await ItemMissPolin.getItemMissPolin(req.body.search, req.body.sort, req.body.skip))
-        }
+        }} catch(error) {console.error(error)}
     });
 });
 
 router.post('/add', async (req, res) => {
     await passportEngine.verifydadmin(req, res, async ()=>{
-        if(req.body.name == 'Файлы') {
+        try{if(req.body.name == 'Файлы') {
             let staticMissPolinModel = await StaticMissPolinModel.findOne();
             if(staticMissPolinModel!==null)
                 fs.unlink(staticMissPolinModel.catalog, ()=>{console.log('successfully deleted');})
@@ -785,7 +785,7 @@ router.post('/add', async (req, res) => {
                     await res.send(await DisRazdelMissPolin.getDisRazdelMissPolin(req.body.search, req.body.sort, req.body.skip))
                 }
             }
-        }
+        }} catch(error) {console.error(error)}
     });
 });
 

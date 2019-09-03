@@ -52,8 +52,8 @@ app.use(function(req, res, next){
     if (req.is('text/*')) {
         req.text = '';
         req.setEncoding('utf8');
-        req.on('data', function(chunk){ req.text += chunk });
-        req.on('end', function(){ req.body = JSON.parse(req.text); next() });
+        req.on('data', function(chunk){ try{req.text += chunk} catch(error) {console.error(error)} });
+        req.on('end', function(){ try{req.body = JSON.parse(req.text); next()} catch(error) {console.error(error)} });
     } else {
         next();
     }
@@ -88,6 +88,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+    try{
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
@@ -95,6 +96,7 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+} catch(error) {console.error(error)}
 });
 
 module.exports = app;
